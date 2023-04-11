@@ -1,3 +1,8 @@
+import bread01img01 from "../imgs/product-imgs/bread(1).png";
+import bread01img02 from "../imgs/product-imgs/bread(2).png";
+import bread01img03 from "../imgs/product-imgs/bread(3).png";
+import bread01img04 from "../imgs/product-imgs/bread(4).png";
+
 import burger01img01 from "../imgs/product-imgs/burger-1.jpg";
 import burger01img02 from "../imgs/product-imgs/burger-2.jpg";
 import burger01img03 from "../imgs/product-imgs/burger-3.jpg";
@@ -122,15 +127,16 @@ export const products = [
       },
       {
             id: 7,
-            title: "Extra Mustard Burger",
-            price: 18.75,
-            image01: burger02img01,
-            image02: burger02img02,
-            image03: burger02img03,
-            image04: burger02img04,
-            category: "Burger",
+            title: "Loaf Bread",
+            price: 13.25,
+            image01: bread01img01,
+            image02: bread01img02,
+            image03: bread01img03,
+            image04: bread01img04,
+            category: "Bread",
             desc: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aperiam nihil, nemo dolore perferendis praesentium modi, excepturi expedita maxime impedit nisi reiciendis quod asperiores aut cupiditate maiores quasi quia error voluptas",
       },
+
       {
             id: 8,
             title: "Spanish Pizza",
@@ -199,13 +205,13 @@ export const products = [
       },
       {
             id: 14,
-            title: "Italian Green Wave",
-            price: 50.0,
-            image01: pizza01img01,
-            image02: pizza02img02,
-            image03: pizza03img03,
-            image04: pizza01img04,
-            category: "Pizza",
+            title: "Crunchy Bread",
+            price: 10.0,
+            image01: bread01img04,
+            image02: bread01img03,
+            image03: bread01img02,
+            image04: bread01img01,
+            category: "Bread",
             desc: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aperiam nihil, nemo dolore perferendis praesentium modi, excepturi expedita maxime impedit nisi reiciendis quod asperiores aut cupiditate maiores quasi quia error voluptas",
       },
 
@@ -267,13 +273,13 @@ export const products = [
       },
       {
             id: 20,
-            title: " Barbaqued Special",
-            price: 44.0,
-            image01: dish02img04,
-            image02: dish03img03,
-            image03: dish02img02,
-            image04: dish01img01,
-            category: "Dish",
+            title: "Extra Mustard Burger",
+            price: 18.75,
+            image01: burger02img01,
+            image02: burger02img02,
+            image03: burger02img03,
+            image04: burger02img04,
+            category: "Burger",
             desc: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aperiam nihil, nemo dolore perferendis praesentium modi, excepturi expedita maxime impedit nisi reiciendis quod asperiores aut cupiditate maiores quasi quia error voluptas",
       },
 ];
