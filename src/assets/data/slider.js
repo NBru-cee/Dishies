@@ -30,7 +30,7 @@ export const sliderData = [
             image: slider04,
       },
       {
-            id: 1,
+            id: 5,
             title: "Restaurant Section also available.",
             desc: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Expedita voluptate ipsum dolores, repellat fugit similique quasi atque consequuntur enim, ratione accusamus vero rerum veritatis deserunt tempore facilis sequi optio voluptates.",
             image: slider05,

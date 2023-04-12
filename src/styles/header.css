@@ -1,0 +1,36 @@
+.logo__title {
+      background: linear-gradient(to left, rgb(9, 183, 9), #a3b70b, #c91c1c);
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      -moz-background-clip: text;
+}
+
+.link__btn {
+      text-transform: capitalize;
+      font-size: 1.1rem;
+      color: #0e1429 !important;
+      margin-left: 1rem;
+      font-weight: 500;
+}
+
+
+.link__btn:active,
+.link__btn:focus {
+      color: #c91c1c !important;
+}
+
+.badge {
+      background: linear-gradient(to right, #c91c1c 0%, yellow 100%);
+      padding: 5px;
+      border-radius: 50%;
+      font-size: 0.8rem;
+      width: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 20px;
+      position: absolute;
+      top: 0;
+      right: 0;
+}

@@ -1,8 +1,12 @@
 import React from 'react'
+import Wrapper from "../wrapper/Wrapper"
+import Hero from '../components/UI/Hero'
 
 const Home = () => {
   return (
-    <div>Home</div>
+        <Wrapper title="Home">
+              <Hero/>
+   </Wrapper>
   )
 }
 

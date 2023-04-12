@@ -1,6 +1,6 @@
 import React from "react";
 import {
-      BrowserRouter as Router,
+      BrowserRouter,
       Routes,
       Route,
       Navigate,
@@ -20,7 +20,7 @@ import Profile from "./pages/Profile";
 
 const App = () => {
       return (
-            <Router>
+            <BrowserRouter>
                   <Header />
                   <Routes>
                         <Route path="/" element={<Navigate to="/home" />} />
@@ -36,7 +36,7 @@ const App = () => {
                         <Route path="/cart" element={<Cart />} />
                   </Routes>
                   <Footer />
-            </Router>
+            </BrowserRouter>
       );
 };
 
