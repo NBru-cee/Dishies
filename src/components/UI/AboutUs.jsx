@@ -12,7 +12,7 @@ const AboutUs = () => {
                         direction="column"
                         spacing={1}
                         textAlign="center"
-                        px={12}
+                        px={6}
                   >
                         <Typography variant="h6" color=" #1c264c">
                               Who we are
@@ -29,18 +29,33 @@ const AboutUs = () => {
                               get from us.
                         </Typography>
                   </Stack>
-                  <Stack direction="row" spacing={2} mt={4}>
+                  <Stack
+                        sx={{
+                              display: "flex",
+                              flexWrap: "wrap",
+                              alignItems: "center",
+                              justifyContent: "center",
+                        }}
+                  >
                         <Services />
                   </Stack>
-                  <Typography
-                        variant="h4"
-                        color="maroon"
-                        my={4}
-                        textAlign="center"
+                  <Stack textAlign="center">
+                        <Typography variant="h4" color="maroon" my={4}>
+                              Dishies Restaurant
+                        </Typography>
+                        <Typography variant="body1" color="#1c264c">
+                              Dishies is for fast food delivery and restaurant
+                              services.
+                        </Typography>
+                  </Stack>
+                  <Stack
+                        sx={{
+                              display: "flex",
+                              flexWrap: "wrap",
+                              alignItems: "center",
+                              justifyContent: "center",
+                        }}
                   >
-                        Dishies Restaurant
-                  </Typography>
-                  <Stack direction="row" spacing={3}>
                         <RestoServices />
                   </Stack>
             </section>

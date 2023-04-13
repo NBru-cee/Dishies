@@ -27,8 +27,8 @@ const ProductCard = ({ item }) => {
                         flexDirection: "column",
                         gap: "0.4rem",
                         justifyContent: "space-between",
-                        height: "17rem",
-                        width: "20rem",
+                        height: "20rem",
+                        width: "18rem",
                   }}
                   className="single__product"
             >
@@ -50,7 +50,7 @@ const ProductCard = ({ item }) => {
                         <Box
                               sx={{
                                     padding: "1rem",
-                                    height: "7rem",
+                                    height: "10rem",
                               }}
                         >
                               <Rating

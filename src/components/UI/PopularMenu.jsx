@@ -19,11 +19,10 @@ const PopularMenu = () => {
                         </Box>
                         <Box
                               sx={{
-                                    display: "grid",
-                                    gridTemplateColumns: {
-                                          xs: "repeat(2, minmax(0, 1fr))",
-                                          sm: "repeat(3, minmax(0, 1fr))",
-                                    },
+                                    display: "flex",
+                                    flexWrap: "wrap",
+                                    alignItems: "center",
+                                    justifyContent: "center",
                               }}
                               className="popular__menu"
                         >

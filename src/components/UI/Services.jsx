@@ -4,51 +4,59 @@ import { services } from "../../assets/data/data";
 
 const Services = () => {
       return (
-            <Box
-                  sx={{
-                        display: "flex",
-                        alignItems: "center",
-                        justifyContent: "center",
-                        flexWrap: "wrap",
-                        gap: "1rem",
-                        padding: "1rem",
-                  }}
-            >
-                  {services.map((service) => (
-                        <Paper
-                              key={service.id}
-                              elevation={4}
-                              sx={{ width: "30%" }}
-                        >
-                              <Stack
-                                    direction="column"
-                                    spacing={1}
-                                    alignItems="center"
-                                    p={4}
-                                    height="20rem"
+            <section>
+                  <Box
+                        sx={{
+                              display: "flex",
+                              justifyContent: "center",
+                              flexWrap: "wrap",
+                              gap: "1rem",
+                              padding: "1rem",
+                        }}
+                        className="services__stack"
+                  >
+                        {services.map((service) => (
+                              <Paper
+                                    key={service.id}
+                                    elevation={4}
+                                    sx={{
+                                          width: "18rem",
+                                          height: "18rem",
+                                          display: "flex",
+                                          flexDirection: "column",
+                                          justifyContent: "space-around",
+                                    }}
                               >
-                                    <Box
-                                          sx={{
-                                                fontSize: "4rem",
-                                                background: "yellow",
-                                                color: "#1c264c",
-                                                borderRadius: "50%",
-                                                width: "6rem",
-                                                height: "6rem",
-                                                display: "flex",
-                                                alignItems: "center",
-                                                justifyContent: "center",
-                                          }}
+                                    <Stack
+                                          direction="column"
+                                          spacing={1}
+                                          alignItems="center"
+                                          p={4}
+                                          height="20rem"
                                     >
-                                          {service.icon}
-                                    </Box>
-                                    <Typography variant="body2">
-                                          {service.content}
-                                    </Typography>
-                              </Stack>
-                        </Paper>
-                  ))}
-            </Box>
+                                          <Box
+                                                sx={{
+                                                      fontSize: "4rem",
+                                                      background: "yellow",
+                                                      color: "maroon",
+                                                      borderRadius: "50%",
+                                                      width: "6rem",
+                                                      height: "6rem",
+                                                      display: "flex",
+                                                      alignItems: "center",
+                                                      justifyContent: "center",
+                                                }}
+                                          >
+                                                {service.icon}
+                                          </Box>
+                                          <Typography variant="body2">
+                                                {service.content}
+                                          </Typography>
+                                    </Stack>
+                              </Paper>
+                        ))}
+                  </Box>
+            </section>
       );
 };
 

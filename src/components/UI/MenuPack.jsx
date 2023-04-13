@@ -68,7 +68,20 @@ const MenuPack = () => {
                         </Typography>
                   </Box>
                   <Box>
-                        <Stack className="btn__stack" direction="row">
+                        <Stack
+                              sx={{
+                                    display: "flex",
+                                    flexWrap: "wrap",
+                                    alignItems: "center",
+                                    justifyContent: "center",
+                                    padding: "1rem",
+                                    borderRadius: "0.5rem",
+                                    flexDirection: "row",
+                                    gap: "1rem",
+                                    background:
+                                          "linear-gradient(to right, #eb3a3a 0%, #e46a6a 100%)",
+                              }}
+                        >
                               <Button
                                     className={`category__btn ${
                                           selectedCategory == "All"
@@ -159,17 +172,20 @@ const MenuPack = () => {
                   </Box>
                   <Box
                         sx={{
-                              display: "grid",
-                              gridTemplateColumns: {
-                                    xs: "repeat(3, minmax(0, 1fr))",
-                                    sm: "repeat(4, minmax(0, 1fr))",
-                              },
-                              gap: "1rem",
-                              mt: "1rem",
+                              display: "flex",
+                              flexWrap: "wrap",
+                              alignItems: "center",
+                              justifyContent: "center",
                         }}
+                        className="menu__stack"
                   >
-                        {allProducts.slice(0, 8).map((item) => (
-                              <Stack key={item.id} direction="row" spacing={2}>
+                        {allProducts.slice(0, 12).map((item) => (
+                              <Stack
+                                    key={item.id}
+                                    direction="row"
+                                    spacing={2}
+                                    m={2}
+                              >
                                     <ProductCard item={item} />
                               </Stack>
                         ))}

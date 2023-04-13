@@ -20,7 +20,11 @@ const Hero = () => {
             <section>
                   <Paper elevation={0} sx={{ p: 2 }}>
                         <Stack
-                              direction={{ xs: "column", sm: "row" }}
+                              direction={{
+                                    xs: "column",
+                                    sm: "column",
+                                    md: "row",
+                              }}
                               spacing={2}
                               alignItems="center"
                         >

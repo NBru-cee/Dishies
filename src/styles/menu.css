@@ -1,10 +1,3 @@
-@media only screen and (max-width: 576px) and (max-width: 400px) {
-      .popular__menu {
-            display: grid;
-            grid-template-columns: 1fr;
-      }
-}
-
 .single__product {
       animation: zoom 1s ease-in-out forwards;
 }
