@@ -4,3 +4,17 @@
             grid-template-columns: 1fr;
       }
 }
+
+.single__product {
+      animation: zoom 1s ease-in-out forwards;
+}
+
+@keyframes zoom {
+      from {
+            transform: scale(0);
+      }
+
+      to {
+            transform: scale(1);
+      }
+}

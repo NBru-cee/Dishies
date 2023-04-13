@@ -11,6 +11,7 @@ import {
       RiSecurePaymentLine,
       RiMoneyDollarCircleLine,
 } from "react-icons/ri";
+import { FaTruck } from "react-icons/fa";
 import service01 from "../../assets/imgs/common-imgs/service-02.png";
 import service02 from "../../assets/imgs/common-imgs/service-03.png";
 
@@ -47,7 +48,7 @@ export const services = [
       },
       {
             id: 2,
-            icon: <RiTruckLine />,
+            icon: <FaTruck />,
             content: " We also offer delivery services for customers. This includes our fast motorbike couriers and also professional truck drivers for those with much products that might require shipping.",
       },
       {
@@ -74,3 +75,4 @@ export const extraServices = [
             content: " Our staff is very experienced when it becomes to making ravishing dishes that can make your mouth salivary. Services are so quick and special so don't hesitate to come.",
       },
 ];
+

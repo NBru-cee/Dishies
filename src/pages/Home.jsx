@@ -3,6 +3,7 @@ import Wrapper from "../wrapper/Wrapper";
 import Hero from "../components/UI/Hero";
 import PopularMenu from "../components/UI/PopularMenu";
 import AboutUs from "../components/UI/AboutUs";
+import MenuPack from "../components/UI/MenuPack";
 
 const Home = () => {
       useEffect(() => {
@@ -15,6 +16,7 @@ const Home = () => {
                         <Hero />
                         <PopularMenu />
                         <AboutUs />
+                        <MenuPack />
                   </main>
             </Wrapper>
       );

@@ -1,0 +1,21 @@
+.btn__stack {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      padding: 1rem;
+      border-radius: 0.5rem;
+      justify-content: center;
+      margin: 3rem 0;
+      background: linear-gradient(to right, #eb3a3a 0%, #e46a6a 100%);
+}
+
+.category__btn {
+      border: 1px solid whitesmoke !important;
+      color: whitesmoke !important;
+      transition: 0.4s;
+}
+
+.active__category {
+      background: whitesmoke !important;
+      color: #eb3a3a !important;
+}

@@ -1,6 +1,6 @@
-import bread01img01 from "../imgs/product-imgs/bread(1).png";
+import bread01img01 from "../imgs/product-imgs/bread(3).png";
 import bread01img02 from "../imgs/product-imgs/bread(2).png";
-import bread01img03 from "../imgs/product-imgs/bread(3).png";
+import bread01img03 from "../imgs/product-imgs/bread(1).png";
 import bread01img04 from "../imgs/product-imgs/bread(4).png";
 
 import burger01img01 from "../imgs/product-imgs/burger-1.jpg";
@@ -33,10 +33,11 @@ import dish02img02 from "../imgs/product-imgs/dish-6.png";
 import dish02img03 from "../imgs/product-imgs/dish-7.png";
 import dish02img04 from "../imgs/product-imgs/dish-8.png";
 
-import dish03img01 from "../imgs/product-imgs/extras-2.jpg";
+import dish03img01 from "../imgs/product-imgs/dish-1.webp";
+import dish03img04 from "../imgs/product-imgs/extras-2.jpg";
 import dish03img02 from "../imgs/product-imgs/veggies-1.jpeg";
 import dish03img03 from "../imgs/product-imgs/veggies-2.webp";
-import dish03img04 from "../imgs/product-imgs/dish-1.webp";
+
 
 import pizza01img01 from "../imgs/product-imgs/pizza-1.jpg";
 import pizza01img02 from "../imgs/product-imgs/pizza-2.jpg";
@@ -88,9 +89,9 @@ export const products = [
             id: 3,
             title: "Shashlik Chicken",
             price: 50.5,
-            image01: chicken01img01,
+            image01: chicken01img03,
             image02: chicken01img02,
-            image03: chicken01img03,
+            image03: chicken01img01,
             image04: chicken01img04,
             category: "Chicken",
             desc: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aperiam nihil, nemo dolore perferendis praesentium modi, excepturi expedita maxime impedit nisi reiciendis quod asperiores aut cupiditate maiores quasi quia error voluptas",
@@ -177,10 +178,10 @@ export const products = [
             id: 11,
             title: "Barbaqued Chicken",
             price: 67.0,
-            image01: chicken01img04,
+            image01: chicken01img01,
             image02: chicken01img02,
             image03: chicken01img03,
-            image04: chicken01img01,
+            image04: chicken01img04,
             category: "Chicken",
             desc: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aperiam nihil, nemo dolore perferendis praesentium modi, excepturi expedita maxime impedit nisi reiciendis quod asperiores aut cupiditate maiores quasi quia error voluptas",
       },
@@ -233,8 +234,8 @@ export const products = [
             id: 16,
             title: " Taco Licioso",
             price: 17.45,
-            image01: tacos01img01,
-            image02: tacos01img04,
+            image01: tacos01img04,
+            image02: tacos01img01,
             image03: tacos01img02,
             image04: tacos01img03,
             category: "Tacos",
@@ -255,7 +256,7 @@ export const products = [
             id: 18,
             title: "Crunchy Dish",
             price: 64.25,
-            image01: dish02img01,
+            image01: dish03img03,
             image02: dish01img04,
             image03: dish02img03,
             image04: dish03img04,
@@ -276,22 +277,22 @@ export const products = [
       },
       {
             id: 20,
-            title: "Extra Mustard Burger",
-            price: 18.75,
-            image01: burger02img01,
-            image02: burger02img02,
-            image03: burger02img03,
-            image04: burger02img04,
-            category: "Burger",
+            title: " Mustard Sandwich",
+            price: 12.5,
+            image01: sandwich01img02,
+            image02: sandwich01img01,
+            category: "Sandwich",
             desc: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aperiam nihil, nemo dolore perferendis praesentium modi, excepturi expedita maxime impedit nisi reiciendis quod asperiores aut cupiditate maiores quasi quia error voluptas",
       },
       {
             id: 21,
-            title: " Mustard Sandwich",
-            price: 12.5,
-            image01: sandwich01img01,
-            image02: sandwich01img02,
-            category: "Sandwich",
+            title: "Extra Mustard Burger",
+            price: 18.75,
+            image01: burger02img03,
+            image02: burger02img02,
+            image03: burger02img03,
+            image04: burger02img04,
+            category: "Burger",
             desc: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aperiam nihil, nemo dolore perferendis praesentium modi, excepturi expedita maxime impedit nisi reiciendis quod asperiores aut cupiditate maiores quasi quia error voluptas",
       },
 ];

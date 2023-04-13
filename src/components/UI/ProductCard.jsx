@@ -30,6 +30,7 @@ const ProductCard = ({ item }) => {
                         height: "17rem",
                         width: "20rem",
                   }}
+                  className="single__product"
             >
                   <Box>
                         <Box sx={{ height: "10rem" }}>
@@ -69,7 +70,7 @@ const ProductCard = ({ item }) => {
                                     alignItems="center"
                               >
                                     <Typography variant="h6" gap={1}>
-                                          Price: $ &nbsp;
+                                          Price: $
                                           <span style={{ color: "maroon" }}>
                                                 {price}
                                           </span>
