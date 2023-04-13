@@ -1,5 +1,5 @@
 .logo__title {
-      background: linear-gradient(to left, rgb(9, 183, 9), #a3b70b, #c91c1c);
+      background: linear-gradient(to left, #09b709, #a3b70b, #c91c1c);
       background-clip: text;
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
@@ -10,13 +10,11 @@
       text-transform: capitalize;
       font-size: 1.1rem;
       color: #0e1429 !important;
-      margin-left: 1rem;
+      margin-left: 2rem;
       font-weight: 500;
 }
 
-
-.link__btn:active,
-.link__btn:focus {
+:is(.link__btn:active, .link__btn:hover, .link__btn:focus) {
       color: #c91c1c !important;
 }
 
@@ -33,4 +31,27 @@
       position: absolute;
       top: 0;
       right: 0;
+}
+
+.sticky__header {
+      position: sticky;
+      top: 0;
+      left: 0;
+      z-index: 10;
+      box-shadow: 0 7px 5px -5px black;
+}
+
+#heading {
+      background: linear-gradient(to right, #fb7a7a 0%, #cc3737 100%);
+}
+
+.search__link{
+      width: 100%;
+      padding: 0.3rem;
+      border-radius: 5px;
+      transition: .4s;
+}
+
+.search__link:hover{
+      background: #ccc;
 }

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import "../../styles/header.css";
 import {
       AppBar,
@@ -10,6 +10,7 @@ import {
       Stack,
       Drawer,
       Box,
+      Tooltip,
 } from "@mui/material";
 import { DinnerDining, ShoppingBag, Person, Close } from "@mui/icons-material";
 import { makeStyles } from "@mui/styles";
@@ -17,6 +18,7 @@ import { MdMenu } from "react-icons/md";
 import { links } from "../../assets/data/data";
 import { Link } from "react-router-dom";
 import Account from "../UI/Account";
+import SearchBar from "./SearchBar";
 
 const useStyles = makeStyles({
       close: {
@@ -33,13 +35,28 @@ const Header = () => {
       const [profileOpen, setProfileOpen] = useState(false);
       const [navOpen, setNavOpen] = useState(false);
       const [cartOpen, setCartOpen] = useState(false);
+      const headerRef = useRef();
       const open = Boolean(profileOpen);
       const closeProfile = () => {
             setProfileOpen(null);
       };
       const classes = useStyles();
+      useEffect(() => {
+            document.addEventListener("scroll", () => {
+                  if (
+                        document.body.scroll > 150 ||
+                        document.documentElement.scrollTop > 150
+                  ) {
+                        headerRef.current.classList.add("sticky__header");
+                  } else {
+                        headerRef.current.classList.remove("sticky__header");
+                  }
+            });
+            document.removeEventListener("scroll", () => {});
+      }, []);
+
       return (
-            <header>
+            <header ref={headerRef}>
                   <AppBar
                         position="static"
                         sx={{
@@ -100,22 +117,43 @@ const Header = () => {
                               </Stack>
 
                               <Stack direction="row">
-                                    <IconButton
-                                          sx={{ postion: "relative" }}
-                                          color="inherit"
-                                          onClick={() => setCartOpen(!cartOpen)}
+                                    <Tooltip
+                                          title="Cart"
+                                          placement="bottom"
+                                          arrow
+                                          enterDelay={1000}
+                                          leaveDelay={200}
                                     >
-                                          <ShoppingBag />
-                                          <span className="badge">2</span>
-                                    </IconButton>
-                                    <IconButton
-                                          color="inherit"
-                                          onClick={(e) =>
-                                                setProfileOpen(e.currentTarget)
-                                          }
+                                          <IconButton
+                                                sx={{ postion: "relative" }}
+                                                color="inherit"
+                                                onClick={() =>
+                                                      setCartOpen(!cartOpen)
+                                                }
+                                          >
+                                                <ShoppingBag />
+                                                <span className="badge">2</span>
+                                          </IconButton>
+                                    </Tooltip>
+                                    <Tooltip
+                                          title="Profile"
+                                          placement="bottom"
+                                          arrow
+                                          enterDelay={1000}
+                                          leaveDelay={200}
                                     >
-                                          <Person />
-                                    </IconButton>
+                                          <IconButton
+                                                color="inherit"
+                                                onClick={(e) =>
+                                                      setProfileOpen(
+                                                            e.currentTarget
+                                                      )
+                                                }
+                                          >
+                                                <Person />
+                                          </IconButton>
+                                    </Tooltip>
+
                                     <IconButton
                                           sx={{
                                                 display: {
@@ -197,6 +235,7 @@ const Header = () => {
                               </Drawer>
                         </Toolbar>
                   </AppBar>
+                  <SearchBar />
             </header>
       );
 };

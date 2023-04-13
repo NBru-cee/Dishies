@@ -28,10 +28,15 @@ input {
       outline: none;
 }
 
+input::placeholder{
+      color:inherit;
+      opacity: 0.7;
+}
+
 main {
       padding: 40px;
 }
 
-
-
-
+::-webkit-scrollbar{
+      display: none;
+}
