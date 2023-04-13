@@ -1,8 +1,71 @@
 import React from "react";
-import { TextField, Stack, IconButton } from "@mui/material";
+import { Stack, IconButton, Typography, Box, Tooltip } from "@mui/material";
+import { Email } from "@mui/icons-material";
+import "../../styles/menu.css";
 
 const NewsLetter = () => {
-      return <div>NewsLetter</div>;
+      return (
+            <section>
+                  <Stack direction="column" spacing={2}>
+                        <Box textAlign="center">
+                              <Typography
+                                    variant="h4"
+                                    color="maroon"
+                                    mb={1}
+                                    textAlign="center"
+                              >
+                                    Get in Touch
+                              </Typography>
+                              <Typography variant="body1" color="#1c264c">
+                                    Help improve dishies with a quick message
+                                    down here:
+                              </Typography>
+                        </Box>
+                        <Box>
+                              <Stack
+                                    sx={{
+                                          display: "flex",
+                                          alignItems: "center",
+                                          flexDirection: "row",
+                                          justifyContent: "center",
+                                          padding: "1rem",
+                                          background:
+                                                "linear-gradient(to left, #eb3a3a 0%, #e46a6a 100%)",
+                                          borderRadius: "0.5rem",
+                                    }}
+                              >
+                                    <textarea
+                                          placeholder="Send message..."
+                                          rows={2}
+                                          cols={100}
+                                    ></textarea>
+                                    <Tooltip
+                                          title="Email us"
+                                          placement="right"
+                                          arrow
+                                          enterDelay={500}
+                                          leaveDelay={100}
+                                    >
+                                          <IconButton
+                                                sx={{
+                                                      color: "whitesmoke",
+
+                                                      "&:hover": {
+                                                            transform:
+                                                                  "scale(1.1) ",
+                                                      },
+                                                }}
+                                          >
+                                                <Email
+                                                      sx={{ fontSize: "4rem" }}
+                                                />
+                                          </IconButton>
+                                    </Tooltip>
+                              </Stack>
+                        </Box>
+                  </Stack>
+            </section>
+      );
 };
 
 export default NewsLetter;

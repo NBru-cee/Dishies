@@ -40,6 +40,7 @@ const Hero = () => {
                                     </Typography>
                                     <Typography
                                           variant="body1"
+                                          color="#1c264c"
                                           mb={2}
                                           fontSize="clamp(1rem, 16px, 1.5rem)"
                                     >

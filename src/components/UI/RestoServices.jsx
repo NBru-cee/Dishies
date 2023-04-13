@@ -50,7 +50,10 @@ const RestoServices = () => {
                                                       style={{ width: "100%" }}
                                                 />
                                           </Box>
-                                          <Typography variant="body2">
+                                          <Typography
+                                                variant="body2"
+                                                color="#1c264c"
+                                          >
                                                 {service.content}
                                           </Typography>
                                     </Stack>
