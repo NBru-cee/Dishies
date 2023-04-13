@@ -41,10 +41,6 @@
       box-shadow: 0 7px 5px -5px black;
 }
 
-#heading {
-      background: linear-gradient(to right, #fb7a7a 0%, #cc3737 100%);
-}
-
 .search__link{
       width: 100%;
       padding: 0.3rem;
@@ -54,4 +50,8 @@
 
 .search__link:hover{
       background: #ccc;
+}
+
+#heding{
+      color: #1c264c;
 }

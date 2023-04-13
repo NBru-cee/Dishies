@@ -58,6 +58,9 @@ import tacos01img02 from "../imgs/product-imgs/tacos-2.jpg";
 import tacos01img03 from "../imgs/product-imgs/tacos-3.jpg";
 import tacos01img04 from "../imgs/product-imgs/tacos-4.jpg";
 
+import sandwich01img01 from "../imgs/product-imgs/sandwitch-1.webp";
+import sandwich01img02 from "../imgs/product-imgs/sandwitch-2.webp";
+
 export const products = [
       {
             id: 1,
@@ -84,7 +87,7 @@ export const products = [
       {
             id: 3,
             title: "Shashlik Chicken",
-            price: 70.5,
+            price: 50.5,
             image01: chicken01img01,
             image02: chicken01img02,
             image03: chicken01img03,
@@ -280,6 +283,15 @@ export const products = [
             image03: burger02img03,
             image04: burger02img04,
             category: "Burger",
+            desc: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aperiam nihil, nemo dolore perferendis praesentium modi, excepturi expedita maxime impedit nisi reiciendis quod asperiores aut cupiditate maiores quasi quia error voluptas",
+      },
+      {
+            id: 21,
+            title: " Mustard Sandwich",
+            price: 12.5,
+            image01: sandwich01img01,
+            image02: sandwich01img02,
+            category: "Sandwich",
             desc: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aperiam nihil, nemo dolore perferendis praesentium modi, excepturi expedita maxime impedit nisi reiciendis quod asperiores aut cupiditate maiores quasi quia error voluptas",
       },
 ];

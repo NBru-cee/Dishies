@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 import Wrapper from "../wrapper/Wrapper";
 import Hero from "../components/UI/Hero";
+import PopularMenu from "../components/UI/PopularMenu";
+import AboutUs from "../components/UI/AboutUs";
 
 const Home = () => {
       useEffect(() => {
@@ -9,7 +11,11 @@ const Home = () => {
 
       return (
             <Wrapper title="Home">
-                  <Hero />
+                  <main>
+                        <Hero />
+                        <PopularMenu />
+                        <AboutUs />
+                  </main>
             </Wrapper>
       );
 };

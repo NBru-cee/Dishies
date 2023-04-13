@@ -1,10 +1,5 @@
 import React from "react";
-import {
-      BrowserRouter,
-      Routes,
-      Route,
-      Navigate,
-} from "react-router-dom";
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import Header from "./components/header/Header";
 import Footer from "./components/footer/Footer";
 import Home from "./pages/Home";
@@ -17,6 +12,7 @@ import Checkout from "./pages/Checkout";
 import Menu from "./pages/Menu";
 import MenuItem from "./pages/MenuItem";
 import Profile from "./pages/Profile";
+import Missing from "./pages/Missing";
 
 const App = () => {
       return (
@@ -34,6 +30,7 @@ const App = () => {
                         <Route path="/foods/:id" element={<MenuItem />} />
                         <Route path="/checkout" element={<Checkout />} />
                         <Route path="/cart" element={<Cart />} />
+                        <Route path="*" element={<Missing />} />
                   </Routes>
                   <Footer />
             </BrowserRouter>
