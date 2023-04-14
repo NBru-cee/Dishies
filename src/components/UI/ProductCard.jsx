@@ -27,18 +27,33 @@ const ProductCard = ({ item }) => {
                         flexDirection: "column",
                         gap: "0.4rem",
                         justifyContent: "space-between",
-                        height: "20rem",
-                        width: "18rem",
+                        height: "17.5rem",
+                        width: "13.5rem",
                   }}
                   className="single__product"
             >
                   <Box>
-                        <Box sx={{ height: "10rem" }}>
+                        <Box
+                              sx={{
+                                    height: "10rem",
+                                    display: "flex",
+                                    alignItems: "center",
+                                    justifyContent: "center",
+                                    overflow: "hidden",
+                                    transition: "0.4s",
+                                    padding: "1.5rem",
+                                    "&:hover": {
+                                          transform: "scale(1.1)",
+                                    },
+                              }}
+                        >
                               <Link to={`/foods/${id}`}>
                                     <img
                                           src={image01}
                                           alt="product image"
                                           style={{
+                                                overflow: "hidden",
+                                                padding: "1rem",
                                                 width: "100%",
                                                 height: "100%",
                                                 objectFit: "cover",
@@ -50,7 +65,7 @@ const ProductCard = ({ item }) => {
                         <Box
                               sx={{
                                     padding: "1rem",
-                                    height: "10rem",
+                                    height: "7.5rem",
                               }}
                         >
                               <Rating

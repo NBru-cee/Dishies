@@ -13,20 +13,20 @@ import bread02img02 from "../imgs/product-imgs/loaf-bread-2.jpg";
 import bread02img03 from "../imgs/product-imgs/loaf-bread-3.jpg";
 import bread02img04 from "../imgs/product-imgs/loaf-bread-4.jpg";
 
-import burger01img01 from "../imgs/product-imgs/burger-1.jpg";
-import burger01img02 from "../imgs/product-imgs/burger-2.jpg";
-import burger01img03 from "../imgs/product-imgs/burger-3.jpg";
-import burger01img04 from "../imgs/product-imgs/burger-4.jpg";
+import burger01img01 from "../imgs/product-imgs/burger-2.jpg";
+import burger01img02 from "../imgs/product-imgs/burger-3.jpg";
+import burger01img03 from "../imgs/product-imgs/burger-4.jpg";
+import burger01img04 from "../imgs/product-imgs/burger-1.jpg";
 
 import burger02img01 from "../imgs/product-imgs/burger-5.jpg";
 import burger02img02 from "../imgs/product-imgs/burger-6.jpg";
 import burger02img03 from "../imgs/product-imgs/burger-7.jpg";
 import burger02img04 from "../imgs/product-imgs/burger-8.png";
 
-import cake01img01 from "../imgs/product-imgs/cake-1.jpg";
-import cake01img02 from "../imgs/product-imgs/cake-2.jpg";
-import cake01img03 from "../imgs/product-imgs/cake-3.png";
-import cake01img04 from "../imgs/product-imgs/cake-6.jpg";
+import cake01img01 from "../imgs/product-imgs/cake-6.jpg";
+import cake01img02 from "../imgs/product-imgs/cake-1.jpg";
+import cake01img03 from "../imgs/product-imgs/cake-2.jpg";
+import cake01img04 from "../imgs/product-imgs/cake-3.png";
 
 import cake02img01 from "../imgs/product-imgs/cake-5.png";
 import cake02img02 from "../imgs/product-imgs/cake-4.png";
@@ -48,8 +48,8 @@ import chicken01img02 from "../imgs/product-imgs/chicken-1.jpg";
 import chicken01img03 from "../imgs/product-imgs/chicken-2.jpg";
 import chicken01img04 from "../imgs/product-imgs/chicken-10.jpg";
 
-import chicken02img01 from "../imgs/product-imgs/chicken-6.jpg";
-import chicken02img02 from "../imgs/product-imgs/chicken-7.png";
+import chicken02img01 from "../imgs/product-imgs/chicken-7.png";
+import chicken02img02 from "../imgs/product-imgs/chicken-6.jpg";
 import chicken02img03 from "../imgs/product-imgs/chicken-8.jpg";
 import chicken02img04 from "../imgs/product-imgs/chicken-9.png";
 
@@ -67,6 +67,16 @@ import chicken05img01 from "../imgs/product-imgs/roasted-chicken-5.jpg";
 import chicken05img02 from "../imgs/product-imgs/roasted-chicken-6.jpg";
 import chicken05img03 from "../imgs/product-imgs/roasted-chicken-7.jpg";
 import chicken05img04 from "../imgs/product-imgs/roasted-chicken-8.jpg";
+
+import coffee01img01 from "../imgs/product-imgs/coffee-1.jpg";
+import coffee01img02 from "../imgs/product-imgs/coffee-2.jpg";
+import coffee01img03 from "../imgs/product-imgs/coffee-3.jpg";
+import coffee01img04 from "../imgs/product-imgs/coffee-4.jpg";
+
+import coffee02img01 from "../imgs/product-imgs/coffee-5.jpg";
+import coffee02img02 from "../imgs/product-imgs/coffee-6.jpg";
+import coffee02img03 from "../imgs/product-imgs/coffee-7.png";
+import coffee02img04 from "../imgs/product-imgs/coffee-7.png";
 
 import dish01img01 from "../imgs/product-imgs/dish-9.png";
 import dish01img02 from "../imgs/product-imgs/dish-2.png";
@@ -116,22 +126,13 @@ import tacos01img04 from "../imgs/product-imgs/tacos-4.jpg";
 import tacos02img01 from "../imgs/product-imgs/tacos-5.jpg";
 import tacos02img02 from "../imgs/product-imgs/tacos-6.jpg";
 import tacos02img03 from "../imgs/product-imgs/tacos-7.jpg";
-import tacos02img04 from "../imgs/product-imgs/tacos-8.jpg";
+import tacos02img04 from "../imgs/product-imgs/tacos-9.jpg";
 
-import tacos03img01 from "../imgs/product-imgs/tacos-9.jpg";
+import tacos03img01 from "../imgs/product-imgs/tacos-8.jpg";
 import tacos03img02 from "../imgs/product-imgs/tacos-10.jpg";
 import tacos03img03 from "../imgs/product-imgs/tacos-1.jpg";
 import tacos03img04 from "../imgs/product-imgs/tacos-12.jpg";
 
-import coffee01img01 from "../imgs/product-imgs/coffee-1.jpg";
-import coffee01img02 from "../imgs/product-imgs/coffee-2.jpg";
-import coffee01img03 from "../imgs/product-imgs/coffee-3.jpg";
-import coffee01img04 from "../imgs/product-imgs/coffee-4.jpg";
-
-import coffee02img01 from "../imgs/product-imgs/coffee-5.jpg";
-import coffee02img02 from "../imgs/product-imgs/coffee-6.jpg";
-import coffee02img03 from "../imgs/product-imgs/coffee-7.png";
-import coffee02img04 from "../imgs/product-imgs/coffee-7.png";
 
 import tea01img01 from "../imgs/product-imgs/tea-1.jpg";
 import tea01img02 from "../imgs/product-imgs/tea-2.jpg";
@@ -277,7 +278,7 @@ export const products = [
       },
       {
             id: 11,
-            title: "Barbaqued Chicken",
+            title: "Spicy Chicken",
             price: 67.0,
             image01: chicken02img01,
             image02: chicken02img02,
@@ -456,7 +457,7 @@ export const products = [
       {
             id: 27,
             title: " Salty  Fries",
-            price: 43.0,
+            price: 33.0,
             image01: fries02img01,
             image02: fries02img02,
             image03: fries02img03,

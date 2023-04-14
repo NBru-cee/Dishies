@@ -1,12 +1,13 @@
-import burger from "../imgs/product-imgs/burger-1.jpg";
-import cake from "../imgs/product-imgs/cake-1.jpg";
+import burger from "../imgs/product-imgs/burger-8.png";
+import cake from "../imgs/product-imgs/cake-6.jpg";
 import chicken from "../imgs/product-imgs/chicken-3.jpg";
 import dish from "../imgs/product-imgs/dish-5.png";
 import pizza from "../imgs/product-imgs/pizza-12.png";
-import sandwich from "../imgs/product-imgs/sandwitch-2.webp";
+import fries from "../imgs/product-imgs/fries-10.jpg";
+import bread from "../imgs/product-imgs/loaf-bread-3.jpg";
+import coffee from "../imgs/product-imgs/coffee-3.jpg";
 
 import {
-      RiTruckLine,
       Ri24HoursLine,
       RiSecurePaymentLine,
       RiMoneyDollarCircleLine,
@@ -32,12 +33,14 @@ export const infoLinks = [
 ];
 
 export const popularMenu = [
-      { id: 1, title: "Chicken Burger", price: "24.00", image01: burger },
+      { id: 13, title: "Cheese Burger", price: "27.00", image01: burger },
       { id: 4, title: "French Cake", price: "43.5", image01: cake },
       { id: 3, title: "Shashlik Chicken", price: "50.5", image01: chicken },
       { id: 6, title: "Chicken Dish", price: "64.25", image01: dish },
       { id: 10, title: "Pizza With Mushroom", price: "49.00", image01: pizza },
-      { id: 21, title: "Mustard Sandwich", price: "12.5", image01: sandwich },
+      { id: 20, title: "French Fries", price: "40.0", image01: fries },
+      { id: 7, title: "Loaf Bread", price: "13.0", image01: bread },
+      { id: 31, title: "Rwandan  Coffee", price: "30.0", image01: coffee },
 ];
 
 export const services = [
@@ -75,4 +78,3 @@ export const extraServices = [
             content: " Our staff is very experienced when it becomes to making ravishing dishes that can make your mouth salivary. Services are so quick and special so don't hesitate to come.",
       },
 ];
-
