@@ -1,9 +1,34 @@
-import React from "react";
-import { Stack, IconButton, Typography, Box, Tooltip } from "@mui/material";
+import React, { useState, forwardRef } from "react";
+import {
+      Stack,
+      IconButton,
+      Typography,
+      Box,
+      Tooltip,
+      Snackbar,
+      Alert,
+} from "@mui/material";
 import { RiSendPlaneLine } from "react-icons/ri";
 import "../../styles/home.css";
 
+const SnackbarAlert = forwardRef(function SnackbarAlert(props, ref) {
+      return <Alert ref={ref} {...props} elevation={6} />;
+});
+
 const NewsLetter = () => {
+      const [open, setOpen] = useState(false);
+      const [wordEntered, setWordEntered] = useState("");
+      const handleClose = (reason) => {
+            if (reason === "clickedaway") {
+                  return;
+            }
+            setOpen(false);
+      };
+      const handleClick = (e) => {
+            setOpen(true);
+            const input = document.querySelector("input");
+            input.value = "";
+      };
       return (
             <section>
                   <Stack direction="column" spacing={2}>
@@ -34,11 +59,13 @@ const NewsLetter = () => {
                                           borderRadius: "0.5rem",
                                     }}
                               >
-                                    <textarea
+                                    <input
                                           placeholder="Send message..."
-                                          rows={2}
-                                          cols={100}
-                                    ></textarea>
+                                          value={wordEntered}
+                                          onChange={(e) =>
+                                                setWordEntered(e.target.value)
+                                          }
+                                    />
                                     <Tooltip
                                           title="Email us"
                                           placement="right"
@@ -49,16 +76,22 @@ const NewsLetter = () => {
                                           <IconButton
                                                 sx={{
                                                       color: "whitesmoke",
-
+                                                      border: "2px solid whitesmoke",
+                                                      ml: "0.2rem",
+                                                      transition: "0.4s",
+                                                      display: "flex",
+                                                      alignItems: "center",
+                                                      justifyContent: "center",
                                                       "&:hover": {
                                                             transform:
                                                                   "scale(1.1) ",
                                                       },
                                                 }}
+                                                onClick={handleClick}
                                           >
                                                 <RiSendPlaneLine
                                                       style={{
-                                                            fontSize: "4rem",
+                                                            fontSize: "2rem",
                                                       }}
                                                 />
                                           </IconButton>
@@ -66,6 +99,15 @@ const NewsLetter = () => {
                               </Stack>
                         </Box>
                   </Stack>
+                  <Snackbar
+                        open={open}
+                        onClose={handleClose}
+                        autoHideDuration={2000}
+                  >
+                        <SnackbarAlert onClose={handleClose} severity="success">
+                              Message received successfully !
+                        </SnackbarAlert>
+                  </Snackbar>
             </section>
       );
 };

@@ -1,5 +1,12 @@
 import React, { useState } from "react";
-import { Typography, Box, Paper, IconButton, Stack, Tooltip } from "@mui/material";
+import {
+      Typography,
+      Box,
+      Paper,
+      IconButton,
+      Stack,
+      Tooltip,
+} from "@mui/material";
 import { Phone, PinDrop, Email, Search, Close } from "@mui/icons-material";
 import { products } from "../../assets/data/products";
 import { Link } from "react-router-dom";
@@ -26,7 +33,6 @@ const SearchBar = () => {
             setFilterData([]);
             setWordEntered("");
       };
-
       return (
             <Paper
                   sx={{
@@ -221,6 +227,7 @@ const SearchBar = () => {
                                                 to={`foods/${item.id}`}
                                                 className="search__link"
                                                 key={item.id}
+                                                onClick={clearInput}
                                           >
                                                 {item.title}
                                           </Link>

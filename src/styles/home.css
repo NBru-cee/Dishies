@@ -12,20 +12,22 @@
       }
 }
 
-textarea {
-      color: #1c264c;
-      background: whitesmoke;
-      resize: none;
+input {
+      color: #272626;
+      background: whitesmoke !important;
       padding: 1rem;
       border-radius: .5rem;
       border: none;
       outline: none;
+      font-size: 1.1rem;
+      width: 70%;
 }
 
-textarea::placeholder {
-      color: inherit;
+input::placeholder {
+      color: #222020;
       font-size: 1rem;
       font-family: inherit;
+      opacity: 0.7;
 }
 
 .btn__stack {

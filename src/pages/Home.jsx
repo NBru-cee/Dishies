@@ -5,6 +5,7 @@ import PopularMenu from "../components/UI/PopularMenu";
 import AboutUs from "../components/UI/AboutUs";
 import MenuPack from "../components/UI/MenuPack";
 import NewsLetter from "../components/UI/NewsLetter";
+import Download from "../components/UI/Download";
 
 const Home = () => {
       useEffect(() => {
@@ -19,6 +20,7 @@ const Home = () => {
                         <AboutUs />
                         <MenuPack />
                         <NewsLetter />
+                        <Download />
                   </main>
             </Wrapper>
       );

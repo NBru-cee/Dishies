@@ -47,6 +47,13 @@ section {
       padding: 40px 0;
 }
 
-.bag{
-      background: linear-gradient(to top, #fb3c3cd7 0%, #fd4848 100%);
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+span {
+      white-space: pre-wrap !important;
 }
