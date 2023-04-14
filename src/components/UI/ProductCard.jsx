@@ -11,13 +11,26 @@ import {
 } from "@mui/material";
 import { ShoppingCart } from "@mui/icons-material";
 import "../../styles/home.css";
+import { useDispatch } from "react-redux";
+import { cartActions } from "../../app/slices/cartSlice";
 
 const ProductCard = ({ item }) => {
       const { image01, price, title, id } = item;
+      const dispatch = useDispatch();
       const [ratingValue, setRatingValue] = useState(null);
       const handleRating = (newValue) => {
             setRatingValue(newValue);
             localStorage.setItem("rating", JSON.stringify(ratingValue));
+      };
+      const addProduct = () => {
+            dispatch(
+                  cartActions.addProduct({
+                        id,
+                        price,
+                        title,
+                        image01,
+                  })
+            );
       };
       return (
             <Paper
@@ -98,6 +111,7 @@ const ProductCard = ({ item }) => {
                                           leaveDelay={200}
                                     >
                                           <IconButton
+                                                onClick={addProduct}
                                                 sx={{
                                                       background: "maroon",
                                                       color: "whitesmoke",

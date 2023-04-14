@@ -30,7 +30,7 @@ const NewsLetter = () => {
             input.value = "";
       };
       return (
-            <section>
+            <section className="newsletter">
                   <Stack direction="column" spacing={2}>
                         <Box textAlign="center">
                               <Typography
@@ -105,7 +105,7 @@ const NewsLetter = () => {
                         autoHideDuration={2000}
                   >
                         <SnackbarAlert onClose={handleClose} severity="success">
-                              Message received successfully !
+                              Message sent successfully !
                         </SnackbarAlert>
                   </Snackbar>
             </section>

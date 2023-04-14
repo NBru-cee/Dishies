@@ -1,6 +1,6 @@
 import burger from "../imgs/product-imgs/burger-8.png";
 import cake from "../imgs/product-imgs/cake-6.jpg";
-import chicken from "../imgs/product-imgs/chicken-3.jpg";
+import chicken from "../imgs/product-imgs/roasted-chicken-1.jpg";
 import dish from "../imgs/product-imgs/dish-5.png";
 import pizza from "../imgs/product-imgs/pizza-12.png";
 import fries from "../imgs/product-imgs/fries-10.jpg";

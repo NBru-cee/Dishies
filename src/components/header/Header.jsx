@@ -1,9 +1,8 @@
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import "../../styles/header.css";
 import {
       AppBar,
       Toolbar,
-      Button,
       Menu,
       IconButton,
       Typography,
@@ -19,6 +18,9 @@ import { links } from "../../assets/data/data";
 import { Link } from "react-router-dom";
 import Account from "../UI/Account";
 import SearchBar from "./SearchBar";
+import { useSelector } from "react-redux";
+import { cartTotalQuantity } from "../../app/slices/cartSlice";
+import CartContainer from "../cart/CartContainer";
 
 const useStyles = makeStyles({
       close: {
@@ -32,6 +34,7 @@ const useStyles = makeStyles({
 });
 
 const Header = () => {
+      const totalQuantity = useSelector(cartTotalQuantity);
       const [profileOpen, setProfileOpen] = useState(false);
       const [navOpen, setNavOpen] = useState(false);
       const [cartOpen, setCartOpen] = useState(false);
@@ -41,19 +44,19 @@ const Header = () => {
             setProfileOpen(null);
       };
       const classes = useStyles();
-      // useEffect(() => {
-      //       document.addEventListener("scroll", () => {
-      //             if (
-      //                   document.body.scroll > 150 ||
-      //                   document.documentElement.scrollTop > 150
-      //             ) {
-      //                   headerRef.current.classList.add("sticky__header");
-      //             } else {
-      //                   headerRef.current.classList.remove("sticky__header");
-      //             }
-      //       });
-      //       document.removeEventListener("scroll", () => {});
-      // }, []);
+      useEffect(() => {
+            document.addEventListener("scroll", () => {
+                  if (
+                        document.body.scroll > 150 ||
+                        document.documentElement.scrollTop > 150
+                  ) {
+                        headerRef.current.classList.add("sticky__header");
+                  } else {
+                        headerRef.current.classList.remove("sticky__header");
+                  }
+            });
+            document.removeEventListener("scroll", () => {});
+      }, []);
 
       return (
             <header ref={headerRef}>
@@ -132,7 +135,9 @@ const Header = () => {
                                                 }
                                           >
                                                 <ShoppingBag />
-                                                <span className="badge">2</span>
+                                                <span className="badge">
+                                                      {totalQuantity}
+                                                </span>
                                           </IconButton>
                                     </Tooltip>
                                     <Tooltip
@@ -167,6 +172,7 @@ const Header = () => {
                                           <MdMenu />
                                     </IconButton>
                               </Stack>
+
                               <Menu
                                     anchorEl={profileOpen}
                                     open={open}
@@ -227,11 +233,12 @@ const Header = () => {
                               <Drawer
                                     anchor="right"
                                     open={cartOpen}
-                                    onClick={() => setCartOpen(false)}
+                                    onClose={() => setCartOpen(false)}
                               >
-                                    <Button variant="outlined" color="success">
-                                          Cart is Open
-                                    </Button>
+                                    <CartContainer
+                                          cartOpen={cartOpen}
+                                          setCartOpen={setCartOpen}
+                                    />
                               </Drawer>
                         </Toolbar>
                   </AppBar>

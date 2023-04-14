@@ -15,14 +15,14 @@ const totalAmount =
             ? JSON.parse(localStorage.getItem("totalAmount"))
             : 0;
 
-const setItems = (products, totalAmount, totalQuantity) => {
+const setProductFunction = (products, totalAmount, totalQuantity) => {
       localStorage.setItem("cartProducts", JSON.stringify(products));
       localStorage.setItem("totalAmount", JSON.stringify(totalAmount));
       localStorage.setItem("totalQuantity", JSON.stringify(totalQuantity));
 };
 
 const initialState = {
-      products: products,
+      cartProducts: products,
       totalAmount: totalAmount,
       totalQuantity: totalQuantity,
 };
@@ -33,23 +33,40 @@ const cartSlice = createSlice({
       reducers: {
             addProduct(state, action) {
                   const newProduct = action.payload;
-                  const existingProduct = state.products.find(
+                  const existingProduct = state.cartProducts.find(
                         (item) => item.id === newProduct.id
                   );
                   state.totalQuantity++;
                   if (!existingProduct) {
-                        state.products.unshift({
+                        state.cartProducts.unshift({
                               id: newProduct.id,
                               title: newProduct.title,
                               quantity: 1,
                               image01: newProduct.image01,
-                              desc: newProduct.desc,
+                              price: newProduct.price,
+                              totalPrice: newProduct.price,
                         });
+                  } else {
+                        existingProduct.totalQuantity++;
+                        existingProduct.totalPrice =
+                              existingProduct.totalPrice + newProduct.price;
                   }
+                  state.totalAmount = state.cartProducts.reduce(
+                        (total, product) =>
+                              total + product.price * product.quantity,
+                        0
+                  );
+                  setProductFunction(
+                        state.cartProducts.map((product) => product),
+                        state.totalAmount,
+                        state.totalQuantity
+                  );
             },
       },
 });
 
-export const selectedProducts = (state) => state.products;
+export const selectedProducts = (state) => state.cartProducts;
+export const cartTotalAmount = (state) => state.totalAmount;
+export const cartTotalQuantity = (state) => state.totalQuantity;
 export const cartActions = cartSlice.actions;
 export default cartSlice;

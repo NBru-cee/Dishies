@@ -43,10 +43,10 @@ import cake04img02 from "../imgs/product-imgs/cake-11.jpg";
 import cake04img03 from "../imgs/product-imgs/cake-12.jpg";
 import cake04img04 from "../imgs/product-imgs/cake-15.jpg";
 
-import chicken01img01 from "../imgs/product-imgs/chicken-3.jpg";
-import chicken01img02 from "../imgs/product-imgs/chicken-1.jpg";
-import chicken01img03 from "../imgs/product-imgs/chicken-2.jpg";
-import chicken01img04 from "../imgs/product-imgs/chicken-10.jpg";
+import chicken01img01 from "../imgs/product-imgs/chicken-10.jpg";
+import chicken01img02 from "../imgs/product-imgs/chicken-2.jpg";
+import chicken01img03 from "../imgs/product-imgs/chicken-3.jpg";
+import chicken01img04 from "../imgs/product-imgs/chicken-1.jpg";
 
 import chicken02img01 from "../imgs/product-imgs/chicken-7.png";
 import chicken02img02 from "../imgs/product-imgs/chicken-6.jpg";
@@ -378,10 +378,10 @@ export const products = [
             id: 17,
             title: "Thin Cream Cake",
             price: 33.0,
-            image01: cake01img02,
+            image01: cake01img04,
             image02: cake01img01,
             image03: cake01img03,
-            image04: cake01img04,
+            image04: cake01img02,
             delivers: 12,
             purchases: 32,
             category: "Cake",

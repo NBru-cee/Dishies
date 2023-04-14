@@ -12,7 +12,7 @@
       }
 }
 
-input {
+.newsletter input {
       color: #272626;
       background: whitesmoke !important;
       padding: 1rem;
@@ -23,7 +23,7 @@ input {
       width: 70%;
 }
 
-input::placeholder {
+.newsletter input::placeholder {
       color: #222020;
       font-size: 1rem;
       font-family: inherit;
