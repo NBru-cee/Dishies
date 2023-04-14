@@ -2,7 +2,7 @@ import React from "react";
 import { Stack, Typography, Box } from "@mui/material";
 import { popularMenu } from "../../assets/data/data";
 import ProductCard from "./ProductCard";
-import "../../styles/menu.css";
+import "../../styles/home.css";
 
 const PopularMenu = () => {
       return (

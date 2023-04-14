@@ -1,7 +1,7 @@
 import React from "react";
 import { Stack, IconButton, Typography, Box, Tooltip } from "@mui/material";
-import { Email } from "@mui/icons-material";
-import "../../styles/menu.css";
+import { RiSendPlaneLine } from "react-icons/ri";
+import "../../styles/home.css";
 
 const NewsLetter = () => {
       return (
@@ -56,8 +56,10 @@ const NewsLetter = () => {
                                                       },
                                                 }}
                                           >
-                                                <Email
-                                                      sx={{ fontSize: "4rem" }}
+                                                <RiSendPlaneLine
+                                                      style={{
+                                                            fontSize: "4rem",
+                                                      }}
                                                 />
                                           </IconButton>
                                     </Tooltip>

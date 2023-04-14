@@ -2,7 +2,7 @@ import { Button, Stack, Box, Typography } from "@mui/material";
 import React, { useState, useEffect } from "react";
 import { products } from "../../assets/data/products";
 import ProductCard from "./ProductCard";
-import "../../styles/menu-pack.css";
+import "../../styles/home.css";
 
 const MenuPack = () => {
       const [selectedCategory, setSelectedCategory] = useState("All");
@@ -42,9 +42,9 @@ const MenuPack = () => {
                   );
                   setAllProducts(filteredProducts);
             }
-            if (selectedCategory === "Sandwich") {
+            if (selectedCategory === "Fries") {
                   const filteredProducts = products.filter(
-                        (item) => item.category === "Sandwich"
+                        (item) => item.category === "Fries"
                   );
                   setAllProducts(filteredProducts);
             }
@@ -148,15 +148,15 @@ const MenuPack = () => {
                               </Button>
                               <Button
                                     className={`category__btn ${
-                                          selectedCategory == "Sandwich"
+                                          selectedCategory == "Fries"
                                                 ? "active__category"
                                                 : ""
                                     }`}
                                     onClick={() =>
-                                          setSelectedCategory("Sandwich")
+                                          setSelectedCategory("Fries")
                                     }
                               >
-                                    Sandwich
+                                    Fries
                               </Button>
                               <Button
                                     className={`category__btn ${

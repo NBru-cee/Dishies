@@ -10,7 +10,7 @@ import {
       Box,
 } from "@mui/material";
 import { ShoppingCart } from "@mui/icons-material";
-import "../../styles/menu.css";
+import "../../styles/home.css";
 
 const ProductCard = ({ item }) => {
       const { image01, price, title, id } = item;
