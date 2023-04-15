@@ -12,7 +12,7 @@
       }
 }
 
-.newsletter input {
+.newsletter textarea {
       color: #272626;
       background: whitesmoke !important;
       padding: 1rem;
@@ -23,7 +23,7 @@
       width: 70%;
 }
 
-.newsletter input::placeholder {
+.newsletter textarea::placeholder {
       color: #222020;
       font-size: 1rem;
       font-family: inherit;
@@ -50,4 +50,14 @@
 .active__category {
       background: whitesmoke !important;
       color: #eb3a3a !important;
+}
+
+.slider__container {
+      display: flex !important;
+      align-items: center;
+      gap: 2rem;
+      justify-content: center;
+      padding: 1rem;
+      height: 95vh;
+      border-radius: 0;
 }

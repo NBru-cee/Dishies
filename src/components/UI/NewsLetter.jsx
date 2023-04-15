@@ -59,13 +59,14 @@ const NewsLetter = () => {
                                           borderRadius: "0.5rem",
                                     }}
                               >
-                                    <input
+                                    <textarea
                                           placeholder="Send message..."
                                           value={wordEntered}
+                                          rows={1}
                                           onChange={(e) =>
                                                 setWordEntered(e.target.value)
                                           }
-                                    />
+                                    ></textarea>
                                     <Tooltip
                                           title="Email us"
                                           placement="right"

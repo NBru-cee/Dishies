@@ -39,10 +39,6 @@ main {
       padding: 0 50px;
 }
 
-::-webkit-scrollbar {
-      display: none;
-}
-
 section {
       padding: 40px 0;
 }

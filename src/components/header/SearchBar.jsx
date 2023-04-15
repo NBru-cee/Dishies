@@ -221,6 +221,7 @@ const SearchBar = () => {
                                           width: "80%",
                                           zIndex: "2",
                                     }}
+                                    className="search__container"
                               >
                                     {filterData.map((item) => (
                                           <Link

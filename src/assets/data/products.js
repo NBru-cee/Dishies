@@ -13,6 +13,21 @@ import bread02img02 from "../imgs/product-imgs/loaf-bread-2.jpg";
 import bread02img03 from "../imgs/product-imgs/loaf-bread-3.jpg";
 import bread02img04 from "../imgs/product-imgs/loaf-bread-4.jpg";
 
+import bread03img01 from "../imgs/product-imgs/bread-5.png";
+import bread03img02 from "../imgs/product-imgs/bread-6.jpg";
+import bread03img03 from "../imgs/product-imgs/bread-7.jpg";
+import bread03img04 from "../imgs/product-imgs/bread-8.jpg";
+
+import bruchette01img01 from "../imgs/product-imgs/bruchette-1.jpg";
+import bruchette01img02 from "../imgs/product-imgs/bruchette-2.jpg";
+import bruchette01img03 from "../imgs/product-imgs/bruchette-3.jpg";
+import bruchette01img04 from "../imgs/product-imgs/bruchette-4.jpg";
+
+import bruchette02img01 from "../imgs/product-imgs/bruchette-5.jpg";
+import bruchette02img02 from "../imgs/product-imgs/bruchette-6.jpg";
+import bruchette02img03 from "../imgs/product-imgs/bruchette-7.jpg";
+import bruchette02img04 from "../imgs/product-imgs/bruchette-8.jpg";
+
 import burger01img01 from "../imgs/product-imgs/burger-2.jpg";
 import burger01img02 from "../imgs/product-imgs/burger-3.jpg";
 import burger01img03 from "../imgs/product-imgs/burger-4.jpg";
@@ -43,15 +58,20 @@ import cake04img02 from "../imgs/product-imgs/cake-11.jpg";
 import cake04img03 from "../imgs/product-imgs/cake-12.jpg";
 import cake04img04 from "../imgs/product-imgs/cake-15.jpg";
 
-import chicken01img01 from "../imgs/product-imgs/chicken-10.jpg";
+import cake05img01 from "../imgs/product-imgs/big-cake-1.jpg";
+import cake05img02 from "../imgs/product-imgs/big-cake-2.jpg";
+import cake05img03 from "../imgs/product-imgs/big-cake-3.jpg";
+import cake05img04 from "../imgs/product-imgs/big-cake-4.jpg";
+
+import chicken01img01 from "../imgs/product-imgs/chicken-15.jpg";
 import chicken01img02 from "../imgs/product-imgs/chicken-2.jpg";
 import chicken01img03 from "../imgs/product-imgs/chicken-3.jpg";
 import chicken01img04 from "../imgs/product-imgs/chicken-1.jpg";
 
-import chicken02img01 from "../imgs/product-imgs/chicken-7.png";
-import chicken02img02 from "../imgs/product-imgs/chicken-6.jpg";
-import chicken02img03 from "../imgs/product-imgs/chicken-8.jpg";
-import chicken02img04 from "../imgs/product-imgs/chicken-9.png";
+import chicken02img01 from "../imgs/product-imgs/chicken-16.jpg";
+import chicken02img02 from "../imgs/product-imgs/chicken-8.jpg";
+import chicken02img03 from "../imgs/product-imgs/chicken-6.jpg";
+import chicken02img04 from "../imgs/product-imgs/chicken-7.png";
 
 import chicken03img01 from "../imgs/product-imgs/chicken-11.jpg";
 import chicken03img02 from "../imgs/product-imgs/chicken-12.png";
@@ -93,6 +113,11 @@ import dish03img04 from "../imgs/product-imgs/dish-10.jpg";
 import dish03img02 from "../imgs/product-imgs/dish-11.jpg";
 import dish03img03 from "../imgs/product-imgs/dish-12.jpg";
 
+import dish04img01 from "../imgs/product-imgs/dish-13.jpg";
+import dish04img04 from "../imgs/product-imgs/dish-14.jpg";
+import dish04img02 from "../imgs/product-imgs/dish-15.jpg";
+import dish04img03 from "../imgs/product-imgs/dish-16.jpg";
+
 import fries01img01 from "../imgs/product-imgs/fries-1.jpg";
 import fries01img02 from "../imgs/product-imgs/fries-2.jpg";
 import fries01img03 from "../imgs/product-imgs/fries-3.jpg";
@@ -102,6 +127,26 @@ import fries02img01 from "../imgs/product-imgs/fries-5.jpg";
 import fries02img02 from "../imgs/product-imgs/fries-6.jpg";
 import fries02img03 from "../imgs/product-imgs/fries-7.jpg";
 import fries02img04 from "../imgs/product-imgs/fries-8.jpg";
+
+import fries03img01 from "../imgs/product-imgs/fries-9.jpg";
+import fries03img02 from "../imgs/product-imgs/fries-10.jpg";
+import fries03img03 from "../imgs/product-imgs/fries-11.jpg";
+import fries03img04 from "../imgs/product-imgs/fries-12.jpg";
+
+import fries04img01 from "../imgs/product-imgs/fries-13.jpg";
+import fries04img02 from "../imgs/product-imgs/fries-14.jpg";
+import fries04img03 from "../imgs/product-imgs/fries-15.jpg";
+import fries04img04 from "../imgs/product-imgs/fries-16.jpg";
+
+import grilledChicken01img01 from "../imgs/product-imgs/grilled-chicken-1.jpg";
+import grilledChicken01img02 from "../imgs/product-imgs/grilled-chicken-2.jpg";
+import grilledChicken01img03 from "../imgs/product-imgs/grilled-chicken-3.jpg";
+import grilledChicken01img04 from "../imgs/product-imgs/grilled-chicken-4.jpg";
+
+import grilledChicken02img01 from "../imgs/product-imgs/grilled-chicken-5.jpg";
+import grilledChicken02img02 from "../imgs/product-imgs/grilled-chicken-6.jpg";
+import grilledChicken02img03 from "../imgs/product-imgs/grilled-chicken-7.jpg";
+import grilledChicken02img04 from "../imgs/product-imgs/grilled-chicken-8.jpg";
 
 import pizza01img01 from "../imgs/product-imgs/pizza-1.jpg";
 import pizza01img02 from "../imgs/product-imgs/pizza-2.jpg";

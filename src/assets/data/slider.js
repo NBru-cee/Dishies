@@ -1,7 +1,7 @@
 import slider01 from "../imgs/slider-imgs/slider01.png";
 import slider02 from "../imgs/slider-imgs/slider02.jpg";
 import slider03 from "../imgs/slider-imgs/slider03.png";
-import slider04 from "../imgs/slider-imgs/slider04.webp";
+import slider04 from "../imgs/slider-imgs/slider04.jpg";
 import slider05 from "../imgs/slider-imgs/slider05.png";
 
 export const sliderData = [
@@ -26,7 +26,7 @@ export const sliderData = [
       {
             id: 4,
             title: "All Categories of Food available at our website.",
-            desc: "Our website offers a wide variety of food categories for both dining in and food delivery. Our menu features appetizers like calamari and garlic bread, entrees ranging from classic grilled chicken to veggie burgers, desserts including tiramisu and fruit tart, and beverages like soft drinks and cocktails. With our diverse selection, there's something for everyone to enjoy.",
+            desc: "Our website offers a wide variety of food categories for both dining in and food delivery. Our menu features appetizers like calamari and crunchy bread, entrees ranging from classic grilled chicken to veggie burgers, desserts including tacos and  tea, and beverages like soft drinks and cocktails. With our diverse selection, there's something for everyone to enjoy.In addition our beverages are for any time you wish whether the new ones or old ones that you may have liked they're available in our special menu so don't hesitate to ask for the drink that united you and your lovely ones",
             image: slider04,
       },
       {

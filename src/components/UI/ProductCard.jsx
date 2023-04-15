@@ -41,7 +41,7 @@ const ProductCard = ({ item }) => {
                         gap: "0.4rem",
                         justifyContent: "space-between",
                         height: "17.5rem",
-                        width: "13.5rem",
+                        width: "13rem",
                   }}
                   className="single__product"
             >

@@ -41,17 +41,17 @@
       box-shadow: 0 7px 5px -5px black;
 }
 
-.search__link{
+.search__link {
       width: 100%;
       padding: 0.3rem;
       border-radius: 5px;
       transition: .4s;
 }
 
-.search__link:hover{
+.search__link:hover {
       background: #ccc;
 }
 
-#heding{
-      color: #1c264c;
+.search__container::-webkit-scrollbar {
+      display: none;
 }
