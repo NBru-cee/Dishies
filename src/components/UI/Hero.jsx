@@ -13,21 +13,32 @@ const Hero = () => {
             speed: 1000,
             slidesToShow: 1,
             slidesToScroll: 1,
+            pauseOnHover: false,
+            dots: true,
+            arrows: true,
       };
       return (
             <section>
-                  <Paper elevation={0} sx={{ p: 2 }}>
-                        <Slider {...settings}>
+                  <Paper
+                        elevation={0}
+                        sx={{
+                              p: 2,
+                              display: "flex",
+                              alignItems: "center",
+                              flexDirection: {
+                                    xs: "row",
+                                    sm: "row",
+                                    md: "column",
+                              },
+                        }}
+                  >
+                        <Slider {...settings} >
                               {sliderData.map((item) => (
                                     <Stack
                                           key={item.id}
-                                          direction={{
-                                                xs: "column",
-                                                sm: "column",
-                                                md: "row",
-                                          }}
                                           spacing={2}
                                           alignItems="center"
+                                          display="flex"
                                     >
                                           <Box flexBasis="50%">
                                                 <Typography

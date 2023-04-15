@@ -1,5 +1,5 @@
 import slider01 from "../imgs/slider-imgs/slider01.png";
-import slider02 from "../imgs/slider-imgs/slider02.png";
+import slider02 from "../imgs/slider-imgs/slider02.jpg";
 import slider03 from "../imgs/slider-imgs/slider03.png";
 import slider04 from "../imgs/slider-imgs/slider04.webp";
 import slider05 from "../imgs/slider-imgs/slider05.png";

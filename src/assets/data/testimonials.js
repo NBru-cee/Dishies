@@ -40,7 +40,7 @@ export const clientData = [
             id: 4,
             name: "Lilly Saint",
             title: "Fashion Designer",
-            content: " Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis quisquam a ut aspernatur? Sed exercitationem, aliquid numquam cupiditate a illum corporis expedita aperiam magni tempore natus esse maiores fuga voluptatem.",
+            content: " As a fashion designer, I have a keen eye for detail and aesthetics, and I appreciate when these qualities are reflected in all aspects of life. That's why I was blown away by the restaurant and food delivery app that I recently discovered. Not only is the interface sleek and user-friendly, but the food itself is a work of art.",
             image: client04,
       },
       {
