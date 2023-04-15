@@ -13,69 +13,71 @@ const Hero = () => {
             speed: 1000,
             slidesToShow: 1,
             slidesToScroll: 1,
-            arrows: true,
-            dots: true,
       };
       return (
             <section>
                   <Paper elevation={0} sx={{ p: 2 }}>
-                        <Stack
-                              direction={{
-                                    xs: "column",
-                                    sm: "column",
-                                    md: "row",
-                              }}
-                              spacing={2}
-                              alignItems="center"
-                        >
-                              <Box flexBasis="50%">
-                                    <Typography
-                                          variant="h5"
-                                          color="#c91212"
-                                          mb={2}
-                                          whiteSpace="nowrap"
-                                          fontSize="clamp(2rem, 20px, 2.5rem)"
+                        <Slider {...settings}>
+                              {sliderData.map((item) => (
+                                    <Stack
+                                          key={item.id}
+                                          direction={{
+                                                xs: "column",
+                                                sm: "column",
+                                                md: "row",
+                                          }}
+                                          spacing={2}
+                                          alignItems="center"
                                     >
-                                          We have amazing food for you
-                                    </Typography>
-                                    <Typography
-                                          variant="body1"
-                                          color="#1c264c"
-                                          mb={2}
-                                          fontSize="clamp(1rem, 16px, 1.5rem)"
-                                    >
-                                          Almost all kinds of foods you can
-                                          dream of are here with us on an
-                                          exclusive price that anyone can
-                                          afford. The best quality of food you
-                                          can have is what we give you so we are
-                                          here to answer your problems with
-                                          hunger.
-                                    </Typography>
-                                    <Stack direction="row" spacing={4}>
-                                          <Button
-                                                variant="contained"
-                                                color="error"
-                                          >
-                                                Order
-                                          </Button>
-                                          <Button
-                                                variant="outlined"
-                                                color="error"
-                                                endIcon={<ChevronRight />}
-                                          >
-                                                See All
-                                          </Button>
+                                          <Box flexBasis="50%">
+                                                <Typography
+                                                      variant="h5"
+                                                      color="#c91212"
+                                                      mb={2}
+                                                      whiteSpace="nowrap"
+                                                      fontSize="clamp(2rem, 20px, 2.5rem)"
+                                                >
+                                                      {item.title}
+                                                </Typography>
+                                                <Typography
+                                                      variant="body1"
+                                                      color="#1c264c"
+                                                      mb={2}
+                                                      fontSize="clamp(1rem, 16px, 1.5rem)"
+                                                >
+                                                      {item.desc}
+                                                </Typography>
+                                                <Stack
+                                                      direction="row"
+                                                      spacing={4}
+                                                >
+                                                      <Button
+                                                            variant="contained"
+                                                            color="error"
+                                                      >
+                                                            Order
+                                                      </Button>
+                                                      <Button
+                                                            variant="outlined"
+                                                            color="error"
+                                                            endIcon={
+                                                                  <ChevronRight />
+                                                            }
+                                                      >
+                                                            See All
+                                                      </Button>
+                                                </Stack>
+                                          </Box>
+                                          <Box flexBasis="50%">
+                                                <img
+                                                      src={item.image}
+                                                      alt="hero image"
+                                                      style={{ width: "100%" }}
+                                                />
+                                          </Box>
                                     </Stack>
-                              </Box>
-                              <Box flexBasis="50%">
-                                    <img
-                                          src={sliderImg}
-                                          alt="hero image"
-                                          style={{ width: "100%" }}
-                                    />
-                              </Box>
-                        </Stack>
+                              ))}
+                        </Slider>
                   </Paper>
             </section>
       );

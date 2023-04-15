@@ -175,7 +175,7 @@ export const products = [
             delivers: 17,
             purchases: 30,
             category: "Burger",
-            desc: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aperiam nihil, nemo dolore perferendis praesentium modi, excepturi expedita maxime impedit nisi reiciendis quod asperiores aut cupiditate maiores quasi quia error voluptas",
+            desc: "Chicken burgers offer several benefits, including being a good source of protein, lower in fat compared to beef burgers, versatile in preparation and customization, nutrient-dense with important vitamins and minerals, and a lower risk of certain diseases such as heart disease and certain types of cancer.",
       },
       {
             id: 2,
@@ -188,7 +188,7 @@ export const products = [
             delivers: 20,
             purchases: 31,
             category: "Tacos",
-            desc: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aperiam nihil, nemo dolore perferendis praesentium modi, excepturi expedita maxime impedit nisi reiciendis quod asperiores aut cupiditate maiores quasi quia error voluptas",
+            desc: "Mexican tacos are a delicious, versatile, and nutritious food made with fresh ingredients that can be customized to suit different tastes and dietary needs. They are easy to prepare and provide a good source of protein, fiber, vitamins, and minerals, making them a great choice for any meal.",
       },
       {
             id: 3,
@@ -201,7 +201,7 @@ export const products = [
             delivers: 18,
             purchases: 32,
             category: "Chicken",
-            desc: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aperiam nihil, nemo dolore perferendis praesentium modi, excepturi expedita maxime impedit nisi reiciendis quod asperiores aut cupiditate maiores quasi quia error voluptas",
+            desc: "Shashlik chicken is a good source of protein and contains spices with antioxidant and anti-inflammatory properties that may reduce the risk of chronic diseases. Grilling or roasting it can also lower its fat content compared to fried options.",
       },
       {
             id: 4,
@@ -214,7 +214,7 @@ export const products = [
             delivers: 19,
             purchases: 33,
             category: "Cake",
-            desc: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aperiam nihil, nemo dolore perferendis praesentium modi, excepturi expedita maxime impedit nisi reiciendis quod asperiores aut cupiditate maiores quasi quia error voluptas",
+            desc: "French cake, also called gateau, is a popular dessert from France. It's made with butter, sugar, flour, eggs, and flavors like vanilla or chocolate. French cake has a light texture and buttery taste, and can be served plain or decorated with toppings like icing, whipped cream, or fruit.",
       },
       {
             id: 5,
@@ -227,7 +227,7 @@ export const products = [
             delivers: 16,
             purchases: 34,
             category: "Pizza",
-            desc: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aperiam nihil, nemo dolore perferendis praesentium modi, excepturi expedita maxime impedit nisi reiciendis quod asperiores aut cupiditate maiores quasi quia error voluptas",
+            desc: "Double cheese pizza is a good source of protein and calcium, and can be a satisfying and convenient option. However, it should be consumed in moderation due to its high calorie, fat, and sodium content.",
       },
       {
             id: 6,
@@ -240,7 +240,7 @@ export const products = [
             delivers: 0,
             purchases: 35,
             category: "Dish",
-            desc: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aperiam nihil, nemo dolore perferendis praesentium modi, excepturi expedita maxime impedit nisi reiciendis quod asperiores aut cupiditate maiores quasi quia error voluptas",
+            desc: "Grilled chicken is a healthy and versatile dish that's high in lean protein and low in fat. It's also a great canvas for a variety of seasonings and can be paired with vegetables to create a delicious and nutritious meal.",
       },
       {
             id: 7,
@@ -253,7 +253,7 @@ export const products = [
             delivers: 30,
             purchases: 29,
             category: "Bread",
-            desc: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aperiam nihil, nemo dolore perferendis praesentium modi, excepturi expedita maxime impedit nisi reiciendis quod asperiores aut cupiditate maiores quasi quia error voluptas",
+            desc: "Loaf bread is a convenient and versatile food that is a good source of carbohydrates, and can be enriched with vitamins and minerals. It can be used as a base for various toppings, spreads, and sandwich fillings. Choosing whole grain loaf bread is recommended as it contains more fiber and nutrients than refined bread.",
       },
 
       {
@@ -267,7 +267,7 @@ export const products = [
             delivers: 22,
             purchases: 37,
             category: "Pizza",
-            desc: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aperiam nihil, nemo dolore perferendis praesentium modi, excepturi expedita maxime impedit nisi reiciendis quod asperiores aut cupiditate maiores quasi quia error voluptas",
+            desc: "Spanish pizza combines Mediterranean ingredients like tomatoes, olives, and olive oil, and is an easy and customizable option for a quick dinner. However, it should be consumed in moderation as it can be high in calories and fat.",
       },
       {
             id: 9,
@@ -280,7 +280,7 @@ export const products = [
             delivers: 0,
             purchases: 38,
             category: "Dish",
-            desc: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aperiam nihil, nemo dolore perferendis praesentium modi, excepturi expedita maxime impedit nisi reiciendis quod asperiores aut cupiditate maiores quasi quia error voluptas",
+            desc: "Special Veggie is a good source of fiber, vitamins, and minerals and may help reduce the risk of certain chronic diseases. However, its nutritional value and calorie content may vary depending on the crust and cheese used.",
       },
       {
             id: 10,
@@ -293,7 +293,7 @@ export const products = [
             delivers: 20,
             purchases: 35,
             category: "Pizza",
-            desc: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aperiam nihil, nemo dolore perferendis praesentium modi, excepturi expedita maxime impedit nisi reiciendis quod asperiores aut cupiditate maiores quasi quia error voluptas",
+            desc: "Mushroom pizza is a tasty and nutritious option. Mushrooms are low in calories, high in fiber and nutrients, and provide an umami flavor to pizza. However, it's important to choose a whole grain crust and limit high-calorie toppings for a healthier option",
       },
       {
             id: 11,
@@ -306,7 +306,7 @@ export const products = [
             delivers: 21,
             purchases: 34,
             category: "Chicken",
-            desc: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aperiam nihil, nemo dolore perferendis praesentium modi, excepturi expedita maxime impedit nisi reiciendis quod asperiores aut cupiditate maiores quasi quia error voluptas",
+            desc: "Spicy chicken contains capsaicin, which may boost metabolism and reduce inflammation. It's also a good source of protein, but should be consumed in moderation due to high calorie and sodium content in some dishes.",
       },
       {
             id: 12,
@@ -319,7 +319,7 @@ export const products = [
             delivers: 0,
             purchases: 33,
             category: "Dish",
-            desc: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aperiam nihil, nemo dolore perferendis praesentium modi, excepturi expedita maxime impedit nisi reiciendis quod asperiores aut cupiditate maiores quasi quia error voluptas",
+            desc: "Chips and pasta is a tasty dish that combines the crunchiness of chips with the softness of pasta. It is a quick and easy meal to prepare, making it a convenient option for those short on time. However, it is important to be mindful of the high calorie and carbohydrate content of this dish, which may not be suitable for those on a restricted diet",
       },
       {
             id: 13,
@@ -332,7 +332,7 @@ export const products = [
             delivers: 34,
             purchases: 21,
             category: "Burger",
-            desc: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aperiam nihil, nemo dolore perferendis praesentium modi, excepturi expedita maxime impedit nisi reiciendis quod asperiores aut cupiditate maiores quasi quia error voluptas",
+            desc: "Cheese Burger provides a good source of protein and may offer some essential nutrients. However, it can also be high in calories, fat, and sodium, so it should be consumed in moderation as part of a balanced diet",
       },
       {
             id: 14,
@@ -345,7 +345,7 @@ export const products = [
             delivers: 44,
             purchases: 35,
             category: "Bread",
-            desc: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aperiam nihil, nemo dolore perferendis praesentium modi, excepturi expedita maxime impedit nisi reiciendis quod asperiores aut cupiditate maiores quasi quia error voluptas",
+            desc: "Crunchy bread is a crispy and satisfying food that can be enjoyed as a snack or as a complement to meals. Its texture and crunchiness can add variety to the diet, while its fiber content may support digestive health. However, it is important to choose bread made with whole grains, as they contain more nutrients and fiber than refined white bread.",
       },
 
       {
@@ -359,7 +359,7 @@ export const products = [
             delivers: 32,
             purchases: 33,
             category: "Burger",
-            desc: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aperiam nihil, nemo dolore perferendis praesentium modi, excepturi expedita maxime impedit nisi reiciendis quod asperiores aut cupiditate maiores quasi quia error voluptas",
+            desc: "Deluxe burger is a tasty and filling option that is often made with high-quality beef, cheese, vegetables, and condiments. It can provide a good source of protein and various nutrients, depending on the ingredients used",
       },
       {
             id: 16,
@@ -372,7 +372,7 @@ export const products = [
             delivers: 22,
             purchases: 23,
             category: "Tacos",
-            desc: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aperiam nihil, nemo dolore perferendis praesentium modi, excepturi expedita maxime impedit nisi reiciendis quod asperiores aut cupiditate maiores quasi quia error voluptas",
+            desc: " Tacos Licioso is  a good source of protein and fiber, and can be customized to suit individual tastes and preferences. However, it is important to be mindful of portion sizes and choose healthier toppings like fresh salsa, guacamole, or grilled vegetables to avoid excess calories and unhealthy fats.",
       },
       {
             id: 17,
@@ -385,7 +385,7 @@ export const products = [
             delivers: 12,
             purchases: 32,
             category: "Cake",
-            desc: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aperiam nihil, nemo dolore perferendis praesentium modi, excepturi expedita maxime impedit nisi reiciendis quod asperiores aut cupiditate maiores quasi quia error voluptas",
+            desc: "Thin cream cake is a delicious dessert that is characterized by its light, fluffy texture and creamy filling. It is often made with layers of delicate sponge cake and whipped cream, and can be flavored with a variety of ingredients like vanilla, chocolate, or fruit. ",
       },
       {
             id: 18,
@@ -398,7 +398,7 @@ export const products = [
             delivers: 0,
             purchases: 25,
             category: "Dish",
-            desc: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aperiam nihil, nemo dolore perferendis praesentium modi, excepturi expedita maxime impedit nisi reiciendis quod asperiores aut cupiditate maiores quasi quia error voluptas",
+            desc: "Crunchy dishes are enjoyable to eat and can provide a range of textures and flavors. They can also be a good source of fiber, vitamins, and minerals, especially when made with fresh fruits and vegetables.",
       },
 
       {
@@ -412,7 +412,7 @@ export const products = [
             delivers: 35,
             purchases: 31,
             category: "Pizza",
-            desc: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aperiam nihil, nemo dolore perferendis praesentium modi, excepturi expedita maxime impedit nisi reiciendis quod asperiores aut cupiditate maiores quasi quia error voluptas",
+            desc: "Homemade pizza is a delicious and customizable dish that can be made with fresh, wholesome ingredients. By making it at home, you have control over the amount of cheese, sauce, and toppings, making it a healthier option than many store-bought varieties",
       },
       {
             id: 20,
@@ -425,7 +425,7 @@ export const products = [
             delivers: 67,
             purchases: 32,
             category: "Fries",
-            desc: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aperiam nihil, nemo dolore perferendis praesentium modi, excepturi expedita maxime impedit nisi reiciendis quod asperiores aut cupiditate maiores quasi quia error voluptas",
+            desc: "French fries are a popular snack or side dish made from sliced and fried potatoes. They are usually salty and crispy, which can be satisfying for many people. However, they are also high in calories and can contribute to weight gain and other health issues if consumed in excess",
       },
       {
             id: 21,
@@ -438,7 +438,7 @@ export const products = [
             delivers: 20,
             purchases: 10,
             category: "Burger",
-            desc: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aperiam nihil, nemo dolore perferendis praesentium modi, excepturi expedita maxime impedit nisi reiciendis quod asperiores aut cupiditate maiores quasi quia error voluptas",
+            desc: "The Extra Mustard Burger is a classic burger with an added kick. It's made with a juicy beef patty, melted cheese, crispy bacon, and a zesty mustard sauce that adds a tangy and savory flavor.",
       },
       {
             id: 22,
@@ -451,7 +451,7 @@ export const products = [
             delivers: 21,
             purchases: 11,
             category: "Cake",
-            desc: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aperiam nihil, nemo dolore perferendis praesentium modi, excepturi expedita maxime impedit nisi reiciendis quod asperiores aut cupiditate maiores quasi quia error voluptas",
+            desc: "Birthday cake is a dessert that is typically served to celebrate birthdays. It is often made with flour, sugar, eggs, and butter, and can be customized with various flavors and decorations.",
       },
       {
             id: 23,
@@ -464,7 +464,7 @@ export const products = [
             delivers: 10,
             purchases: 20,
             category: "Chicken",
-            desc: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aperiam nihil, nemo dolore perferendis praesentium modi, excepturi expedita maxime impedit nisi reiciendis quod asperiores aut cupiditate maiores quasi quia error voluptas",
+            desc: "Fried chicken is a popular dish made by coating chicken in seasoned flour and then frying it until crispy. It is a good source of protein and can be a tasty and convenient option for a meal or snack. ",
       },
       {
             id: 24,
@@ -477,7 +477,7 @@ export const products = [
             delivers: 34,
             purchases: 13,
             category: "Cake",
-            desc: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aperiam nihil, nemo dolore perferendis praesentium modi, excepturi expedita maxime impedit nisi reiciendis quod asperiores aut cupiditate maiores quasi quia error voluptas",
+            desc: "Cupcakes are a popular dessert that offers a few benefits. They are small and portable, making them a convenient option for snacking or sharing. They also come in a variety of flavors and can be customized to suit individual tastes. ",
       },
       {
             id: 25,
@@ -490,7 +490,7 @@ export const products = [
             delivers: 25,
             purchases: 15,
             category: "Cake",
-            desc: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aperiam nihil, nemo dolore perferendis praesentium modi, excepturi expedita maxime impedit nisi reiciendis quod asperiores aut cupiditate maiores quasi quia error voluptas",
+            desc: "Extra cream cake is a delicious dessert that features a generous amount of creamy frosting on top of a soft and moist cake. While it provides a decadent and satisfying taste experience, it is also high in calories, sugar, and fat.",
       },
       {
             id: 26,
@@ -503,7 +503,7 @@ export const products = [
             delivers: 36,
             purchases: 16,
             category: "Cake",
-            desc: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aperiam nihil, nemo dolore perferendis praesentium modi, excepturi expedita maxime impedit nisi reiciendis quod asperiores aut cupiditate maiores quasi quia error voluptas",
+            desc: "Slicy cake is a delicious dessert that offers a few benefits. It is a convenient option for people who want a quick and easy treat, and it can be customized with various flavors and toppings. ",
       },
       {
             id: 27,
@@ -516,7 +516,7 @@ export const products = [
             delivers: 290,
             purchases: 60,
             category: "Fries",
-            desc: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aperiam nihil, nemo dolore perferendis praesentium modi, excepturi expedita maxime impedit nisi reiciendis quod asperiores aut cupiditate maiores quasi quia error voluptas",
+            desc: "Salty fries are a popular and tasty snack that can be enjoyed on their own or as a side dish. They are easy to prepare and provide a quick source of carbohydrates, which can provide energy to the body.",
       },
       {
             id: 28,
@@ -529,7 +529,7 @@ export const products = [
             delivers: 20,
             purchases: 20,
             category: "Chicken",
-            desc: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aperiam nihil, nemo dolore perferendis praesentium modi, excepturi expedita maxime impedit nisi reiciendis quod asperiores aut cupiditate maiores quasi quia error voluptas",
+            desc: "Barbecued chicken is a delicious and flavorful dish that is often grilled or smoked. It provides a good source of protein and can be a healthy option when prepared without excessive added sugars or fats. ",
       },
       {
             id: 29,
@@ -542,7 +542,7 @@ export const products = [
             delivers: 40,
             purchases: 21,
             category: "Chicken",
-            desc: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aperiam nihil, nemo dolore perferendis praesentium modi, excepturi expedita maxime impedit nisi reiciendis quod asperiores aut cupiditate maiores quasi quia error voluptas",
+            desc: "Less oily chicken is a healthier option compared to its oily counterparts as it contains less fat and calories. It can be prepared by grilling, baking, or roasting, which helps reduce its oil content. ",
       },
       {
             id: 30,
@@ -555,7 +555,7 @@ export const products = [
             delivers: 200,
             purchases: 50,
             category: "Tacos",
-            desc: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aperiam nihil, nemo dolore perferendis praesentium modi, excepturi expedita maxime impedit nisi reiciendis quod asperiores aut cupiditate maiores quasi quia error voluptas",
+            desc: "Double tacos can provide a good source of protein and fiber, but should be consumed in moderation as they may also be high in calories and sodium.",
       },
       {
             id: 31,
@@ -568,7 +568,7 @@ export const products = [
             delivers: 0,
             purchases: 70,
             category: "Softs",
-            desc: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aperiam nihil, nemo dolore perferendis praesentium modi, excepturi expedita maxime impedit nisi reiciendis quod asperiores aut cupiditate maiores quasi quia error voluptas",
+            desc: "The coffee is typically handpicked and carefully processed, resulting in a premium product that is highly sought after by coffee enthusiasts. Drinking Rwandan coffee can also support the country's local economy and sustainable farming practices,",
       },
       {
             id: 32,
@@ -581,7 +581,7 @@ export const products = [
             delivers: 0,
             purchases: 69,
             category: "Softs",
-            desc: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aperiam nihil, nemo dolore perferendis praesentium modi, excepturi expedita maxime impedit nisi reiciendis quod asperiores aut cupiditate maiores quasi quia error voluptas",
+            desc: "It is known for its smooth and nutty flavor profile and is popular worldwide. Brazilian coffee beans are often used in blends due to their mild taste, low acidity, and versatility in different brewing methods.",
       },
       {
             id: 33,
@@ -594,7 +594,7 @@ export const products = [
             delivers: 0,
             purchases: 30,
             category: "Softs",
-            desc: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aperiam nihil, nemo dolore perferendis praesentium modi, excepturi expedita maxime impedit nisi reiciendis quod asperiores aut cupiditate maiores quasi quia error voluptas",
+            desc: "Rwandan tea is also rich in antioxidants, which can help protect against chronic diseases and promote overall health. It is an important export crop for Rwanda, contributing to the country's economy and providing employment opportunities for many Rwandan farmers.",
       },
       {
             id: 34,
@@ -607,7 +607,7 @@ export const products = [
             delivers: 0,
             purchases: 22,
             category: "Softs",
-            desc: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aperiam nihil, nemo dolore perferendis praesentium modi, excepturi expedita maxime impedit nisi reiciendis quod asperiores aut cupiditate maiores quasi quia error voluptas",
+            desc: "Deluxe tea is a premium blend of high-quality tea leaves and natural ingredients like herbs, spices, and fruits. It offers a unique and flavorful taste and may provide various health benefits such as improved digestion, reduced stress, and enhanced immune function",
       },
       {
             id: 35,
@@ -620,7 +620,7 @@ export const products = [
             delivers: 0,
             purchases: 40,
             category: "Fancy",
-            desc: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aperiam nihil, nemo dolore perferendis praesentium modi, excepturi expedita maxime impedit nisi reiciendis quod asperiores aut cupiditate maiores quasi quia error voluptas",
+            desc: "Champagne is known for its unique taste and effervescence, which comes from the carbon dioxide that is trapped in the bottle during the fermentation process. It is often served in special flutes and can be enjoyed on its own or paired with food",
       },
       {
             id: 36,
@@ -633,7 +633,7 @@ export const products = [
             delivers: 0,
             purchases: 41,
             category: "Fancy",
-            desc: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aperiam nihil, nemo dolore perferendis praesentium modi, excepturi expedita maxime impedit nisi reiciendis quod asperiores aut cupiditate maiores quasi quia error voluptas",
+            desc: "Hennessy is often enjoyed as a sipping liquor or used as a base for cocktails. It is also considered a luxury item and has become a symbol of sophistication and elegance.",
       },
       {
             id: 37,
@@ -646,7 +646,7 @@ export const products = [
             delivers: 0,
             purchases: 42,
             category: "Fancy",
-            desc: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aperiam nihil, nemo dolore perferendis praesentium modi, excepturi expedita maxime impedit nisi reiciendis quod asperiores aut cupiditate maiores quasi quia error voluptas",
+            desc: "Liquor is a type of distilled alcoholic beverage that contains a higher percentage of alcohol than beer or wine. It is typically consumed in smaller quantities due to its potency, which can provide a quick and noticeable effect",
       },
       {
             id: 38,
@@ -659,6 +659,6 @@ export const products = [
             delivers: 0,
             purchases: 43,
             category: "Fancy",
-            desc: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aperiam nihil, nemo dolore perferendis praesentium modi, excepturi expedita maxime impedit nisi reiciendis quod asperiores aut cupiditate maiores quasi quia error voluptas",
+            desc: "Jameson's flavor is characterized by its light, fruity notes, and subtle hints of vanilla and spice. It can be enjoyed neat, on the rocks, or as a key ingredient in cocktails like the classic Irish Coffee.",
       },
 ];
