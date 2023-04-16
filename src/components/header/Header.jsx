@@ -44,20 +44,20 @@ const Header = () => {
             setProfileOpen(null);
       };
       const classes = useStyles();
-      
-      // useEffect(() => {
-      //       document.addEventListener("scroll", () => {
-      //             if (
-      //                   document.body.scroll > 150 ||
-      //                   document.documentElement.scrollTop > 150
-      //             ) {
-      //                   headerRef.current.classList.add("sticky__header");
-      //             } else {
-      //                   headerRef.current.classList.remove("sticky__header");
-      //             }
-      //       });
-      //       document.removeEventListener("scroll", () => {});
-      // }, []);
+
+      useEffect(() => {
+            document.addEventListener("scroll", () => {
+                  if (
+                        document.body.scroll > 150 ||
+                        document.documentElement.scrollTop > 150
+                  ) {
+                        headerRef.current.classList.add("sticky__header");
+                  } else {
+                        headerRef.current.classList.remove("sticky__header");
+                  }
+            });
+            document.removeEventListener("scroll", () => {});
+      }, []);
 
       return (
             <header ref={headerRef}>
@@ -236,10 +236,7 @@ const Header = () => {
                                     open={cartOpen}
                                     onClose={() => setCartOpen(false)}
                               >
-                                    <CartContainer
-                                          cartOpen={cartOpen}
-                                          setCartOpen={setCartOpen}
-                                    />
+                                    <CartContainer setCartOpen={setCartOpen} />
                               </Drawer>
                         </Toolbar>
                   </AppBar>

@@ -3,17 +3,12 @@ import { IconButton, Typography, Stack, Box } from "@mui/material";
 import { Close } from "@mui/icons-material";
 import { Link } from "react-router-dom";
 import CartProduct from "./CartProduct";
-import { useSelector, useDispatch } from "react-redux";
-import {
-      selectedProducts,
-      cartTotalAmount,
-      cartActions,
-} from "../../app/slices/cartSlice";
+import { useSelector } from "react-redux";
+import { selectedProducts, cartTotalAmount } from "../../app/slices/cartSlice";
 
-const CartContainer = ({cartOpen, }) => {
+const CartContainer = ({ setCartOpen }) => {
       const totalAmount = useSelector(cartTotalAmount);
       const cartProducts = useSelector(selectedProducts);
-      const dispatch = useDispatch();
 
       return (
             <Stack>
@@ -35,18 +30,26 @@ const CartContainer = ({cartOpen, }) => {
                                                 background: "red",
                                           },
                                     }}
+                                    onClick={() => setCartOpen(false)}
                               >
                                     <Close />
                               </IconButton>
                         </Box>
-                        <Box
-                              sx={{
-                                    position: "sticky",
-                                    bottom: 0,
-                                    left: 0,
-                                    padding: "0.5rem",
-                              }}
-                        >
+                        <Box>
+                              {cartProducts.length == 0 ? (
+                                    <Typography variant="body1" color="error">
+                                          Your cart is empty!
+                                    </Typography>
+                              ) : (
+                                    cartProducts.map((product) => {
+                                          <CartProduct
+                                                key={product.id}
+                                                product={product}
+                                          />;
+                                    })
+                              )}
+                        </Box>
+                        <Box>
                               <Stack
                                     direction="row"
                                     spacing={2}
