@@ -11,28 +11,27 @@ const Services = () => {
                               justifyContent: "center",
                               flexWrap: "wrap",
                               gap: "1rem",
-                              padding: "1rem",
+                              padding: "01rem",
                         }}
                         className="services__stack"
                   >
                         {services.map((service) => (
                               <Paper
                                     key={service.id}
-                                    elevation={4}
+                                    elevation={2}
                                     sx={{
                                           width: "14rem",
-                                          height: "18rem",
+                                          height: "18.5rem",
                                           display: "flex",
                                           flexDirection: "column",
-                                          justifyContent: "space-around",
+                                          justifyContent: "space-between",
                                     }}
                               >
                                     <Stack
                                           direction="column"
                                           spacing={1}
                                           alignItems="center"
-                                          p={4}
-                                          height="20rem"
+                                          p={2}
                                     >
                                           <Box
                                                 sx={{

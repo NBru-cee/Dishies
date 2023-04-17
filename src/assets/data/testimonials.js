@@ -3,7 +3,7 @@ import client02 from "../imgs/testimonial-imgs/avatar-2.png";
 import client03 from "../imgs/testimonial-imgs/avatar-3.jpg";
 import client04 from "../imgs/testimonial-imgs/avatar-4.jpg";
 import client05 from "../imgs/testimonial-imgs/avatar-5.jpg";
-import client06 from "../imgs/testimonial-imgs/avatar-6.jpg";
+import client06 from "../imgs/testimonial-imgs/avatar-6.png";
 import client07 from "../imgs/testimonial-imgs/avatar-7.jpg";
 import client08 from "../imgs/testimonial-imgs/avatar-8.png";
 import client09 from "../imgs/testimonial-imgs/avatar-9.jpg";

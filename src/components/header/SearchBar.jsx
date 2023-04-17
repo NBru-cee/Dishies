@@ -42,6 +42,13 @@ const SearchBar = () => {
                         backgroundImage:
                               " linear-gradient(to bottom, #c91c1c 0%, #fb7a7a 100%)",
                         color: "whitesmoke",
+
+                        flexDirection: {
+                              xs: "column",
+                              sm: "row",
+                              md: "row",
+                        },
+                        gap: "1rem",
                   }}
             >
                   <Stack
@@ -50,16 +57,20 @@ const SearchBar = () => {
                         sx={{
                               display: {
                                     xs: "none",
-                                    sm: "none",
+                                    sm: "flex",
                                     md: "flex",
                               },
                         }}
                   >
                         <Box>
-                              <Typography variant="body2">
+                              <Typography
+                                    variant="body2"
+                                    fontSize="0.6rem"
+                                    textAlign="start"
+                              >
                                     Need Help?
                               </Typography>
-                              <Stack direction="row" alignItems="center">
+                              <Stack direction="column" textAlign="center">
                                     <Tooltip
                                           title="Contact us"
                                           placement="bottom"
@@ -69,8 +80,10 @@ const SearchBar = () => {
                                     >
                                           <IconButton
                                                 sx={{
-                                                      width: "35px",
-                                                      height: "35px",
+                                                      width: "20px",
+                                                      height: "20px",
+                                                      padding: "1rem",
+                                                      boxSizing: "border-box",
                                                       background: "whitesmoke",
                                                       borderRadius: "50%",
                                                       display: "flex",
@@ -81,20 +94,31 @@ const SearchBar = () => {
                                                       "&:hover": {
                                                             background: "#ccc",
                                                       },
+                                                      fontSize: "12px",
                                                 }}
                                           >
                                                 <Phone />
                                           </IconButton>
                                     </Tooltip>
-                                    <Typography variant="body2">
+                                    <Typography
+                                          variant="body2"
+                                          fontSize="0.6rem"
+                                          textAlign="center"
+                                    >
                                           +250-791-888-141
                                     </Typography>
                               </Stack>
                         </Box>
 
-                        <Box>
-                              <Typography variant="body2">Location</Typography>
-                              <Stack direction="row" alignItems="center">
+                        <Box textAlign="center">
+                              <Typography
+                                    variant="body2"
+                                    fontSize="0.6rem"
+                                    textAlign="start"
+                              >
+                                    Location
+                              </Typography>
+                              <Stack direction="column" textAlign="center">
                                     <Tooltip
                                           title="Our Location"
                                           placement="bottom"
@@ -104,8 +128,10 @@ const SearchBar = () => {
                                     >
                                           <IconButton
                                                 sx={{
-                                                      width: "35px",
-                                                      height: "35px",
+                                                      width: "20px",
+                                                      height: "20px",
+                                                      padding: "1rem",
+                                                      boxSizing: "border-box",
                                                       background: "whitesmoke",
                                                       borderRadius: "50%",
                                                       display: "flex",
@@ -121,17 +147,25 @@ const SearchBar = () => {
                                                 <PinDrop />
                                           </IconButton>
                                     </Tooltip>
-                                    <Typography variant="body2">
+                                    <Typography
+                                          variant="body2"
+                                          fontSize="0.6rem"
+                                          textAlign="center"
+                                    >
                                           Kigali, Rwanda
                                     </Typography>
                               </Stack>
                         </Box>
 
-                        <Box>
-                              <Typography variant="body2">
+                        <Box textAlign="center">
+                              <Typography
+                                    variant="body2"
+                                    fontSize="0.6rem"
+                                    textAlign="start"
+                              >
                                     Get in touch
                               </Typography>
-                              <Stack direction="row" alignItems="center">
+                              <Stack direction="column" textAlign="center">
                                     <Tooltip
                                           title="Send Message"
                                           placement="bottom"
@@ -141,8 +175,10 @@ const SearchBar = () => {
                                     >
                                           <IconButton
                                                 sx={{
-                                                      width: "35px",
-                                                      height: "35px",
+                                                      width: "20px",
+                                                      height: "20px",
+                                                      padding: "1rem",
+                                                      boxSizing: "border-box",
                                                       background: "whitesmoke",
                                                       borderRadius: "50%",
                                                       display: "flex",
@@ -153,12 +189,17 @@ const SearchBar = () => {
                                                       "&:hover": {
                                                             background: "#ccc",
                                                       },
+                                                      fontSize: "12px",
                                                 }}
                                           >
                                                 <Email />
                                           </IconButton>
                                     </Tooltip>
-                                    <Typography variant="body2">
+                                    <Typography
+                                          variant="body2"
+                                          fontSize="0.6rem"
+                                          textAlign="center"
+                                    >
                                           bruce@yahoo.com
                                     </Typography>
                               </Stack>
@@ -185,6 +226,7 @@ const SearchBar = () => {
                                           background: "none",
                                           fontSize: "1rem",
                                           color: "white",
+                                          width: "90%",
                                     }}
                               />
 

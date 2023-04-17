@@ -19,7 +19,6 @@ import { Link } from "react-router-dom";
 import Account from "../UI/Account";
 import SearchBar from "./SearchBar";
 import { useSelector } from "react-redux";
-import { cartTotalQuantity } from "../../app/slices/cartSlice";
 import CartContainer from "../cart/CartContainer";
 
 const useStyles = makeStyles({
@@ -34,7 +33,7 @@ const useStyles = makeStyles({
 });
 
 const Header = () => {
-      const totalQuantity = useSelector(cartTotalQuantity);
+      const totalQuantity = useSelector((state) => state.cart.totalQuantity);
       const [profileOpen, setProfileOpen] = useState(false);
       const [navOpen, setNavOpen] = useState(false);
       const [cartOpen, setCartOpen] = useState(false);
@@ -45,19 +44,19 @@ const Header = () => {
       };
       const classes = useStyles();
 
-      useEffect(() => {
-            document.addEventListener("scroll", () => {
-                  if (
-                        document.body.scroll > 150 ||
-                        document.documentElement.scrollTop > 150
-                  ) {
-                        headerRef.current.classList.add("sticky__header");
-                  } else {
-                        headerRef.current.classList.remove("sticky__header");
-                  }
-            });
-            document.removeEventListener("scroll", () => {});
-      }, []);
+      // useEffect(() => {
+      //       document.addEventListener("scroll", () => {
+      //             if (
+      //                   document.body.scroll > 150 ||
+      //                   document.documentElement.scrollTop > 150
+      //             ) {
+      //                   headerRef.current.classList.add("sticky__header");
+      //             } else {
+      //                   headerRef.current.classList.remove("sticky__header");
+      //             }
+      //       });
+      //       document.removeEventListener("scroll", () => {});
+      // }, []);
 
       return (
             <header ref={headerRef}>
@@ -178,6 +177,10 @@ const Header = () => {
                                     anchorEl={profileOpen}
                                     open={open}
                                     onClose={closeProfile}
+                                    anchorOrigin={{
+                                          vertical: "bottom",
+                                          horizontal: "right",
+                                    }}
                               >
                                     <Account />
                               </Menu>

@@ -40,7 +40,7 @@ const Download = () => {
                                                       style={{
                                                             width: "100%",
                                                             borderRadius:
-                                                                  "0.7rem",
+                                                                  "0.4rem",
                                                       }}
                                                 />
                                           </Box>
@@ -51,7 +51,7 @@ const Download = () => {
                                                       style={{
                                                             width: "100%",
                                                             borderRadius:
-                                                                  "0.7rem",
+                                                                  "0.4rem",
                                                             zIndex: "2",
                                                             transform:
                                                                   "translate(-20%, 5%)",

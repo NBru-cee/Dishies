@@ -20,7 +20,7 @@ const RestoServices = () => {
                                     elevation={4}
                                     sx={{
                                           width: "17rem",
-                                          height: "17rem",
+                                          height: "18rem",
                                           display: "flex",
                                           alignItems: "center",
                                           justifyContent: "space-around",

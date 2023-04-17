@@ -16,6 +16,8 @@ import { FaTruck } from "react-icons/fa";
 import service01 from "../../assets/imgs/common-imgs/service-02.png";
 import service02 from "../../assets/imgs/common-imgs/service-03.png";
 
+import { Settings, Logout, Help } from "@mui/icons-material";
+
 export const links = [
       { id: 1, path: "/home", title: "Home" },
       { id: 2, path: "/about", title: "About" },
@@ -78,3 +80,16 @@ export const extraServices = [
             content: " Our staff is very experienced when it becomes to making ravishing dishes that can make your mouth salivary. Services are so quick and special so don't hesitate to come.",
       },
 ];
+
+export const profiles = [
+      { id: 1, title: "My Profile", path: "/account", icon: <Settings /> },
+      { id: 2, title: "Help", path: "/help", icon: <Help /> },
+      { id: 3, title: "Logout", path: "/register", icon: <Logout /> },
+];
+
+import chef01 from "../imgs/kitchen-imgs/chef1.png";
+import chef02 from "../imgs/kitchen-imgs/chef2.png";
+import chef03 from "../imgs/kitchen-imgs/chef3.png";
+import chef04 from "../imgs/kitchen-imgs/chef4.png";
+import chef05 from "../imgs/kitchen-imgs/chef5.png";
+import chef06 from "../imgs/kitchen-imgs/chef6.png";

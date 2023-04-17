@@ -4,11 +4,14 @@ import { Close } from "@mui/icons-material";
 import { Link } from "react-router-dom";
 import CartProduct from "./CartProduct";
 import { useSelector } from "react-redux";
-import { selectedProducts, cartTotalAmount } from "../../app/slices/cartSlice";
+import {
+      allSelectedProducts,
+      cartTotalAmount,
+} from "../../app/slices/cartSlice";
 
 const CartContainer = ({ setCartOpen }) => {
       const totalAmount = useSelector(cartTotalAmount);
-      const cartProducts = useSelector(selectedProducts);
+      const allProducts = useSelector(allSelectedProducts);
 
       return (
             <Stack>
@@ -36,16 +39,18 @@ const CartContainer = ({ setCartOpen }) => {
                               </IconButton>
                         </Box>
                         <Box>
-                              {cartProducts.length == 0 ? (
+                              {allProducts.length === 0 ? (
                                     <Typography variant="body1" color="error">
                                           Your cart is empty!
                                     </Typography>
                               ) : (
-                                    cartProducts.map((product) => {
-                                          <CartProduct
-                                                key={product.id}
-                                                product={product}
-                                          />;
+                                    allProducts.map((product) => {
+                                          return (
+                                                <CartProduct
+                                                      key={product.id}
+                                                      product={product}
+                                                />
+                                          );
                                     })
                               )}
                         </Box>
