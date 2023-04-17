@@ -1,7 +1,7 @@
 import React from "react";
 import { Typography, Box, Stack, IconButton } from "@mui/material";
 import { Apple } from "@mui/icons-material";
-import {RiGooglePlayFill} from "react-icons/ri"
+import { RiGooglePlayFill } from "react-icons/ri";
 import downloadImg01 from "../../assets/imgs/common-imgs/download.png";
 import downloadImg02 from "../../assets/imgs/common-imgs/download2.png";
 
@@ -74,7 +74,14 @@ const Download = () => {
                                           device you have. We are available on
                                           all devices.
                                     </Typography>
-                                    <Stack direction="row" spacing={3} mt={4}>
+                                    <Stack
+                                          direction={{
+                                                xs: "column",
+                                                sm: "row",
+                                          }}
+                                          spacing={3}
+                                          mt={4}
+                                    >
                                           <IconButton
                                                 sx={{
                                                       color: "#eb3a3a",

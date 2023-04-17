@@ -152,9 +152,7 @@ const MenuPack = () => {
                                                 ? "active__category"
                                                 : ""
                                     }`}
-                                    onClick={() =>
-                                          setSelectedCategory("Fries")
-                                    }
+                                    onClick={() => setSelectedCategory("Fries")}
                               >
                                     Fries
                               </Button>

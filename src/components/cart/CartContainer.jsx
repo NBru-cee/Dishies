@@ -17,7 +17,6 @@ const CartContainer = ({ setCartOpen }) => {
             <Stack>
                   <Box
                         sx={{
-                              width: "15rem",
                               postition: "relative",
                               height: "100%",
                         }}
@@ -26,8 +25,9 @@ const CartContainer = ({ setCartOpen }) => {
                               sx={{
                                     position: "static",
                                     top: 0,
-                                    left: 0,
                                     padding: "0.5rem",
+                                    zIndex: 10,
+                                    boxShadow: "5px 0 5px black",
                               }}
                         >
                               <IconButton
@@ -44,9 +44,19 @@ const CartContainer = ({ setCartOpen }) => {
                                     <Close />
                               </IconButton>
                         </Box>
-                        <Box>
+                        <Box
+                              sx={{
+                                    height: "80vh",
+                                    padding: "1rem",
+                                    overflowY: "scroll !important",
+                              }}
+                        >
                               {allProducts.length === 0 ? (
-                                    <Typography variant="body1" color="error">
+                                    <Typography
+                                          variant="body1"
+                                          color="#18181c"
+                                          fontWeight="600"
+                                    >
                                           Your cart is empty!
                                     </Typography>
                               ) : (
@@ -73,14 +83,26 @@ const CartContainer = ({ setCartOpen }) => {
                                     spacing={2}
                                     justifyContent="space-around"
                                     alignItems="center"
+                                    zIndex={10}
                               >
                                     <Typography
                                           variant="body1"
                                           color="whitesmoke"
                                     >
-                                          Total: $ <span>{totalAmount}</span>
+                                          Total: $<span>{totalAmount}</span>
                                     </Typography>
-                                    <Link to="/checkout">Checkout</Link>
+                                    <Link
+                                          to="/checkout"
+                                          style={{
+                                                background: "whitesmoke",
+                                                fontWeight: "bold",
+                                                borderRadius: "0.4rem",
+                                                padding: "0.5rem 1rem",
+                                                textAlign: "center",
+                                          }}
+                                    >
+                                          Checkout
+                                    </Link>
                               </Stack>
                         </Box>
                   </Box>

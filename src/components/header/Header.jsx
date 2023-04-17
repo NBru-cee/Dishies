@@ -16,7 +16,6 @@ import { MdMenu } from "react-icons/md";
 import { links } from "../../assets/data/data";
 import { Link } from "react-router-dom";
 import Account from "../UI/Account";
-import SearchBar from "./SearchBar";
 import { useSelector } from "react-redux";
 import CartContainer from "../cart/CartContainer";
 
@@ -34,8 +33,8 @@ const Header = () => {
       useEffect(() => {
             document.addEventListener("scroll", () => {
                   if (
-                        document.body.scroll > 150 ||
-                        document.documentElement.scrollTop > 150
+                        document.body.scroll > 100 ||
+                        document.documentElement.scrollTop > 100
                   ) {
                         headerRef.current.classList.add("sticky__header");
                   } else {
@@ -240,7 +239,6 @@ const Header = () => {
                               </Drawer>
                         </Toolbar>
                   </AppBar>
-                  <SearchBar />
             </header>
       );
 };

@@ -15,7 +15,18 @@ const Account = () => {
                               textAlign="center"
                         >
                               <Link to={profile.path}>
-                                    <IconButton>{profile.icon}</IconButton>
+                                    <IconButton
+                                          sx={{
+                                                background: "whitesmoke",
+                                                transition: "0.4s",
+                                                "&:hover": {
+                                                      background: "maroon",
+                                                      color: "whitesmoke",
+                                                },
+                                          }}
+                                    >
+                                          {profile.icon}
+                                    </IconButton>
                               </Link>
                               <Typography variant="body2">
                                     {profile.title}

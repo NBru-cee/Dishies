@@ -1,7 +1,15 @@
 import React from "react";
-import { ListItem, Box, Stack, Button, Typography } from "@mui/material";
+import {
+      ListItem,
+      Box,
+      Stack,
+      Typography,
+      Button,
+      IconButton,
+} from "@mui/material";
 import { useDispatch } from "react-redux";
 import { cartActions } from "../../app/slices/cartSlice";
+import { Close } from "@mui/icons-material";
 
 const CartProduct = ({ product }) => {
       const dispatch = useDispatch();
@@ -9,6 +17,7 @@ const CartProduct = ({ product }) => {
       const increment = () => {
             dispatch(
                   cartActions.addProduct({
+                        id,
                         price,
                         title,
                         image01,
@@ -16,22 +25,67 @@ const CartProduct = ({ product }) => {
                   })
             );
       };
+
       return (
-            <ListItem>
-                  <Box
+            <ListItem sx={{ padding: "0.5rem" }}>
+                  <Box>
+                        <Stack display="flex" direction="row">
+                              <Box sx={{ width: "5rem" }}>
+                                    <img
+                                          src={image01}
+                                          alt="image 01"
+                                          style={{
+                                                width: "3rem",
+                                                objectFit: "cover",
+                                          }}
+                                    />
+                              </Box>
+                              <Box sx={{ width: "7rem" }}>
+                                    <Typography variant="body2">
+                                          {title}
+                                    </Typography>
+                              </Box>
+                        </Stack>
+                        <Stack direction="row" spacing={2} alignItems="center">
+                              <Typography variant="body2" color="#18181c">
+                                    {quantity} x
+                              </Typography>
+                              <Typography variant="body2" color="red">
+                                    ${totalPrice}
+                              </Typography>
+                        </Stack>
+                        <Stack direction="row" spacing={1} alignItems="center">
+                              <Button onClick={increment} color="error">
+                                    +
+                              </Button>
+                              <Typography variant="body2">
+                                    {quantity}
+                              </Typography>
+                              <Button
+                                    color="error"
+                                    onClick={() =>
+                                          dispatch(cartActions.removeItem(id))
+                                    }
+                              >
+                                    -
+                              </Button>
+                        </Stack>
+                  </Box>
+                  <IconButton
+                        onClick={() => dispatch(cartActions.deletItem(id))}
                         sx={{
-                              display: "flex",
-                              gap: "0.5rem",
-                              alignItems: "center",
+                              cursor: "pointer",
+                              background: "#780f0f;",
+                              color: "white",
+                              padding: "0.2rem",
+                              borderRadius: "50%",
+                              "&:hover": {
+                                    background: "red",
+                              },
                         }}
                   >
-                        <Box>
-                              <img src={image01} alt="image 01" />
-                        </Box>
-                        <Box>
-                              <Typography variant="body2">{title}</Typography>
-                        </Box>
-                  </Box>
+                        <Close />
+                  </IconButton>
             </ListItem>
       );
 };

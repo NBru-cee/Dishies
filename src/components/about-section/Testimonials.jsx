@@ -83,7 +83,10 @@ const Testimonials = () => {
                                                                               client.name
                                                                         }
                                                                   </Typography>
-                                                                  <Typography variant="body2">
+                                                                  <Typography
+                                                                        variant="body2"
+                                                                        color="maroon"
+                                                                  >
                                                                         {
                                                                               client.title
                                                                         }

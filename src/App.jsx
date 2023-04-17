@@ -13,11 +13,13 @@ import Menu from "./pages/Menu";
 import MenuItem from "./pages/MenuItem";
 import Profile from "./pages/Profile";
 import Missing from "./pages/Missing";
+import SearchBar from "./components/header/SearchBar";
 
 const App = () => {
       return (
             <BrowserRouter>
                   <Header />
+                  <SearchBar />
                   <Routes>
                         <Route path="/" element={<Navigate to="/home" />} />
                         <Route path="/home" element={<Home />} />
