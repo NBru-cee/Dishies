@@ -14,7 +14,11 @@ const OurChefs = () => {
                               About us
                         </Typography>
                         <Stack
-                              direction="row"
+                              direction={{
+                                    xs: "column",
+                                    sm: "column",
+                                    md: "row",
+                              }}
                               spacing={2}
                               alignItems="center"
                               display="flex"

@@ -1,19 +1,16 @@
 import React from "react";
-import {
-      Box,
-      ImageList,
-      ImageListItem,
-      Typography,
-      Stack,
-} from "@mui/material";
+import { Box, Typography, Stack } from "@mui/material";
 import { chefs } from "../../assets/data/data";
-import "../../styles/about.css";
 
 const OurChefs = () => {
       return (
             <section>
                   <Stack
-                        direction="row"
+                        direction={{
+                              xs: "column",
+                              sm: "column",
+                              md: "row",
+                        }}
                         spacing={4}
                         alignItems="center"
                         display="flex"
@@ -21,30 +18,30 @@ const OurChefs = () => {
                         <Box
                               sx={{
                                     flexBasis: "50%",
-                                    martinTop: "4rem",
+                                    marginTop: "5rem",
                               }}
                         >
-                              <ImageList
-                                    cols={3}
-                                    gap={2}
-                                    rowHeight={140}
+                              <Stack
+                                    direction="row"
+                                    display="grid"
+                                    gridTemplateColumns="repeat(3, minmax(0, 1fr))"
+                                    gap="1rem"
                                     className="about__chefs"
                               >
                                     {chefs.map((chef) => (
-                                          <ImageListItem key={chef.id}>
-                                                <img
-                                                      src={chef.image}
-                                                      alt={chef.alt}
-                                                      style={{
-                                                            width: "100%",
-                                                            padding: "0.5em",
-                                                            objectFit: "cover",
-                                                            margin: "0.5em 0",
-                                                      }}
-                                                />
-                                          </ImageListItem>
+                                          <img
+                                                src={chef.image}
+                                                alt={chef.alt}
+                                                key={chef.id}
+                                                style={{
+                                                      width: "100%",
+                                                      height: "150px",
+                                                      objectFit: "cover",
+                                                      borderRadius: "0.5rem",
+                                                }}
+                                          />
                                     ))}
-                              </ImageList>
+                              </Stack>
                         </Box>
                         <Box sx={{ flexBasis: "50%" }}>
                               <Typography variant="h5" color="red" my={3}>

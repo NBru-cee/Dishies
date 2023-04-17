@@ -7,7 +7,6 @@ import client06 from "../imgs/testimonial-imgs/avatar-6.png";
 import client07 from "../imgs/testimonial-imgs/avatar-7.jpg";
 import client08 from "../imgs/testimonial-imgs/avatar-8.png";
 import client09 from "../imgs/testimonial-imgs/avatar-9.jpg";
-import client10 from "../imgs/testimonial-imgs/avatar-10.jpeg";
 import client11 from "../imgs/testimonial-imgs/client-1.png";
 import client12 from "../imgs/testimonial-imgs/client-2.jpg";
 import client13 from "../imgs/testimonial-imgs/client-3.jpg";
@@ -33,15 +32,15 @@ export const clientData = [
             id: 3,
             name: "Victor Doe",
             title: "Database Analyst",
-            content: "As a database analyst, I was impressed with the efficiency of the restaurant or food delivery app. The app's database system was well-designed, making it easy to place orders quickly. I appreciated the app's ability to remember my past orders and preferences, making my ordering experience even more seamless. Additionally, the app's real-time tracking system allowed me to keep track of my delivery. Overall, I highly recommend this app to anyone looking for a reliable way to order food.",
+            content: "As a database analyst, I was impressed with the efficiency of the restaurant or food delivery app. The app's database system was well-designed, making it easy to place orders quickly. I appreciated the app's ability to remember my past orders and preferences, making my ordering experience even more seamless.",
             image: client03,
       },
       {
             id: 4,
-            name: "Lilly Saint",
-            title: "Fashion Designer",
-            content: " As a fashion designer, I have a keen eye for detail and aesthetics, and I appreciate when these qualities are reflected in all aspects of life. That's why I was blown away by the restaurant and food delivery app that I recently discovered. Not only is the interface sleek and user-friendly, but the food itself is a work of art.",
-            image: client04,
+            name: "Oscar Long",
+            title: "Police Commissioner",
+            content: " Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis quisquam a ut aspernatur? Sed exercitationem, aliquid numquam cupiditate a illum corporis expedita aperiam magni tempore natus esse maiores fuga voluptatem.",
+            image: client15,
       },
       {
             id: 5,
@@ -105,19 +104,5 @@ export const clientData = [
             title: "Caltech Student",
             content: " Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis quisquam a ut aspernatur? Sed exercitationem, aliquid numquam cupiditate a illum corporis expedita aperiam magni tempore natus esse maiores fuga voluptatem.",
             image: client14,
-      },
-      {
-            id: 14,
-            name: "Fiona Fawl",
-            title: "Fashion Model",
-            content: " Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis quisquam a ut aspernatur? Sed exercitationem, aliquid numquam cupiditate a illum corporis expedita aperiam magni tempore natus esse maiores fuga voluptatem.",
-            image: client10,
-      },
-      {
-            id: 15,
-            name: "Oscar Hummings",
-            title: "Professional Commissioner",
-            content: " Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis quisquam a ut aspernatur? Sed exercitationem, aliquid numquam cupiditate a illum corporis expedita aperiam magni tempore natus esse maiores fuga voluptatem.",
-            image: client15,
       },
 ];

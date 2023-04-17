@@ -3,7 +3,7 @@ import { createSlice } from "@reduxjs/toolkit";
 const products =
       localStorage.getItem("cartProducts") !== null
             ? JSON.parse(localStorage.getItem("cartProducts"))
-            : 0;
+            : [];
 
 const totalAmount =
       localStorage.getItem("totalAmount") !== null

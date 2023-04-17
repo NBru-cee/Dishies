@@ -15,7 +15,13 @@ const CartContainer = ({ setCartOpen }) => {
 
       return (
             <Stack>
-                  <Box>
+                  <Box
+                        sx={{
+                              width: "15rem",
+                              postition: "relative",
+                              height: "100%",
+                        }}
+                  >
                         <Box
                               sx={{
                                     position: "static",
@@ -44,23 +50,34 @@ const CartContainer = ({ setCartOpen }) => {
                                           Your cart is empty!
                                     </Typography>
                               ) : (
-                                    allProducts.map((product) => {
-                                          return (
-                                                <CartProduct
-                                                      key={product.id}
-                                                      product={product}
-                                                />
-                                          );
-                                    })
+                                    allProducts.map((product) => (
+                                          <CartProduct
+                                                key={product.id}
+                                                product={product}
+                                          />
+                                    ))
                               )}
                         </Box>
-                        <Box>
+                        <Box
+                              sx={{
+                                    bgcolor: "maroon",
+                                    position: "absolute",
+                                    bottom: 0,
+                                    right: 0,
+                                    width: "100%",
+                                    padding: "0.5rem",
+                              }}
+                        >
                               <Stack
                                     direction="row"
                                     spacing={2}
                                     justifyContent="space-around"
+                                    alignItems="center"
                               >
-                                    <Typography variant="body1">
+                                    <Typography
+                                          variant="body1"
+                                          color="whitesmoke"
+                                    >
                                           Total: $ <span>{totalAmount}</span>
                                     </Typography>
                                     <Link to="/checkout">Checkout</Link>

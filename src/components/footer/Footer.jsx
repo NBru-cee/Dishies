@@ -21,7 +21,6 @@ const Footer = () => {
                               "linear-gradient(to right, #fb7a7a 0%, #cc3737 100%)",
                         padding: "2rem",
                         color: "whitesmoke",
-                        borderTopLeftRadius: "5rem",
                   }}
             >
                   <Stack direction="column" spacing={1}>

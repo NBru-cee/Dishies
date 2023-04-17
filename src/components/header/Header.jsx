@@ -12,7 +12,6 @@ import {
       Tooltip,
 } from "@mui/material";
 import { DinnerDining, ShoppingBag, Person, Close } from "@mui/icons-material";
-import { makeStyles } from "@mui/styles";
 import { MdMenu } from "react-icons/md";
 import { links } from "../../assets/data/data";
 import { Link } from "react-router-dom";
@@ -20,17 +19,6 @@ import Account from "../UI/Account";
 import SearchBar from "./SearchBar";
 import { useSelector } from "react-redux";
 import CartContainer from "../cart/CartContainer";
-
-const useStyles = makeStyles({
-      close: {
-            background: "maroon",
-            color: "white",
-            transition: "0.4s ease-in-out",
-            "&:hover": {
-                  background: "red",
-            },
-      },
-});
 
 const Header = () => {
       const totalQuantity = useSelector((state) => state.cart.totalQuantity);
@@ -42,21 +30,20 @@ const Header = () => {
       const closeProfile = () => {
             setProfileOpen(null);
       };
-      const classes = useStyles();
 
-      // useEffect(() => {
-      //       document.addEventListener("scroll", () => {
-      //             if (
-      //                   document.body.scroll > 150 ||
-      //                   document.documentElement.scrollTop > 150
-      //             ) {
-      //                   headerRef.current.classList.add("sticky__header");
-      //             } else {
-      //                   headerRef.current.classList.remove("sticky__header");
-      //             }
-      //       });
-      //       document.removeEventListener("scroll", () => {});
-      // }, []);
+      useEffect(() => {
+            document.addEventListener("scroll", () => {
+                  if (
+                        document.body.scroll > 150 ||
+                        document.documentElement.scrollTop > 150
+                  ) {
+                        headerRef.current.classList.add("sticky__header");
+                  } else {
+                        headerRef.current.classList.remove("sticky__header");
+                  }
+            });
+            document.removeEventListener("scroll", () => {});
+      }, []);
 
       return (
             <header ref={headerRef}>
@@ -203,7 +190,17 @@ const Header = () => {
                                                       onClick={() =>
                                                             setNavOpen(false)
                                                       }
-                                                      className={classes.close}
+                                                      sx={{
+                                                            background:
+                                                                  "maroon",
+                                                            color: "white",
+                                                            transition:
+                                                                  "0.4s ease-in-out",
+                                                            "&:hover": {
+                                                                  background:
+                                                                        "red",
+                                                            },
+                                                      }}
                                                 >
                                                       <Close />
                                                 </IconButton>

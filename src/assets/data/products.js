@@ -3,14 +3,14 @@ import birthdayCake01img02 from "../imgs/product-imgs/birthday-2.jpg";
 import birthdayCake01img03 from "../imgs/product-imgs/birthday-3.jpg";
 import birthdayCake01img04 from "../imgs/product-imgs/birthday-4.jpg";
 
-import bread01img01 from "../imgs/product-imgs/bread-1.jpg";
-import bread01img02 from "../imgs/product-imgs/bread-2.jpg";
-import bread01img03 from "../imgs/product-imgs/bread-3.jpg";
-import bread01img04 from "../imgs/product-imgs/bread-4.jpg";
+import bread01img01 from "../imgs/product-imgs/bread-4.jpg";
+import bread01img02 from "../imgs/product-imgs/bread-1.jpg";
+import bread01img03 from "../imgs/product-imgs/bread-2.jpg";
+import bread01img04 from "../imgs/product-imgs/bread-3.jpg";
 
-import bread02img01 from "../imgs/product-imgs/loaf-bread-1.jpg";
-import bread02img02 from "../imgs/product-imgs/loaf-bread-2.jpg";
-import bread02img03 from "../imgs/product-imgs/loaf-bread-3.jpg";
+import bread02img01 from "../imgs/product-imgs/loaf-bread-3.jpg";
+import bread02img02 from "../imgs/product-imgs/loaf-bread-1.jpg";
+import bread02img03 from "../imgs/product-imgs/loaf-bread-2.jpg";
 import bread02img04 from "../imgs/product-imgs/loaf-bread-4.jpg";
 
 import bread03img01 from "../imgs/product-imgs/bread-5.png";
@@ -317,7 +317,7 @@ export const products = [
       {
             id: 9,
             title: "Special Veggie'",
-            price: 82.0,
+            price: 43.0,
             image01: dish01img01,
             image02: dish01img02,
             image03: dish01img03,
@@ -396,7 +396,7 @@ export const products = [
       {
             id: 15,
             title: "Deluxe Burger",
-            price: 70.5,
+            price: 15.5,
             image01: burger01img03,
             image02: burger02img02,
             image03: burger02img03,
