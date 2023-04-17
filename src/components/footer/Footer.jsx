@@ -21,6 +21,7 @@ const Footer = () => {
                               "linear-gradient(to right, #fb7a7a 0%, #cc3737 100%)",
                         padding: "2rem",
                         color: "whitesmoke",
+                        borderTopLeftRadius: "5rem",
                   }}
             >
                   <Stack direction="column" spacing={1}>
@@ -70,7 +71,7 @@ const Footer = () => {
                               </Box>
                               <Box>
                                     <Typography variant="h6">
-                                          Quck Links
+                                          Quick Links
                                     </Typography>
                                     <Stack direction="column" spacing={1}>
                                           {links.map((link) => (

@@ -93,3 +93,12 @@ import chef03 from "../imgs/kitchen-imgs/chef3.png";
 import chef04 from "../imgs/kitchen-imgs/chef4.png";
 import chef05 from "../imgs/kitchen-imgs/chef5.png";
 import chef06 from "../imgs/kitchen-imgs/chef6.png";
+
+export const chefs = [
+      { id: 1, image: chef01, alt: "chef 01" },
+      { id: 2, image: chef02, alt: "chef 02" },
+      { id: 3, image: chef03, alt: "chef 03" },
+      { id: 4, image: chef04, alt: "chef 04" },
+      { id: 5, image: chef05, alt: "chef 05" },
+      { id: 6, image: chef06, alt: "chef 06" },
+];
