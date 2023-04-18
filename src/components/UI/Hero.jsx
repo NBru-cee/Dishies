@@ -18,7 +18,7 @@ const Hero = () => {
       };
 
       return (
-            <section>
+            <section style={{ padding: "1rem" }}>
                   <Slider {...settings}>
                         {sliderData.map((item) => (
                               <Paper
@@ -31,7 +31,9 @@ const Hero = () => {
                                                 sm: "row",
                                           },
                                           alignItems: "center",
-                                          height: "90%",
+                                          height: {
+                                                md: "90vh",
+                                          },
                                           gap: "2rem",
                                           justifyContent: "center",
                                           padding: "1rem",

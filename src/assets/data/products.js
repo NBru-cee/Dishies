@@ -63,10 +63,10 @@ import cake05img02 from "../imgs/product-imgs/big-cake-2.jpg";
 import cake05img03 from "../imgs/product-imgs/big-cake-3.jpg";
 import cake05img04 from "../imgs/product-imgs/big-cake-4.jpg";
 
-import chicken01img01 from "../imgs/product-imgs/chicken-15.jpg";
-import chicken01img02 from "../imgs/product-imgs/chicken-2.jpg";
-import chicken01img03 from "../imgs/product-imgs/chicken-3.jpg";
-import chicken01img04 from "../imgs/product-imgs/chicken-1.jpg";
+import chicken01img01 from "../imgs/product-imgs/chicken-2.jpg";
+import chicken01img02 from "../imgs/product-imgs/chicken-3.jpg";
+import chicken01img03 from "../imgs/product-imgs/chicken-1.jpg";
+import chicken01img04 from "../imgs/product-imgs/chicken-15.jpg";
 
 import chicken02img01 from "../imgs/product-imgs/chicken-16.jpg";
 import chicken02img02 from "../imgs/product-imgs/chicken-8.jpg";
@@ -248,13 +248,13 @@ export const products = [
       {
             id: "3",
             title: "Shashlik Chicken",
-            price: 50.5,
+            price: 24.5,
             image01: chicken01img01,
             image02: chicken01img02,
             image03: chicken01img03,
             image04: chicken01img04,
-            delivers: 18,
-            purchases: 32,
+            delivers: 43,
+            purchases: 55,
             category: "Chicken",
             desc: "Shashlik chicken is a good source of protein and contains spices with antioxidant and anti-inflammatory properties that may reduce the risk of chronic diseases. Grilling or roasting it can also lower its fat content compared to fried options.",
       },

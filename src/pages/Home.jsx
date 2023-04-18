@@ -14,8 +14,8 @@ const Home = () => {
 
       return (
             <Wrapper title="Home">
+                  <Hero />
                   <main>
-                        <Hero />
                         <PopularMenu />
                         <AboutUs />
                         <MenuPack />

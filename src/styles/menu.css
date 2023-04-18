@@ -46,7 +46,7 @@
 }
 
 .menu__title {
-      background-image: url('../assets/imgs/product-imgs/chicken-3.jpg');
+      background-image: url('../assets/imgs/product-imgs/cake-1.jpg');
       background-position: center;
       background-size: auto;
       background-repeat: no-repeat;
@@ -75,4 +75,35 @@
       bottom: 30%;
       left: 50%;
       transform: translate(-50%, -50%);
+}
+
+.prev__image {
+      width: 5rem;
+      height: 5rem;
+      object-fit: contain;
+      cursor: pointer;
+      transition: 0.4s;
+      border-radius: 0.5rem;
+}
+
+.prev__image:hover {
+      transform: scale(1.2);
+}
+
+.main__image {
+      flex-basis: 40%;
+      width: 30rem;
+      height: 30rem;
+      margin: 1rem;
+      padding: 1rem;
+}
+
+.main__image img {
+      width: 75%;
+      object-fit: cover;
+      border-radius: 1rem;
+}
+
+.main__fonts {
+      font-family: "Poppins", sans-serif !important;
 }
