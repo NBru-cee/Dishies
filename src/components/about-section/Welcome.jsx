@@ -1,6 +1,7 @@
 import aboutImg from "../../assets/imgs/common-imgs/about-img.webp";
 import { Box, Stack, Typography } from "@mui/material";
 import React from "react";
+import "../../styles/about.css";
 
 const OurChefs = () => {
       return (
@@ -16,18 +17,26 @@ const OurChefs = () => {
                         <Stack
                               direction={{
                                     xs: "column",
-                                    sm: "column",
-                                    md: "row",
+                                    sm: "row",
                               }}
                               spacing={2}
                               alignItems="center"
                               display="flex"
                         >
                               <Box sx={{ flexBasis: "50%" }}>
-                                    <Typography variant="h5" my={2} color="red">
+                                    <Typography
+                                          variant="h5"
+                                          my={2}
+                                          color="red"
+                                          className="welcome"
+                                    >
                                           Welcome
                                     </Typography>
-                                    <Typography variant="body1" my={1}>
+                                    <Typography
+                                          variant="body1"
+                                          my={1}
+                                          className="welcome"
+                                    >
                                           Dishies story began in 2023 with a
                                           clear and unique vision of the future
                                           of fast food.Recognizing the
@@ -35,7 +44,11 @@ const OurChefs = () => {
                                           for flavor, and authenticity, Dishies'
                                           creation was by no means accidental.
                                     </Typography>
-                                    <Typography variant="body1" my={1}>
+                                    <Typography
+                                          variant="body1"
+                                          my={1}
+                                          className="welcome"
+                                    >
                                           Since our humble beginnings as a
                                           family-run eatery in Nyabihu, Dishies
                                           has been able to maninatain our

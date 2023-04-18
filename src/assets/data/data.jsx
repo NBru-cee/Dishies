@@ -3,7 +3,7 @@ import cake from "../imgs/product-imgs/cake-6.jpg";
 import chicken from "../imgs/product-imgs/roasted-chicken-1.jpg";
 import dish from "../imgs/product-imgs/dish-5.png";
 import pizza from "../imgs/product-imgs/pizza-12.png";
-import fries from "../imgs/product-imgs/fries-10.jpg";
+import fries from "../imgs/product-imgs/fries-1.jpg";
 import bread from "../imgs/product-imgs/loaf-bread-3.jpg";
 import coffee from "../imgs/product-imgs/coffee-3.jpg";
 

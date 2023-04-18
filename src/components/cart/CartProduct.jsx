@@ -64,7 +64,9 @@ const CartProduct = ({ product }) => {
                               <Button
                                     color="error"
                                     onClick={() =>
-                                          dispatch(cartActions.removeItem(id))
+                                          dispatch(
+                                                cartActions.removeProduct(id)
+                                          )
                                     }
                               >
                                     -
@@ -72,7 +74,7 @@ const CartProduct = ({ product }) => {
                         </Stack>
                   </Box>
                   <IconButton
-                        onClick={() => dispatch(cartActions.deletItem(id))}
+                        onClick={() => dispatch(cartActions.deleteProduct(id))}
                         sx={{
                               cursor: "pointer",
                               background: "#780f0f;",

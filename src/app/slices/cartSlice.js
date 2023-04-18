@@ -65,7 +65,7 @@ const cartSlice = createSlice({
                   );
             },
             //remove item from cart
-            removeItem(state, action) {
+            removeProduct(state, action) {
                   const id = action.payload;
                   const existingProduct = state.cartProducts.find(
                         (item) => item.id === id
@@ -92,7 +92,7 @@ const cartSlice = createSlice({
                   );
             },
             //delete item from cart
-            deletItem(state, action) {
+            deleteProduct(state, action) {
                   const id = action.payload;
                   const existingProduct = state.cartProducts.find(
                         (item) => item.id === id

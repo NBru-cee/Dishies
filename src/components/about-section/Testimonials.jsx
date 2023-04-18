@@ -5,6 +5,7 @@ import { Typography, Box, Stack } from "@mui/material";
 import { clientData } from "../../assets/data/testimonials";
 import "swiper/css";
 import "swiper/css/effect-cards";
+import "../../styles/about.css";
 
 const Testimonials = () => {
       return (
@@ -20,6 +21,7 @@ const Testimonials = () => {
                               color="red"
                               textAlign="center"
                               my={2}
+                              className="testimonials"
                         >
                               What Our Customers say
                         </Typography>
@@ -77,6 +79,7 @@ const Testimonials = () => {
                                                                   alignItems="center"
                                                                   justifyContent="space-around"
                                                                   my={2}
+                                                                  className="testimonials"
                                                             >
                                                                   <Typography variant="body1">
                                                                         {
@@ -92,7 +95,10 @@ const Testimonials = () => {
                                                                         }
                                                                   </Typography>
                                                             </Stack>
-                                                            <Typography variant="body2">
+                                                            <Typography
+                                                                  variant="body2"
+                                                                  className="testimonials"
+                                                            >
                                                                   {
                                                                         client.content
                                                                   }

@@ -1,0 +1,78 @@
+.widget__search,
+.widget__sort {
+      border: 1.5px solid #1c1414;
+      padding: 1rem;
+      border-radius: 0.5rem;
+      width: 100%;
+      background: transparent;
+      width: 20rem;
+      outline: none;
+}
+
+.widget__search:focus {
+      border: 1.5px solid #f04242;
+}
+
+.widget__search::placeholder {
+      font-size: 1rem;
+      font-family: inherit;
+      color: #1c1414;
+}
+
+.menu__pages {
+      display: flex;
+      align-items: center;
+      list-style: none;
+      justify-content: center;
+      margin-top: 3rem;
+}
+
+
+
+.menu__pages a {
+      background: #f04242;
+      padding: 1rem;
+      cursor: pointer;
+      margin: 0.5rem;
+      border-radius: 0.5rem;
+      color: whitesmoke !important;
+      font-size: 1.2rem;
+      transition: 0.4s;
+}
+
+.menu__pages:is(a:hover, a:focus, a:active) {
+      opacity: 0.8;
+      color: whitesmoke !important;
+}
+
+.menu__title {
+      background-image: url('../assets/imgs/product-imgs/chicken-3.jpg');
+      background-position: center;
+      background-size: auto;
+      background-repeat: no-repeat;
+      height: 80vh;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: "Poppins", sans-serif;
+      opacity: 0.5;
+      position: relative;
+}
+
+.menu__content {
+      background: linear-gradient(to bottom, #f45656, #fa7272);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+}
+
+.menu__header__title {
+      color: white;
+      font-weight: 700;
+      font-size: 2rem;
+      position: absolute;
+      bottom: 30%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+}

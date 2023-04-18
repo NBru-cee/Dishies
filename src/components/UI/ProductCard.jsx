@@ -54,9 +54,9 @@ const ProductCard = ({ item }) => {
                                     justifyContent: "center",
                                     overflow: "hidden",
                                     transition: "0.4s",
-                                    padding: "1.5rem",
+                                    padding: "2rem",
                                     "&:hover": {
-                                          transform: "scale(1.1)",
+                                          transform: "scale(1.2)",
                                     },
                               }}
                         >
@@ -66,7 +66,7 @@ const ProductCard = ({ item }) => {
                                           alt="product image"
                                           style={{
                                                 overflow: "hidden",
-                                                padding: "1rem",
+                                                padding: "2rem",
                                                 width: "100%",
                                                 height: "100%",
                                                 objectFit: "cover",
