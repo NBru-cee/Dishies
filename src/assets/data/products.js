@@ -275,7 +275,7 @@ export const products = [
             image04: chicken01img04,
             delivers: 43,
             purchases: 55,
-            category: "Chicken",
+            category: "Bruchette",
             desc: "Shashlik chicken is a good source of protein and contains spices with antioxidant and anti-inflammatory properties that may reduce the risk of chronic diseases. Grilling or roasting it can also lower its fat content compared to fried options.",
       },
       {
