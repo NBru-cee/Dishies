@@ -38,6 +38,16 @@ import burger02img02 from "../imgs/product-imgs/burger-6.jpg";
 import burger02img03 from "../imgs/product-imgs/burger-7.jpg";
 import burger02img04 from "../imgs/product-imgs/burger-8.png";
 
+import burger03img01 from "../imgs/product-imgs/turkey-burger-1.jpg";
+import burger03img02 from "../imgs/product-imgs/turkey-burger-2.jpg";
+import burger03img03 from "../imgs/product-imgs/turkey-burger-3.jpg";
+import burger03img04 from "../imgs/product-imgs/turkey-burger-4.jpg";
+
+import burger04img01 from "../imgs/product-imgs/bison-burger-1.jpg";
+import burger04img02 from "../imgs/product-imgs/bison-burger-2.jpg";
+import burger04img03 from "../imgs/product-imgs/bison-burger-3.jpg";
+import burger04img04 from "../imgs/product-imgs/bison-burger-4.jpg";
+
 import cake01img01 from "../imgs/product-imgs/cake-6.jpg";
 import cake01img02 from "../imgs/product-imgs/cake-1.jpg";
 import cake01img03 from "../imgs/product-imgs/cake-2.jpg";
@@ -172,6 +182,16 @@ import pizza03img01 from "../imgs/product-imgs/pizza-8.png";
 import pizza03img02 from "../imgs/product-imgs/pizza-10.png";
 import pizza03img03 from "../imgs/product-imgs/pizza-11.png";
 import pizza03img04 from "../imgs/product-imgs/pizza-12.png";
+
+import pizza04img01 from "../imgs/product-imgs/hawai-pizza-1.jpg";
+import pizza04img02 from "../imgs/product-imgs/hawai-pizza-2.jpg";
+import pizza04img03 from "../imgs/product-imgs/hawai-pizza-3.jpg";
+import pizza04img04 from "../imgs/product-imgs/hawai-pizza-4.jpg";
+
+import pizza05img01 from "../imgs/product-imgs/pizza-13.png";
+import pizza05img02 from "../imgs/product-imgs/pizza-14.png";
+import pizza05img03 from "../imgs/product-imgs/pizza-15.png";
+import pizza05img04 from "../imgs/product-imgs/pizza-16.png";
 
 import tacos01img01 from "../imgs/product-imgs/tacos-11.jpg";
 import tacos01img02 from "../imgs/product-imgs/tacos-2.jpg";
@@ -858,5 +878,57 @@ export const products = [
             purchases: 54,
             category: "Dish",
             desc: "This dish provides a wide range of nutrients and health benefits. These dishes can be a great way to increase your daily intake of vitamins, minerals, and fiber, while also promoting satiety and helping to maintain a healthy weight.",
+      },
+      {
+            id: "50",
+            title: "Hawaiian Pizza ",
+            price: 26.0,
+            image01: pizza04img01,
+            image02: pizza04img02,
+            image03: pizza04img03,
+            image04: pizza04img04,
+            delivers: 44,
+            purchases: 54,
+            category: "Pizza",
+            desc: "Hawaiian pizza is a pizza that is typically topped with tomato sauce, cheese, ham, and pineapple. While its nutritional benefits depend on the specific ingredients used, pineapple is a good source of vitamin C and dietary fiber.",
+      },
+      {
+            id: "51",
+            title: "BBQ Pizza ",
+            price: 30.0,
+            image01: pizza05img01,
+            image02: pizza05img02,
+            image03: pizza05img03,
+            image04: pizza05img04,
+            delivers: 61,
+            purchases: 92,
+            category: "Pizza",
+            desc: "BBQ, or barbecue, is a cooking method that involves grilling meat, fish, or vegetables over an open flame or hot coals. Some potential benefits of BBQ include increased protein intake, reduced fat content (compared to fried foods), and the potential for enhanced flavor and enjoyment of meals. However, it's important to balance BBQ consumption with a healthy overall diet and to take precautions to avoid overexposure to smoke and carcinogens.",
+      },
+      {
+            id: "52",
+            title: "Turkey Burger ",
+            price: 17.0,
+            image01: burger03img01,
+            image02: burger03img02,
+            image03: burger03img03,
+            image04: burger03img04,
+            delivers: 24,
+            purchases: 53,
+            category: "Burger",
+            desc: "A turkey burger is a burger patty made from ground turkey meat instead of beef. Some potential benefits of turkey burgers include lower fat content than beef burgers, higher protein content, and potential reduction in the risk of heart disease. However, it's important to choose lean ground turkey and to prepare turkey burgers carefully to ensure they are safe to eat.",
+      },
+      {
+            id: "53",
+            title: "Bison Burger ",
+            price: 20.0,
+            image01: burger04img01,
+            image02: burger04img02,
+            image03: burger04img03,
+            image04: burger04img04,
+            delivers: 27,
+            purchases: 55,
+            category: "Burger",
+            desc: "Bison burgers are a popular alternative to traditional beef burgers, and they offer some potential benefits such as being leaner, lower in calories, and higher in protein than beef. Additionally, bison meat is often raised without antibiotics or hormones, making it a potential choice for those looking for more sustainably-raised meat options.",
       },
 ];

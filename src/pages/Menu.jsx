@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Wrapper from "../wrapper/Wrapper";
 import { products } from "../assets/data/products";
 import Widgets from "../components/menu-section/Widgets";
@@ -8,6 +8,7 @@ import AllFoods from "../components/menu-section/AllFoods";
 const Menu = () => {
       const [searchTerm, setSearchTerm] = useState("");
       const [pageNumber, setPageNumber] = useState(0);
+
       const searchedProduct = products.filter((item) => {
             if (searchTerm === "") {
                   return item;
@@ -28,9 +29,11 @@ const Menu = () => {
       const setPage = ({ selected }) => {
             setPageNumber(selected);
       };
-
       const [allProducts, setAllProducts] = useState(displayedPage);
-      
+      useEffect(() => {
+            window.scrollTo(0, 0);
+      }, []);
+
       return (
             <Wrapper title="Menu">
                   <main>

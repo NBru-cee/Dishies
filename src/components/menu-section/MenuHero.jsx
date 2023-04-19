@@ -35,8 +35,8 @@ const MenuHero = () => {
                                                 src={product.image01}
                                                 alt={product.title}
                                                 style={{
-                                                      width: "80%",
-                                                      height: "80vh",
+                                                      width: "30%",
+                                                      height: "50vh",
                                                       objectFit: "contain",
                                                 }}
                                           />
