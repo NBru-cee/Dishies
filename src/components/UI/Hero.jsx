@@ -32,7 +32,7 @@ const Hero = () => {
                                    },
                                    alignItems: "center",
                                    height: {
-                                        md: "90vh",
+                                        md: "95vh",
                                    },
                                    gap: "2rem",
                                    justifyContent: "center",
