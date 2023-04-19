@@ -123,9 +123,7 @@ const Header = () => {
                                           >
                                                 <ShoppingBag />
                                                 <span className="badge">
-                                                      {Math.floor(
-                                                            totalQuantity
-                                                      )}
+                                                      {totalQuantity}
                                                 </span>
                                           </IconButton>
                                     </Tooltip>
