@@ -25,13 +25,20 @@ const Download = () => {
                               padding: "1rem",
                               borderRadius: "0.5rem",
                               my: "2rem",
+                              display: "flex",
+                              flexDirection: {
+                                    xs: "column",
+                                    sm: "row",
+                              },
                         }}
                   >
                         <Stack
                               direction={{ sm: "column", md: "row" }}
                               spacing={2}
+                              display="flex"
+                              flexDirection="column"
                         >
-                              <Box>
+                              <Box sx={{ flexBasis: "50%" }}>
                                     <Stack direction="row" pb="2rem">
                                           <Box sx={{ width: "50%" }}>
                                                 <img
@@ -62,17 +69,31 @@ const Download = () => {
                                           </Box>
                                     </Stack>
                               </Box>
-                              <Box textAlign="center">
+                              <Box textAlign="center" flexBasis="50%">
                                     <Typography variant="h5" color="whitesmoke">
                                           Download our mobile app ! Order
                                           delicious food.
                                     </Typography>
-                                    <Typography variant="body2">
-                                          Our website is also available on
-                                          mobile devices and tablet so when you
-                                          feel hungry, don't be limited by the
-                                          device you have. We are available on
-                                          all devices.
+                                    <Typography variant="body2" color="#14141a">
+                                          Are you tired of waiting in long
+                                          queues at your favorite restaurant, or
+                                          spending hours in the kitchen
+                                          preparing meals? Look no further than
+                                          the Dishies mobile website! Our
+                                          platform offers a variety of
+                                          restaurant and food delivery options
+                                          to satisfy any craving, all in one
+                                          convenient location. With just a few
+                                          clicks, you can enjoy delicious meals
+                                          from your favorite restaurants,
+                                          delivered right to your doorstep.
+                                          Plus, with our user-friendly interface
+                                          and simple payment options, ordering
+                                          food has never been easier. Don't miss
+                                          out on the benefits of Dishies -
+                                          download our mobile website today and
+                                          start enjoying hassle-free dining
+                                          experiences!
                                     </Typography>
                                     <Stack
                                           direction={{

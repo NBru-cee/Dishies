@@ -47,14 +47,16 @@ const Hero = () => {
                                                 mb={2}
                                                 whiteSpace="nowrap"
                                                 fontSize="clamp(2rem, 20px, 2.5rem)"
+                                                className="hero__fonts"
                                           >
                                                 {item.title}
                                           </Typography>
                                           <Typography
                                                 variant="body1"
-                                                color="#1c264c"
+                                                color="#14141a"
                                                 mb={2}
                                                 fontSize="clamp(1rem, 16px, 1.5rem)"
+                                                className="hero__fonts"
                                           >
                                                 {item.desc}
                                           </Typography>

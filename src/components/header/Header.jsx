@@ -18,9 +18,10 @@ import { Link } from "react-router-dom";
 import Account from "../UI/Account";
 import { useSelector } from "react-redux";
 import CartContainer from "../cart/CartContainer";
+import { cartTotalQuantity } from "../../app/slices/cartSlice";
 
 const Header = () => {
-      const totalQuantity = useSelector((state) => state.cart.totalQuantity);
+      const totalQuantity = useSelector(cartTotalQuantity);
       const [profileOpen, setProfileOpen] = useState(false);
       const [navOpen, setNavOpen] = useState(false);
       const [cartOpen, setCartOpen] = useState(false);
@@ -122,7 +123,9 @@ const Header = () => {
                                           >
                                                 <ShoppingBag />
                                                 <span className="badge">
-                                                      {totalQuantity}
+                                                      {Math.floor(
+                                                            totalQuantity
+                                                      )}
                                                 </span>
                                           </IconButton>
                                     </Tooltip>

@@ -7,7 +7,7 @@
 }
 
 html {
-      font-family: "Poppins", sans-serif;
+      font-family: "Poppins", sans-serif !important;
       scroll-behavior: smooth;
       background: white;
 }
@@ -31,9 +31,11 @@ input {
       outline: none;
 }
 
-input::placeholder {
+input::placeholder,
+textarea::placeholder {
       color: inherit;
       opacity: 0.7;
+      font-family: "Poppins", sans-serif !important;
 }
 
 main {
@@ -53,4 +55,5 @@ h6,
 p,
 span {
       white-space: pre-wrap !important;
+      font-family: "Poppins", sans-serif !important;
 }
