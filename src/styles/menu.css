@@ -104,9 +104,6 @@
      border-radius: 1rem;
 }
 
-.main__fonts {
-     font-family: "Poppins", sans-serif !important;
-}
 
 .cart__table::-webkit-scrollbar {
      display: none;
