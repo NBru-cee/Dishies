@@ -1,11 +1,16 @@
 import React, { useRef, useState, useEffect } from "react";
 import { FaCheck, FaTimes, FaInfoCircle } from "react-icons/fa";
-import axios from "../api/axios";
+import "../../styles/profile.css";
+import { Button, Typography } from "@mui/material";
+import { Link } from "react-router-dom";
+import { authActions } from "../../app/slices/authSlice";
+import { useDispatch, useSelector } from "react-redux";
 
 const user_regex = /^[A-z][A-z0-9-_]{3,23}$/;
 const pwd_regex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%]).{8,24}$/;
 
 const UserLogin = () => {
+     
      const userRef = useRef();
      const errRef = useRef();
      const [user, setUser] = useState("");
@@ -18,16 +23,20 @@ const UserLogin = () => {
      const [validMatch, setValidMatch] = useState(false);
      const [matchFocus, setMatchFocus] = useState(false);
      const [errMsg, setErrMsg] = useState("");
-     const [success, setSuccess] = useState(false);
+     const isLoggedIn = useSelector((state) => state.auth.isLoggedIn);
+     const dispatch = useDispatch();
+
      useEffect(() => {
           userRef.current.focus();
      }, []);
+
      useEffect(() => {
           const result = user_regex.test(user);
           console.log(result);
           console.log(user);
           setValidName(result);
      }, [user]);
+
      useEffect(() => {
           const result = pwd_regex.test(pwd);
           console.log(result);
@@ -36,11 +45,12 @@ const UserLogin = () => {
           const match = pwd === matchPwd;
           setValidMatch(match);
      }, [pwd, matchPwd]);
+
      useEffect(() => {
           setErrMsg("");
      }, [user, pwd, matchPwd]);
 
-     const handleSubmit = async (e) => {
+     const handleSubmit = (e) => {
           e.preventDefault();
           const v1 = user_regex.test(user);
           const v2 = pwd_regex.test(pwd);
@@ -48,42 +58,35 @@ const UserLogin = () => {
                setErrMsg("Invalid Entry");
                return;
           }
-          try {
-               const response = await axios.post(
-                    userUserLogin_url,
-                    JSON.stringify({ user, pwd }),
-                    {
-                         headers: { "Content-Type": "application/json" },
-                         withCredentials: true,
-                    }
-               );
-               console.log(response.data);
-               console.log(response.accessToken);
-               console.log(JSON.stringify(response));
-               setSuccess(true);
-               //clear the input fields
-          } catch (err) {
-               if (!err?.response) {
-                    setErrMsg("No server response");
-               } else if (err.response?.status === 409) {
-                    setErrMsg("Username taken");
-               } else {
-                    setErrMsg("Registration failed");
-               }
-               errRef.current.focus();
-          }
+          setSuccess(true);
+          dispatch(authActions.login());
      };
+
      return (
           <>
-               {success ? (
-                    <section>
+               {isLoggedIn ? (
+                    <article
+                         style={{
+                              background: "#99929266",
+                              display: "flex",
+                              flexDirection: "column",
+                              alignItems: "center",
+                              justifyContent: "center",
+                              color: "whitesmoke",
+                         }}
+                    >
                          <h1>Success</h1>
-                         <p>
-                              <a href="#">Sign in</a>
-                         </p>
-                    </section>
+                         <Typography
+                              variant="h5"
+                              color="darksmoke"
+                              mt={2}
+                              textAlign="center"
+                         >
+                              <Link to="/home">Sign in</Link>
+                         </Typography>
+                    </article>
                ) : (
-                    <section>
+                    <article className="login">
                          <p
                               ref={errRef}
                               className={errMsg ? "errmsg" : "offscreen"}
@@ -91,7 +94,7 @@ const UserLogin = () => {
                          >
                               {errMsg}
                          </p>
-                         <h1>UserLogin</h1>
+                         <h1>Login Here</h1>
                          <form onSubmit={handleSubmit}>
                               <label htmlFor="username">
                                    Username:
@@ -226,7 +229,14 @@ const UserLogin = () => {
                                    <FaInfoCircle />
                                    Must match the first password input field
                               </p>
-                              <button
+                              <Button
+                                   variant="contained"
+                                   type="submit"
+                                   sx={{
+                                        mt: "2rem",
+                                        fontSize: "inherit",
+                                   }}
+                                   color="error"
                                    disabled={
                                         !validName || !validPwd || !validMatch
                                              ? true
@@ -234,15 +244,15 @@ const UserLogin = () => {
                                    }
                               >
                                    Sign Up
-                              </button>
+                              </Button>
                          </form>
                          <p>
-                              Already userUserLogined? <br />
+                              Already have an account?
                               <span className="line">
-                                   <a href="#">Sign In</a>
+                                   <Link to="/register">Sign In</Link>
                               </span>
                          </p>
-                    </section>
+                    </article>
                )}
           </>
      );

@@ -18,7 +18,7 @@ const Hero = () => {
      };
 
      return (
-          <section style={{ padding: "1rem" }}>
+          <section style={{ padding: "2rem" }}>
                <Slider {...settings}>
                     {sliderData.map((item) => (
                          <Paper
@@ -27,16 +27,17 @@ const Hero = () => {
                               sx={{
                                    display: "flex !important",
                                    flexDirection: {
+                                        xs: "column",
                                         sm: "column",
                                         md: "row",
                                    },
-                                   alignItems: "center",
                                    height: {
-                                        md: "95vh",
+                                        md: "100vh",
                                    },
+                                   alignItems: "center",
                                    gap: "2rem",
                                    justifyContent: "center",
-                                   padding: "1rem",
+                                   padding: "2rem",
                                    borderRadius: 0,
                               }}
                          >
@@ -45,7 +46,6 @@ const Hero = () => {
                                         variant="h5"
                                         color="#c91212"
                                         mb={2}
-                                        whiteSpace="nowrap"
                                         fontSize="clamp(2rem, 20px, 2.5rem)"
                                    >
                                         {item.title}

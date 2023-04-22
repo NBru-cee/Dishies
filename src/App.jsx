@@ -14,29 +14,34 @@ import MenuItem from "./pages/MenuItem";
 import Profile from "./pages/Profile";
 import Missing from "./pages/Missing";
 import SearchBar from "./components/header/SearchBar";
+import { useSelector } from "react-redux";
 
 const App = () => {
-      return (
-            <BrowserRouter>
-                  <Header />
-                  <SearchBar />
-                  <Routes>
-                        <Route path="/" element={<Navigate to="/home" />} />
-                        <Route path="/home" element={<Home />} />
-                        <Route path="/about" element={<About />} />
-                        <Route path="/contact" element={<Contact />} />
-                        <Route path="/login" element={<Login />} />
-                        <Route path="/register" element={<Register />} />
-                        <Route path="/account" element={<Profile />} />
-                        <Route path="/foods" element={<Menu />} />
-                        <Route path="/foods/:id" element={<MenuItem />} />
-                        <Route path="/checkout" element={<Checkout />} />
-                        <Route path="/cart" element={<Cart />} />
-                        <Route path="*" element={<Missing />} />
-                  </Routes>
-                  <Footer />
-            </BrowserRouter>
-      );
+     const isLoggedIn = useSelector((state) => state.auth.isLoggedIn);
+
+     return (
+          <>
+               <BrowserRouter>
+                    <Header />
+                    <SearchBar />
+                    <Routes>
+                         <Route path="/" element={<Navigate to="/home" />} />
+                         <Route path="/home" element={<Home />} />
+                         <Route path="/about" element={<About />} />
+                         <Route path="/contact" element={<Contact />} />
+                         <Route path="/register" element={<Register />} />
+                         <Route path="/account" element={<Profile />} />
+                         <Route path="/foods" element={<Menu />} />
+                         <Route path="/foods/:id" element={<MenuItem />} />
+                         <Route path="/checkout" element={<Checkout />} />
+                         <Route path="/cart" element={<Cart />} />
+                         <Route path="*" element={<Missing />} />
+                         <Route path="/login" element={<Login />} />
+                    </Routes>
+                    <Footer />
+               </BrowserRouter>
+          </>
+     );
 };
 
 export default App;

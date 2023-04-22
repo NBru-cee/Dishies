@@ -8,22 +8,22 @@ import NewsLetter from "../components/UI/NewsLetter";
 import Download from "../components/UI/Download";
 
 const Home = () => {
-      useEffect(() => {
-            window.scrollTo(0, 0);
-      }, []);
+     useEffect(() => {
+          window.scrollTo(0, 0);
+     }, []);
 
-      return (
-            <Wrapper title="Home">
-                  <Hero />
-                  <main>
-                        <PopularMenu />
-                        <AboutUs />
-                        <MenuPack />
-                        <NewsLetter />
-                        <Download />
-                  </main>
-            </Wrapper>
-      );
+     return (
+          <Wrapper title="Home">
+               <Hero />
+               <main>
+                    <PopularMenu />
+                    <AboutUs />
+                    <MenuPack />
+                    <NewsLetter />
+                    <Download />
+               </main>
+          </Wrapper>
+     );
 };
 
 export default Home;
