@@ -29,7 +29,8 @@ const Menu = () => {
       const setPage = ({ selected }) => {
             setPageNumber(selected);
       };
-      const [allProducts, setAllProducts] = useState(displayedPage);
+     const [allProducts, setAllProducts] = useState(products);
+     
       useEffect(() => {
             window.scrollTo(0, 0);
       }, []);
