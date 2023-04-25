@@ -32,13 +32,12 @@ const Hero = () => {
                                         md: "row",
                                    },
                                    height: {
-                                        md: "90vh",
+                                        md: "80vh",
                                    },
                                    alignItems: "center",
                                    gap: "2rem",
                                    justifyContent: "center",
-                                   padding: "2rem",
-                                   borderRadius: 0,
+                                   padding: "1rem 2rem",
                               }}
                          >
                               <Box flexBasis="50%">
