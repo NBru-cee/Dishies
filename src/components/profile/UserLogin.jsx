@@ -10,7 +10,6 @@ const user_regex = /^[A-z][A-z0-9-_]{3,23}$/;
 const pwd_regex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%]).{8,24}$/;
 
 const UserLogin = () => {
-     
      const userRef = useRef();
      const errRef = useRef();
      const [user, setUser] = useState("");
@@ -22,6 +21,7 @@ const UserLogin = () => {
      const [matchPwd, setMatchPwd] = useState("");
      const [validMatch, setValidMatch] = useState(false);
      const [matchFocus, setMatchFocus] = useState(false);
+     const [success, setSuccess] = useState(false);
      const [errMsg, setErrMsg] = useState("");
      const isLoggedIn = useSelector((state) => state.auth.isLoggedIn);
      const dispatch = useDispatch();
@@ -64,7 +64,7 @@ const UserLogin = () => {
 
      return (
           <>
-               {isLoggedIn ? (
+               {success ? (
                     <article
                          style={{
                               background: "#99929266",
@@ -78,7 +78,7 @@ const UserLogin = () => {
                          <h1>Success</h1>
                          <Typography
                               variant="h5"
-                              color="darksmoke"
+                              color="green"
                               mt={2}
                               textAlign="center"
                          >
