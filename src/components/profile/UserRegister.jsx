@@ -15,7 +15,7 @@ const UserRegister = () => {
                <Paper>
                     <Box
                          sx={{
-                              padding: "0 20rem",
+                              padding: "0 5rem",
                               display: "flex",
                               alignItems: "center",
                               justifyContent: "center",

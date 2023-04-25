@@ -1,63 +1,63 @@
 .single__product {
-      animation: zoom 1s ease-in-out forwards;
+     animation: zoom 1s ease-in-out forwards;
 }
 
 @keyframes zoom {
-      from {
-            transform: scale(0);
-      }
+     from {
+          transform: scale(0);
+     }
 
-      to {
-            transform: scale(1);
-      }
+     to {
+          transform: scale(1);
+     }
 }
 
 .newsletter textarea {
-      color: #272626;
-      background: whitesmoke !important;
-      padding: 1rem;
-      border-radius: .5rem;
-      border: none;
-      outline: none;
-      font-size: 1.1rem;
-      width: 70%;
+     color: #272626;
+     background: whitesmoke !important;
+     padding: 1rem;
+     border-radius: .5rem;
+     border: none;
+     outline: none;
+     font-size: 1.1rem;
+     width: 70%;
 }
 
 .newsletter textarea::placeholder {
-      color: #222020;
-      font-size: 1rem;
-      font-family: inherit;
-      opacity: 0.7;
+     color: #222020;
+     font-size: 1rem;
+     font-family: inherit;
+     opacity: 0.7;
 }
 
 .btn__stack {
-      display: flex;
-      align-items: center;
-      gap: 1rem;
-      padding: 1rem;
-      border-radius: 0.5rem;
-      justify-content: center;
-      margin: 3rem 0;
-      background: linear-gradient(to right, #eb3a3a 0%, #e46a6a 100%);
+     display: flex;
+     align-items: center;
+     gap: 1rem;
+     padding: 1rem;
+     border-radius: 0.5rem;
+     justify-content: center;
+     margin: 3rem 0;
+     background: linear-gradient(to right, #eb3a3a 0%, #e46a6a 100%);
 }
 
 .category__btn {
-      border: 1px solid whitesmoke !important;
-      color: whitesmoke !important;
-      transition: 0.4s;
+     border: 1px solid whitesmoke !important;
+     color: whitesmoke !important;
+     transition: 0.4s;
 }
 
 .active__category {
-      background: whitesmoke !important;
-      color: #eb3a3a !important;
+     background: whitesmoke !important;
+     color: #eb3a3a !important;
 }
 
 .slider__container {
-      display: flex !important;
-      align-items: center;
-      gap: 2rem;
-      justify-content: center;
-      padding: 1rem;
-      height: 95vh;
-      border-radius: 0;
+     display: flex !important;
+     align-items: center;
+     gap: 2rem;
+     justify-content: center;
+     padding: 1rem;
+     height: 95vh;
+     border-radius: 0;
 }

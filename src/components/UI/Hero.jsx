@@ -32,7 +32,7 @@ const Hero = () => {
                                         md: "row",
                                    },
                                    height: {
-                                        md: "100vh",
+                                        md: "90vh",
                                    },
                                    alignItems: "center",
                                    gap: "2rem",
@@ -43,22 +43,20 @@ const Hero = () => {
                          >
                               <Box flexBasis="50%">
                                    <Typography
-                                        variant="h5"
+                                        variant="h6"
                                         color="#c91212"
                                         mb={2}
-                                        fontSize="clamp(2rem, 20px, 2.5rem)"
                                    >
                                         {item.title}
                                    </Typography>
                                    <Typography
-                                        variant="body1"
+                                        variant="subtitle2"
                                         color="#14141a"
                                         mb={2}
-                                        fontSize="clamp(1rem, 16px, 1.5rem)"
                                    >
                                         {item.desc}
                                    </Typography>
-                                   <Stack direction="row" spacing={4}>
+                                   <Stack direction="row" spacing={4} mt={2}>
                                         <Button
                                              variant="contained"
                                              color="error"
