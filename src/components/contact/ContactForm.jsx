@@ -8,14 +8,29 @@ import {
      Stack,
      Box,
 } from "@mui/material";
-import React from "react";
+import React, { forwardRef, useState } from "react";
+
+const SnackbarAlert = forwardRef(function SnackbarAlert(props, ref) {
+     return <Alert ref={ref} {...props} elevation={6} />;
+});
 
 const ContactForm = () => {
      const handleSubmit = (e) => {
           e.preventDefault();
           console.log("Form Submitted");
      };
-
+     const [open, setOpen] = useState(false);
+     const handleClose = (reason) => {
+          if (reason === "clickedaway") {
+               return;
+          }
+          setOpen(false);
+     };
+     const handleClick = (e) => {
+          setOpen(true);
+          const input = document.querySelector("input");
+          input.value = "";
+     };
      return (
           <section>
                <Paper>
@@ -97,11 +112,21 @@ const ContactForm = () => {
                                    mt: "1rem",
                                    padding: "0.5rem 0",
                               }}
+                              onClick={handleClick}
                          >
                               Submit
                          </Button>
                     </form>
                </Paper>
+               <Snackbar
+                    open={open}
+                    onClose={handleClose}
+                    autoHideDuration={2000}
+               >
+                    <SnackbarAlert onClose={handleClose} severity="success">
+                         Form sent successfully !
+                    </SnackbarAlert>
+               </Snackbar>
           </section>
      );
 };
