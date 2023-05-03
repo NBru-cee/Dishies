@@ -13,8 +13,8 @@ const Hero = () => {
           speed: 1000,
           slidesToShow: 1,
           slidesToScroll: 1,
-          dots: true,
-          arrows: true,
+          dots: false,
+          arrows: false,
      };
 
      return (
@@ -32,6 +32,8 @@ const Hero = () => {
                                         md: "row",
                                    },
                                    height: {
+                                        xs: "160vh",
+                                        sm: "200vh",
                                         md: "80vh",
                                    },
                                    alignItems: "center",

@@ -8,7 +8,7 @@
 
 .link__btn {
      text-transform: capitalize;
-     font-size: 1.1rem;
+     font-size: 1rem;
      color: #0e1429 !important;
      margin-left: 2rem;
      font-weight: 500;
@@ -22,7 +22,7 @@
      background: linear-gradient(to right, #c91c1c 0%, yellow 100%);
      padding: 5px;
      border-radius: 50%;
-     font-size: 0.8rem;
+     font-size: 0.7rem;
      width: 20px;
      display: flex;
      align-items: center;

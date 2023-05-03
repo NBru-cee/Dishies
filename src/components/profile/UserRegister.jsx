@@ -19,7 +19,7 @@ const UserRegister = () => {
                               display: "flex",
                               alignItems: "center",
                               justifyContent: "center",
-                              width: "100%",
+                              width: "25%",
                          }}
                     >
                          <form>

@@ -61,3 +61,12 @@
      height: 95vh;
      border-radius: 0;
 }
+
+.footer_links {
+     transition: 0.4s;
+     width: 10rem;
+}
+
+.footer_links:hover {
+     color: orange !important;
+}

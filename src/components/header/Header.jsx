@@ -60,6 +60,7 @@ const Header = () => {
                               display: "flex",
                               alignItems: "center",
                               justifyContent: "space-between",
+                              padding: "0.5rem",
                          }}
                     >
                          <Stack direction="column" alignItems="center">
@@ -102,7 +103,7 @@ const Header = () => {
                               ))}
                          </Stack>
 
-                         <Stack direction="row">
+                         <Stack direction="row" spacing={2}>
                               <Tooltip
                                    title="Cart"
                                    placement="bottom"
@@ -138,18 +139,27 @@ const Header = () => {
                                    </IconButton>
                               </Tooltip>
 
-                              <IconButton
-                                   sx={{
-                                        display: {
-                                             sm: "none",
-                                             xs: "block",
-                                        },
-                                   }}
-                                   color="inherit"
-                                   onClick={() => setNavOpen(!navOpen)}
+                              <Tooltip
+                                   title="Menu"
+                                   placement="bottom"
+                                   arrow
+                                   enterDelay={1000}
+                                   leaveDelay={200}
                               >
-                                   <MdMenu />
-                              </IconButton>
+                                   <IconButton
+                                        sx={{
+                                             display: {
+                                                  sm: "none",
+                                                  xs: "block",
+                                             },
+                                             transform: "translateY(5px)",
+                                        }}
+                                        color="inherit"
+                                        onClick={() => setNavOpen(!navOpen)}
+                                   >
+                                        <MdMenu />
+                                   </IconButton>
+                              </Tooltip>
                          </Stack>
 
                          <Menu

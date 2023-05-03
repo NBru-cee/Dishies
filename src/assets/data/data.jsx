@@ -20,7 +20,16 @@ import chef03 from "../imgs/kitchen-imgs/chef3.png";
 import chef04 from "../imgs/kitchen-imgs/chef4.png";
 import chef05 from "../imgs/kitchen-imgs/chef5.png";
 import chef06 from "../imgs/kitchen-imgs/chef6.png";
-import { Settings, Logout, Help } from "@mui/icons-material";
+import {
+     Settings,
+     Logout,
+     Help,
+     FacebookRounded,
+     Instagram,
+     WhatsApp,
+     LinkedIn,
+     Twitter,
+} from "@mui/icons-material";
 
 export const links = [
      { id: 1, path: "/home", title: "Home" },
@@ -98,4 +107,37 @@ export const chefs = [
      { id: 4, image: chef04, alt: "chef 04" },
      { id: 5, image: chef05, alt: "chef 05" },
      { id: 6, image: chef06, alt: "chef 06" },
+];
+
+export const socialMedias = [
+     {
+          id: 1,
+          icon: <FacebookRounded />,
+          url: "https://www.facebook.com",
+          color: "primary",
+     },
+     {
+          id: 2,
+          icon: <Instagram />,
+          url: "https://www.instagram.com",
+          color: "secondary",
+     },
+     {
+          id: 3,
+          icon: <WhatsApp />,
+          url: "https://www.whatsapp.com",
+          color: "success",
+     },
+     {
+          id: 4,
+          icon: <LinkedIn />,
+          url: "https://www.primary.com",
+          color: "primary",
+     },
+     {
+          id: 5,
+          icon: <Twitter />,
+          url: "https://www.info.com",
+          color: "info",
+     },
 ];

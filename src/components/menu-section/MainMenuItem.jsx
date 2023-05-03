@@ -81,7 +81,7 @@ const MainMenuItem = ({ product, prevImage, setPrevImage, addProduct }) => {
                     </Box>
                     <Box sx={{ flexBasis: "40%" }}>
                          <Stack direction="column" spacing={2}>
-                              <Typography variant="h4" color="#050530">
+                              <Typography variant="h6" color="#050530">
                                    {product.title}
                               </Typography>
                               <Typography variant="h5">
@@ -97,7 +97,7 @@ const MainMenuItem = ({ product, prevImage, setPrevImage, addProduct }) => {
                                    </span>
                               </Typography>
                               <Stack direction="column" spacing={2}>
-                                   <Typography variant="h5" color="#050530">
+                                   <Typography variant="body1" color="#050530">
                                         <CountUp
                                              start={0}
                                              duration={3}
@@ -112,7 +112,7 @@ const MainMenuItem = ({ product, prevImage, setPrevImage, addProduct }) => {
                                         />
                                         <span> Delivers</span>
                                    </Typography>
-                                   <Typography variant="h5" color="#050530">
+                                   <Typography variant="body1" color="#050530">
                                         <CountUp
                                              start={0}
                                              duration={3}

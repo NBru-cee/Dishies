@@ -3,14 +3,9 @@ import { links } from "../../assets/data/data";
 import { infoLinks } from "../../assets/data/data";
 import { Stack, Box, IconButton, Typography } from "@mui/material";
 import { Link } from "react-router-dom";
-import {
-     FacebookRounded,
-     Instagram,
-     WhatsApp,
-     LinkedIn,
-     Twitter,
-     DinnerDining,
-} from "@mui/icons-material";
+import { DinnerDining } from "@mui/icons-material";
+import { socialMedias } from "../../assets/data/data";
+import "../../styles/home.css";
 
 const Footer = () => {
      const year = new Date().getFullYear().toString();
@@ -68,7 +63,11 @@ const Footer = () => {
                               <Typography variant="h6">Quick Links</Typography>
                               <Stack direction="column" spacing={1}>
                                    {links.map((link) => (
-                                        <Link to={link.path} key={link.id}>
+                                        <Link
+                                             to={link.path}
+                                             key={link.id}
+                                             className="footer_links"
+                                        >
                                              {link.title}
                                         </Link>
                                    ))}
@@ -78,7 +77,11 @@ const Footer = () => {
                               <Typography variant="h6">Info Links</Typography>
                               <Stack direction="column" spacing={1}>
                                    {infoLinks.map((link) => (
-                                        <Link key={link.id} to={link.path}>
+                                        <Link
+                                             key={link.id}
+                                             to={link.path}
+                                             className="footer_links"
+                                        >
                                              {link.title}
                                         </Link>
                                    ))}
@@ -89,81 +92,26 @@ const Footer = () => {
                                    Support us at:
                               </Typography>
                               <Stack spacing={2} direction="row">
-                                   <Link
-                                        to="https://www.facebook.com"
-                                        style={{
-                                             width: "35px",
-                                             height: "35px",
-                                             background: "white",
-                                             borderRadius: "50%",
-                                             padding: "5px",
-                                             display: "flex",
-                                             alignItems: "center",
-                                             justifyContent: "center",
-                                        }}
-                                   >
-                                        <FacebookRounded color="primary" />
-                                   </Link>
-                                   <Link
-                                        to="https://www.instagram.com"
-                                        style={{
-                                             width: "35px",
-                                             height: "35px",
-                                             background: "white",
-                                             borderRadius: "50%",
-                                             padding: "5px",
-                                             display: "flex",
-                                             alignItems: "center",
-                                             justifyContent: "center",
-                                        }}
-                                   >
-                                        <Instagram color="secondary" />
-                                   </Link>
-                                   <Link
-                                        to="https://www.whatsapp.com"
-                                        style={{
-                                             width: "35px",
-                                             height: "35px",
-                                             background: "white",
-                                             borderRadius: "50%",
-                                             padding: "5px",
-                                             display: "flex",
-                                             alignItems: "center",
-                                             justifyContent: "center",
-                                        }}
-                                   >
-                                        <WhatsApp color="success" />
-                                   </Link>
-                                   <Link
-                                        to="https://www.linkedin.com"
-                                        style={{
-                                             width: "35px",
-                                             height: "35px",
-                                             background: "white",
-                                             borderRadius: "50%",
-                                             padding: "5px",
-                                             display: "flex",
-                                             alignItems: "center",
-                                             justifyContent: "center",
-                                        }}
-                                   >
-                                        <LinkedIn color="primary" />
-                                   </Link>
-                                   <Link
-                                        to="https://www.twitter.com"
-                                        style={{
-                                             width: "35px",
-                                             height: "35px",
-                                             background: "white",
-                                             borderRadius: "50%",
-                                             padding: "5px",
-                                             display: "flex",
-                                             alignItems: "center",
-                                             justifyContent: "center",
-                                        }}
-                                   >
-                                        <Twitter color="info" />
-                                   </Link>
+                                   {socialMedias.map((media) => (
+                                        <Link
+                                             key={media.id}
+                                             to={media.url}
+                                             style={{
+                                                  width: "35px",
+                                                  height: "35px",
+                                                  background: "white",
+                                                  borderRadius: "50%",
+                                                  padding: "5px",
+                                                  display: "flex",
+                                                  alignItems: "center",
+                                                  justifyContent: "center",
+                                             }}
+                                        >
+                                             <IconButton color={media.color}>
+                                                  {media.icon}
+                                             </IconButton>
+                                        </Link>
+                                   ))}
                               </Stack>
                          </Box>
                     </Stack>
