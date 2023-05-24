@@ -13,11 +13,10 @@ const Contact = () => {
       return (
             <Wrapper title="Contact">
                   <MenuTitle title="Contact us" />
-                  <LocalizationProvider dateAdapter={AdapterDateFns}>
-                        <main>
-                              <ContactForm />
-                        </main>
-                  </LocalizationProvider>
+
+                  <main style={{ padding: "2rem" }}>
+                        <ContactForm />
+                  </main>
             </Wrapper>
       );
 };
