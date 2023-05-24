@@ -1,27 +1,17 @@
-import React, { Component } from "react";
-import { Map, GoogleApiWrapper } from "google-maps-react";
+import { useMemo } from "react";
+import { GoogleMap, Marker } from "@react-google-maps/api";
 
-class MapContainer extends Component {
-      render() {
-            const mapStyles = {
-                  width: "100%",
-                  height: "400px",
-            };
+const MapContainer = () => {
+      const center = useMemo(() => ({ lat: 44, lng: -86 }), []);
+      return (
+            <GoogleMap
+                  zoom={10}
+                  center={center}
+                  mapContainerClassName="mapContainer"
+            >
+                  <Marker position={center} />
+            </GoogleMap>
+      );
+};
 
-            return (
-                  <Map
-                        google={this.props.google}
-                        zoom={14}
-                        style={mapStyles}
-                        initialCenter={{
-                              lat: 37.7749,
-                              lng: -122.4194,
-                        }}
-                  />
-            );
-      }
-}
-
-export default GoogleApiWrapper({
-      apiKey: "AIzaSyBlpE6WC-dOa9bRbgCrMqNwqPX_aTInLj4",
-})(MapContainer);
+export default MapContainer;

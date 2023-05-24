@@ -7,12 +7,14 @@ import {
       Stack,
       Tooltip,
       Dialog,
+      CircularProgress,
 } from "@mui/material";
 import { Phone, PinDrop, Email, Search, Close } from "@mui/icons-material";
 import { products } from "../../assets/data/products";
 import { Link } from "react-router-dom";
 import "../../styles/header.css";
 import MapContainer from "../UI/MapContainer";
+import { useLoadScript } from "@react-google-maps/api";
 
 const SearchBar = () => {
       const [filterData, setFilterData] = useState([]);
@@ -36,6 +38,12 @@ const SearchBar = () => {
             setFilterData([]);
             setWordEntered("");
       };
+      const isLoaded = useLoadScript({
+            googleMapsApiKey: "AIzaSyBlpE6WC-dOa9bRbgCrMqNwqPX_aTInLj4",
+      });
+      if (!isLoaded) {
+            return <CircularProgress />;
+      }
       return (
             <Paper
                   sx={{
