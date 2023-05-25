@@ -1,123 +1,315 @@
-import React from "react";
+import React, { useRef, useState, useEffect } from "react";
+import { FaInfoCircle } from "react-icons/fa";
+import "../../styles/profile.css";
 import {
-     TextField,
-     Box,
-     Stack,
-     Button,
-     Typography,
-     Paper,
-     Link,
+      Typography,
+      TextField,
+      Box,
+      Button,
+      Paper,
+      Stack,
 } from "@mui/material";
+import { Link } from "react-router-dom";
+import { authActions } from "../../app/slices/authSlice";
+import { useDispatch } from "react-redux";
 
-const UserRegister = () => {
-     return (
-          <section>
-               <Paper>
-                    <Box
-                         sx={{
-                              padding: "0 5rem",
-                              display: "flex",
-                              alignItems: "center",
-                              justifyContent: "center",
-                              flexDirection: "column",
-                              width: "100%",
-                         }}
-                    >
-                         <form>
-                              <Stack direction="column" my={2}>
-                                   <TextField
-                                        label="First Name"
-                                        color="success"
-                                        sx={{ width: "100%" }}
-                                   />
-                                   <small></small>
-                              </Stack>
+const user_regex = /^[A-z][A-z0-9-_]{3,23}$/;
+const pwd_regex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%]).{8,24}$/;
 
-                              <Stack direction="column" my={2}>
-                                   <TextField
-                                        label="Last Name"
-                                        color="success"
-                                        sx={{ width: "100%" }}
-                                   />
-                                   <small></small>
-                              </Stack>
+const userRegister = () => {
+      const userRef = useRef();
+      const errRef = useRef();
+      const [user, setUser] = useState("");
+      const [validName, setValidName] = useState(false);
+      const [userFocus, setUserFocus] = useState(false);
+      const [pwd, setPwd] = useState("");
+      const [validPwd, setValidPwd] = useState(false);
+      const [pwdFocus, setPwdFocus] = useState(false);
+      const [matchPwd, setMatchPwd] = useState("");
+      const [validMatch, setValidMatch] = useState(false);
+      const [matchFocus, setMatchFocus] = useState(false);
+      const [success, setSuccess] = useState(false);
+      const [errMsg, setErrMsg] = useState("");
+      const dispatch = useDispatch();
 
-                              <Stack direction="column" my={2}>
-                                   <TextField
-                                        label="Email"
-                                        color="success"
-                                        sx={{ width: "100%" }}
-                                        type="email"
-                                   />
-                                   <small></small>
-                              </Stack>
+      useEffect(() => {
+            userRef.current.focus();
+      }, []);
 
-                              <Stack direction="column" my={2}>
-                                   <TextField
-                                        label="Password"
-                                        color="success"
-                                        sx={{ width: "100%" }}
-                                        type="password"
-                                   />
-                                   <small></small>
-                              </Stack>
+      useEffect(() => {
+            const result = user_regex.test(user);
+            console.log(result);
+            console.log(user);
+            setValidName(result);
+      }, [user]);
 
-                              <Stack direction="column" my={2}>
-                                   <TextField
-                                        label="Confirm Password"
-                                        color="success"
-                                        sx={{ width: "100%" }}
-                                        type="password"
-                                   />
-                                   <small></small>
-                              </Stack>
+      useEffect(() => {
+            const result = pwd_regex.test(pwd);
+            console.log(result);
+            console.log(pwd);
+            setValidPwd(result);
+            const match = pwd === matchPwd;
+            setValidMatch(match);
+      }, [pwd, matchPwd]);
 
-                              <Stack direction="row" my={2}>
-                                   <Button
-                                        variant="contained"
-                                        color="error"
-                                        sx={{
-                                             width: "100%",
-                                             textAlign: "center",
-                                             padding: "0.5rem 0",
-                                        }}
-                                   >
-                                        <Link href="/">Sign up</Link>
-                                   </Button>
-                              </Stack>
+      useEffect(() => {
+            setErrMsg("");
+      }, [user, pwd, matchPwd]);
 
-                              <Box>
-                                   <Typography
-                                        variant="subtitle"
-                                        textAlign="center"
-                                   >
-                                        Already have an account ?
-                                        <Link
-                                             href="/login"
-                                             sx={{
-                                                  color: "darkblue !important",
-                                                  fontSize: "1.2rem",
-                                                  fontWeight: "500",
-                                                  transition: "0.4s",
-                                                  "&:hover": {
-                                                       opacity: 0.8,
-                                                       color: "darkblue !important",
-                                                  },
-                                                  "&:active": {
-                                                       opacity: 0.6,
-                                                       color: "darkblue !important",
-                                                  },
-                                             }}
-                                        >
-                                             Log in here.
-                                        </Link>
-                                   </Typography>
+      const handleSubmit = (e) => {
+            e.preventDefault();
+            const v1 = user_regex.test(user);
+            const v2 = pwd_regex.test(pwd);
+            if (!v1 || !v2) {
+                  setErrMsg("Invalid Entry");
+                  return;
+            }
+            setSuccess(true);
+            dispatch(authActions.login());
+      };
+
+      return (
+            <>
+                  {success ? (
+                        <Paper
+                              style={{
+                                    background: "#99929266",
+                                    display: "flex",
+                                    flexDirection: "column",
+                                    alignItems: "center",
+                                    justifyContent: "center",
+                                    color: "whitesmoke",
+                              }}
+                        >
+                              <Typography variant="h1">Success</Typography>
+                              <Typography
+                                    variant="h5"
+                                    color="green"
+                                    mt={2}
+                                    textAlign="center"
+                              >
+                                    <Link to="/home">Sign in</Link>
+                              </Typography>
+                        </Paper>
+                  ) : (
+                        <Paper
+                              className="login"
+                              sx={{
+                                    padding: "2rem",
+                                    display: "flex",
+                                    flexDirection: "column",
+                                    alignItems: "center",
+                                    width: "90%",
+                                    margin: "2rem",
+                              }}
+                        >
+                              <Typography
+                                    variant="body1"
+                                    ref={errRef}
+                                    className={errMsg ? "errmsg" : "offscreen"}
+                                    aria-live="assertLive"
+                              >
+                                    {errMsg}
+                              </Typography>
+                              <Typography variant="h3">Signup Here</Typography>
+                              <form
+                                    onSubmit={handleSubmit}
+                                    className="loginForm"
+                              >
+                                    <Stack direction="column" spacing={2}>
+                                          <TextField
+                                                label="Username"
+                                                type="text"
+                                                id="username"
+                                                ref={userRef}
+                                                autoComplete="off"
+                                                color={`${
+                                                      validName
+                                                            ? "success"
+                                                            : "error"
+                                                }`}
+                                                onChange={(e) =>
+                                                      setUser(e.target.value)
+                                                }
+                                                required
+                                                aria-invalid={
+                                                      validName
+                                                            ? "false"
+                                                            : "true"
+                                                }
+                                                aria-describedby="uidnote"
+                                                onFocus={() =>
+                                                      setUserFocus(true)
+                                                }
+                                                onBlur={() =>
+                                                      setUserFocus(false)
+                                                }
+                                          />
+                                          <Typography
+                                                variant="body1"
+                                                id="uidnote"
+                                                className={
+                                                      userFocus &&
+                                                      user &&
+                                                      !validName
+                                                            ? "instructions"
+                                                            : "offscreen"
+                                                }
+                                          >
+                                                <FaInfoCircle />
+                                                4 to 24 characters. <br />
+                                                Must begin with a letter. <br />
+                                                Letters, Numbers, underscores,
+                                                <br />
+                                                and hyphens allowed
+                                          </Typography>
+                                    </Stack>
+
+                                    <Stack direction="column" spacing={2}>
+                                          <TextField
+                                                label="Password"
+                                                type="password"
+                                                color={`${
+                                                      validPwd
+                                                            ? "success"
+                                                            : "error"
+                                                }`}
+                                                onChange={(e) =>
+                                                      setPwd(e.target.value)
+                                                }
+                                                required
+                                                aria-invalid={
+                                                      validPwd
+                                                            ? "false"
+                                                            : "true"
+                                                }
+                                                aria-describedby="pwdnote"
+                                                onFocus={() =>
+                                                      setPwdFocus(true)
+                                                }
+                                                onBlur={() =>
+                                                      setPwdFocus(false)
+                                                }
+                                          />
+                                          <Typography
+                                                variant="body1"
+                                                id="pwdnote"
+                                                className={
+                                                      pwdFocus && !validPwd
+                                                            ? "instructions"
+                                                            : "offscreen"
+                                                }
+                                          >
+                                                <FaInfoCircle />
+                                                8 to 24 characters. <br />
+                                                Must include <br />
+                                                uppercase and <br />
+                                                lowercase letters,
+                                                <br />
+                                                a number and a <br /> special
+                                                character. <br /> Allowed
+                                                special <br />
+                                                characters:
+                                                <span aria-label="exclamation mark">
+                                                      !
+                                                </span>
+                                                <span aria-label="at symbol">
+                                                      @
+                                                </span>
+                                                <span aria-label=" hashtag">
+                                                      #
+                                                </span>
+                                                <span aria-label=" dollar sign">
+                                                      $
+                                                </span>
+                                                <span aria-label=" percent">
+                                                      %
+                                                </span>
+                                          </Typography>
+                                    </Stack>
+
+                                    <Stack direction="column" spacing={2}>
+                                          <TextField
+                                                label="Confirm Password"
+                                                type="password"
+                                                id="confirm_pwd"
+                                                color={`${
+                                                      validMatch
+                                                            ? "success"
+                                                            : "error"
+                                                }`}
+                                                required
+                                                onChange={(e) =>
+                                                      setMatchPwd(
+                                                            e.target.value
+                                                      )
+                                                }
+                                                aria-invalid={
+                                                      validMatch
+                                                            ? "false"
+                                                            : "true"
+                                                }
+                                                aria-describedby="confirmnote"
+                                                onFocus={() =>
+                                                      setMatchFocus(true)
+                                                }
+                                                onBlur={() =>
+                                                      setMatchFocus(false)
+                                                }
+                                          />
+                                          <Typography
+                                                variant="body1"
+                                                id="confirmnote"
+                                                className={
+                                                      matchFocus && !validMatch
+                                                            ? "instructions"
+                                                            : "offscreen"
+                                                }
+                                          >
+                                                <FaInfoCircle />
+                                                Must match the first <br />
+                                                password input field
+                                          </Typography>
+                                    </Stack>
+                                    <Box
+                                          display="flex"
+                                          width="100%"
+                                          alignItems="center"
+                                    >
+                                          <Button
+                                                variant="contained"
+                                                type="submit"
+                                                color="error"
+                                                sx={{ width: "100%" }}
+                                                disabled={
+                                                      !validName ||
+                                                      !validPwd ||
+                                                      !validMatch
+                                                            ? true
+                                                            : false
+                                                }
+                                          >
+                                                Sign Up
+                                          </Button>
+                                    </Box>
+                              </form>
+                              <Box mt="1rem">
+                                    <Typography variant="body2">
+                                          Already have an account?
+                                          <Typography
+                                                variant="subtitle1"
+                                                className="line"
+                                          >
+                                                <Link to="/login">
+                                                      Login here
+                                                </Link>
+                                          </Typography>
+                                    </Typography>
                               </Box>
-                         </form>
-                    </Box>
-               </Paper>
-          </section>
-     );
+                        </Paper>
+                  )}
+            </>
+      );
 };
 
-export default UserRegister;
+export default userRegister;
