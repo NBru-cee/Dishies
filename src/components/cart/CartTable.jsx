@@ -1,6 +1,6 @@
 import React from "react";
 import { cartActions } from "../../app/slices/cartSlice";
-import { IconButton, TableCell, TableRow } from "@mui/material";
+import { IconButton, TableCell, TableRow, Tooltip } from "@mui/material";
 import { useDispatch } from "react-redux";
 import { Delete } from "@mui/icons-material";
 import "../../styles/menu.css";
@@ -33,19 +33,27 @@ const CartTable = ({ product }) => {
                   <TableCell>${price}</TableCell>
                   <TableCell>${totalPrice}</TableCell>
                   <TableCell>
-                        <IconButton
-                              onClick={deleteProduct}
-                              sx={{
-                                    background: "maroon",
-                                    color: "whitesmoke",
-                                    transition: "0.4s",
-                                    "&:hover": {
-                                          background: "red",
-                                    },
-                              }}
+                        <Tooltip
+                              title="Remove from cart"
+                              placement="bottom"
+                              enterDelay={1000}
+                              leaveDelay={500}
+                              arrow
                         >
-                              <Delete />
-                        </IconButton>
+                              <IconButton
+                                    onClick={deleteProduct}
+                                    sx={{
+                                          background: "maroon",
+                                          color: "whitesmoke",
+                                          transition: "0.4s",
+                                          "&:hover": {
+                                                background: "red",
+                                          },
+                                    }}
+                              >
+                                    <Delete />
+                              </IconButton>
+                        </Tooltip>
                   </TableCell>
             </TableRow>
       );

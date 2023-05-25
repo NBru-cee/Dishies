@@ -15,7 +15,7 @@ import { useDispatch } from "react-redux";
 import { cartActions } from "../../app/slices/cartSlice";
 
 const ProductCard = ({ item }) => {
-      const { image01, price, title, id } = item;
+      const { image01, price, title, id, category } = item;
       const dispatch = useDispatch();
       const [ratingValue, setRatingValue] = useState(null);
       const handleRating = (newValue) => {
@@ -47,18 +47,29 @@ const ProductCard = ({ item }) => {
             >
                   <Box>
                         <Box
-                              sx={{
-                                    height: "10rem",
-                                    display: "flex",
-                                    alignItems: "center",
-                                    justifyContent: "center",
-                                    overflow: "hidden",
-                                    transition: "0.4s",
-                                    padding: "2rem",
-                                    "&:hover": {
-                                          transform: "scale(1.2)",
-                                    },
-                              }}
+                              height="10rem"
+                              display="flex"
+                              alignItems="center"
+                              justifyContent="center"
+                              overflow="hidden"
+                              sx={
+                                    category === "Wine"
+                                          ? {
+                                                  padding: "2rem",
+                                                  transition: "0.4s",
+                                                  "&:hover": {
+                                                        transform:
+                                                              "scale(1.15)",
+                                                  },
+                                            }
+                                          : {
+                                                  transition: "0.4s",
+                                                  "&:hover": {
+                                                        transform:
+                                                              "scale(1.15)",
+                                                  },
+                                            }
+                              }
                         >
                               <Link to={`/foods/${id}`}>
                                     <img
