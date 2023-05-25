@@ -6,6 +6,7 @@ import pizza from "../imgs/product-imgs/pizza-12.png";
 import fries from "../imgs/product-imgs/fries-1.png";
 import bread from "../imgs/product-imgs/loaf-bread-3.png";
 import coffee from "../imgs/product-imgs/coffee-3.png";
+
 import {
       Ri24HoursLine,
       RiSecurePaymentLine,
@@ -14,7 +15,7 @@ import {
 import { FaTruck } from "react-icons/fa";
 import service01 from "../../assets/imgs/common-imgs/service-02.png";
 import service02 from "../../assets/imgs/common-imgs/service-03.png";
-import chef01 from "../imgs/kitchen-imgs/chef-1.jpg";
+import chef01 from "../imgs/kitchen-imgs/chef-1.png";
 import chef02 from "../imgs/kitchen-imgs/chef2.png";
 import chef03 from "../imgs/kitchen-imgs/chef3.png";
 import chef04 from "../imgs/kitchen-imgs/chef4.png";

@@ -1,17 +1,17 @@
-import client01 from "../imgs/testimonial-imgs/avatar-1.jpg";
+import client01 from "../imgs/testimonial-imgs/avatar-1.png";
 import client02 from "../imgs/testimonial-imgs/avatar-2.png";
-import client03 from "../imgs/testimonial-imgs/avatar-3.jpg";
-import client04 from "../imgs/testimonial-imgs/avatar-4.jpg";
-import client05 from "../imgs/testimonial-imgs/avatar-5.jpg";
+import client03 from "../imgs/testimonial-imgs/avatar-3.png";
+import client04 from "../imgs/testimonial-imgs/avatar-4.png";
+import client05 from "../imgs/testimonial-imgs/avatar-5.png";
 import client06 from "../imgs/testimonial-imgs/avatar-6.png";
-import client07 from "../imgs/testimonial-imgs/avatar-7.jpg";
+import client07 from "../imgs/testimonial-imgs/avatar-7.png";
 import client08 from "../imgs/testimonial-imgs/avatar-8.png";
-import client09 from "../imgs/testimonial-imgs/avatar-9.jpg";
+import client09 from "../imgs/testimonial-imgs/avatar-9.png";
 import client11 from "../imgs/testimonial-imgs/client-1.png";
-import client12 from "../imgs/testimonial-imgs/client-2.jpg";
-import client13 from "../imgs/testimonial-imgs/client-3.jpg";
-import client14 from "../imgs/testimonial-imgs/client-4.jpg";
-import client15 from "../imgs/testimonial-imgs/client-5.jpg";
+import client12 from "../imgs/testimonial-imgs/client-2.png";
+import client13 from "../imgs/testimonial-imgs/client-3.png";
+import client14 from "../imgs/testimonial-imgs/client-4.png";
+import client15 from "../imgs/testimonial-imgs/client-5.png";
 
 export const clientData = [
       {
