@@ -96,9 +96,11 @@ const userRegister = () => {
                                     minHeight: "100vh",
                               }}
                         >
-                              <Typography variant="h1">Success</Typography>
+                              <Typography variant="h1" color="goldenrod">
+                                    Success
+                              </Typography>
                               <Typography variant="h4" color="green">
-                                    Your account have been successfully created?
+                                    Your account have been successfully created!
                               </Typography>
                               <Link to="/" className="signupButton">
                                     Explore Dishies

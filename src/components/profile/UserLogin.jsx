@@ -79,17 +79,19 @@ const UserLogin = () => {
                                     alignItems: "center",
                                     justifyContent: "center",
                                     color: "whitesmoke",
+                                    padding: "2rem",
+                                    margin: "2rem",
+                                    minWidth: "100%",
+                                    minHeight: "100vh",
                               }}
                         >
                               <Typography variant="h1">Success</Typography>
-                              <Typography
-                                    variant="h5"
-                                    color="green"
-                                    mt={2}
-                                    textAlign="center"
-                              >
-                                    <Link to="/home">Sign in</Link>
+                              <Typography variant="h4" color="green">
+                                    Your have successfully logged in!
                               </Typography>
+                              <Link to="/" className="signupButton">
+                                    Explore Dishies
+                              </Link>
                         </Paper>
                   ) : (
                         <Paper
