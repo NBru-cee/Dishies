@@ -41,7 +41,7 @@ const Cart = () => {
                                           sx={{ maxHeight: "300px" }}
                                           className="cart__table"
                                     >
-                                          <Table stickyHeader>
+                                          <Table stickyHeader className="table">
                                                 <TableHead>
                                                       <TableRow>
                                                             <TableCell>

@@ -22,41 +22,6 @@ const Missing = () => {
                                     alt="not found"
                                     style={{ width: "100%" }}
                               />
-                              <Box
-                                    position="absolute"
-                                    right="-50%"
-                                    top="20%"
-                                    backgroundColor="orange"
-                                    padding="1rem"
-                              >
-                                    <Box
-                                          position="absolute"
-                                          left="-10%"
-                                          top="30%"
-                                    >
-                                          <svg
-                                                width="100"
-                                                height="100"
-                                                style={{
-                                                      transform:
-                                                            "rotate(40deg)",
-                                                }}
-                                          >
-                                                <polygon
-                                                      points="0,0 0,50 50,50"
-                                                      fill="orange"
-                                                />
-                                          </svg>
-                                    </Box>
-                                    <Typography
-                                          variant="body1"
-                                          color="whitesmoke"
-                                          fontSize="1.5rem"
-                                    >
-                                          I don't think this is what you were
-                                          looking for
-                                    </Typography>
-                              </Box>
                         </Box>
                         <Box margin="3rem auto">
                               <Typography variant="h4" color="maroon">

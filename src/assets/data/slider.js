@@ -36,5 +36,3 @@ export const sliderData = [
             image: slider05,
       },
 ];
-
-// So come and join us for a meal, and discover the delights of our amazing and delicious food for yourself!

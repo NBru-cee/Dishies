@@ -14,7 +14,19 @@ import { products } from "../../assets/data/products";
 import { Link } from "react-router-dom";
 import "../../styles/header.css";
 import MapContainer from "../UI/MapContainer";
+import Draggable from "react-draggable";
 import { useLoadScript } from "@react-google-maps/api";
+
+function PaperComponent() {
+      return (
+            <Draggable
+                  handle="#draggable-dialog-title"
+                  cancel={'[class*="MuiDialogContent-root"]'}
+            >
+                  <Paper />
+            </Draggable>
+      );
+}
 
 const SearchBar = () => {
       const [filterData, setFilterData] = useState([]);
@@ -39,7 +51,7 @@ const SearchBar = () => {
             setWordEntered("");
       };
       const isLoaded = useLoadScript({
-            googleMapsApiKey: "AIzaSyBlpE6WC-dOa9bRbgCrMqNwqPX_aTInLj4",
+            googleMapsApiKey: "AIzaSyDtVUZlglD-lVUyt3JXUdX1TXSRneLF1LA",
       });
       if (!isLoaded) {
             return <CircularProgress />;
@@ -183,6 +195,15 @@ const SearchBar = () => {
                                     </Tooltip>
                               </Stack>
                         </Box>
+                        <Box>
+                              <Dialog
+                                    open={open}
+                                    onClose={() => setOpen(false)}
+                                    PaperComponent={PaperComponent}
+                              >
+                                    <MapContainer />
+                              </Dialog>
+                        </Box>
                   </Stack>
                   <Stack direction="column" position="relative">
                         <Stack
@@ -257,11 +278,6 @@ const SearchBar = () => {
                               </Stack>
                         )}
                   </Stack>
-                  <Box>
-                        <Dialog open={open} onClose={() => setOpen(false)}>
-                              <MapContainer />
-                        </Dialog>
-                  </Box>
             </Paper>
       );
 };

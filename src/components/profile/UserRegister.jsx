@@ -15,6 +15,8 @@ import { useDispatch } from "react-redux";
 
 const user_regex = /^[A-z][A-z0-9-_]{3,23}$/;
 const pwd_regex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%]).{8,24}$/;
+const email_regex =
+      /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
 
 const userRegister = () => {
       const userRef = useRef();
@@ -22,12 +24,19 @@ const userRegister = () => {
       const [user, setUser] = useState("");
       const [validName, setValidName] = useState(false);
       const [userFocus, setUserFocus] = useState(false);
+
+      const [email, setEmail] = useState("");
+      const [validEmail, setValidEmail] = useState(false);
+      const [emailFocus, setEmailFocus] = useState(false);
+
       const [pwd, setPwd] = useState("");
       const [validPwd, setValidPwd] = useState(false);
       const [pwdFocus, setPwdFocus] = useState(false);
+
       const [matchPwd, setMatchPwd] = useState("");
       const [validMatch, setValidMatch] = useState(false);
       const [matchFocus, setMatchFocus] = useState(false);
+
       const [success, setSuccess] = useState(false);
       const [errMsg, setErrMsg] = useState("");
       const dispatch = useDispatch();
@@ -38,15 +47,16 @@ const userRegister = () => {
 
       useEffect(() => {
             const result = user_regex.test(user);
-            console.log(result);
-            console.log(user);
             setValidName(result);
       }, [user]);
 
       useEffect(() => {
+            const result = email_regex.test(email);
+            setValidEmail(result);
+      }, [email]);
+
+      useEffect(() => {
             const result = pwd_regex.test(pwd);
-            console.log(result);
-            console.log(pwd);
             setValidPwd(result);
             const match = pwd === matchPwd;
             setValidMatch(match);
@@ -54,13 +64,14 @@ const userRegister = () => {
 
       useEffect(() => {
             setErrMsg("");
-      }, [user, pwd, matchPwd]);
+      }, [user, pwd, matchPwd, email]);
 
       const handleSubmit = (e) => {
             e.preventDefault();
             const v1 = user_regex.test(user);
             const v2 = pwd_regex.test(pwd);
-            if (!v1 || !v2) {
+            const v3 = email_regex.test(email);
+            if (!v1 || !v2 || !v3) {
                   setErrMsg("Invalid Entry");
                   return;
             }
@@ -79,17 +90,19 @@ const userRegister = () => {
                                     alignItems: "center",
                                     justifyContent: "center",
                                     color: "whitesmoke",
+                                    padding: "2rem",
+                                    margin: "2rem",
+                                    minWidth: "100%",
+                                    minHeight: "100vh",
                               }}
                         >
                               <Typography variant="h1">Success</Typography>
-                              <Typography
-                                    variant="h5"
-                                    color="green"
-                                    mt={2}
-                                    textAlign="center"
-                              >
-                                    <Link to="/home">Sign in</Link>
+                              <Typography variant="h4" color="green">
+                                    Your account have been successfully created?
                               </Typography>
+                              <Link to="/" className="signupButton">
+                                    Explore Dishies
+                              </Link>
                         </Paper>
                   ) : (
                         <Paper
@@ -111,7 +124,9 @@ const userRegister = () => {
                               >
                                     {errMsg}
                               </Typography>
-                              <Typography variant="h3">Signup Here</Typography>
+                              <Typography variant="h3">
+                                    Register Here
+                              </Typography>
                               <form
                                     onSubmit={handleSubmit}
                                     className="loginForm"
@@ -159,6 +174,54 @@ const userRegister = () => {
                                                 <FaInfoCircle />
                                                 4 to 24 characters. <br />
                                                 Must begin with a letter. <br />
+                                                Letters, Numbers, underscores,
+                                                <br />
+                                                and hyphens allowed
+                                          </Typography>
+                                    </Stack>
+
+                                    <Stack direction="column" spacing={2}>
+                                          <TextField
+                                                label="Email"
+                                                type="text"
+                                                id="email"
+                                                ref={userRef}
+                                                autoComplete="off"
+                                                color={`${
+                                                      validEmail
+                                                            ? "success"
+                                                            : "error"
+                                                }`}
+                                                onChange={(e) =>
+                                                      setEmail(e.target.value)
+                                                }
+                                                required
+                                                aria-invalid={
+                                                      validEmail
+                                                            ? "false"
+                                                            : "true"
+                                                }
+                                                aria-describedby="emailnote"
+                                                onFocus={() =>
+                                                      setEmailFocus(true)
+                                                }
+                                                onBlur={() =>
+                                                      setEmailFocus(false)
+                                                }
+                                          />
+                                          <Typography
+                                                variant="body1"
+                                                id="emailnote"
+                                                className={
+                                                      emailFocus &&
+                                                      email &&
+                                                      !validEmail
+                                                            ? "instructions"
+                                                            : "offscreen"
+                                                }
+                                          >
+                                                <FaInfoCircle />
+                                                Must contain an @ sign. <br />
                                                 Letters, Numbers, underscores,
                                                 <br />
                                                 and hyphens allowed
@@ -296,14 +359,14 @@ const userRegister = () => {
                               <Box mt="1rem">
                                     <Typography variant="body2">
                                           Already have an account?
-                                          <Typography
-                                                variant="subtitle1"
-                                                className="line"
+                                          <Link
+                                                to="/login"
+                                                style={{
+                                                      textDecoration: "none",
+                                                }}
                                           >
-                                                <Link to="/login">
-                                                      Login here
-                                                </Link>
-                                          </Typography>
+                                                Login here
+                                          </Link>
                                     </Typography>
                               </Box>
                         </Paper>

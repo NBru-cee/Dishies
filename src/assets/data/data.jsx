@@ -12,15 +12,19 @@ import {
       RiSecurePaymentLine,
       RiMoneyDollarCircleLine,
 } from "react-icons/ri";
+
 import { FaTruck } from "react-icons/fa";
+
 import service01 from "../../assets/imgs/common-imgs/service-02.png";
 import service02 from "../../assets/imgs/common-imgs/service-03.png";
+
 import chef01 from "../imgs/kitchen-imgs/chef-1.png";
 import chef02 from "../imgs/kitchen-imgs/chef2.png";
 import chef03 from "../imgs/kitchen-imgs/chef3.png";
 import chef04 from "../imgs/kitchen-imgs/chef4.png";
 import chef05 from "../imgs/kitchen-imgs/chef5.png";
 import chef06 from "../imgs/kitchen-imgs/chef6.png";
+
 import {
       Settings,
       Logout,
@@ -132,13 +136,13 @@ export const socialMedias = [
       {
             id: 4,
             icon: <LinkedIn />,
-            url: "https://www.primary.com",
+            url: "https://www.linkedin.com",
             color: "primary",
       },
       {
             id: 5,
             icon: <Twitter />,
-            url: "https://www.info.com",
+            url: "https://www.twitter.com",
             color: "info",
       },
 ];

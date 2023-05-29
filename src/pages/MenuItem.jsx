@@ -9,46 +9,46 @@ import MainMenuItem from "../components/menu-section/MainMenuItem";
 import RelatedProducts from "../components/menu-section/RelatedProducts";
 
 const MenuItem = () => {
-     const { id } = useParams();
-     const product = products.find((product) => product.id === id);
-     const dispatch = useDispatch();
-     const addProduct = () => {
-          dispatch(
-               cartActions.addProduct({
-                    id,
-                    title,
-                    price,
-                    image01,
-               })
-          );
-     };
-     const { title, price, image01, category, desc, delivers, purchases } =
-          product;
-     const [prevImage, setPrevImage] = useState(product.image01);
-     const relatedProducts = products.filter(
-          (product) => category === product.category
-     );
-     useEffect(() => {
-          setPrevImage(product.image01);
-     }, [product]);
+      const { id } = useParams();
+      const product = products.find((product) => product.id === id);
+      const dispatch = useDispatch();
+      const addProduct = () => {
+            dispatch(
+                  cartActions.addProduct({
+                        id,
+                        title,
+                        price,
+                        image01,
+                  })
+            );
+      };
+      const { title, price, image01, category, desc, delivers, purchases } =
+            product;
+      const [prevImage, setPrevImage] = useState(product.image01);
+      const relatedProducts = products.filter(
+            (product) => category === product.category
+      );
+      useEffect(() => {
+            setPrevImage(product.image01);
+      }, [product]);
 
-     useEffect(() => {
-          window.scrollTo(0, 0);
-     }, [product.id]);
-     return (
-          <Wrapper title="Menu Item">
-               <MenuTitle title={title} />
-               <main>
-                    <MainMenuItem
-                         product={product}
-                         prevImage={prevImage}
-                         setPrevImage={setPrevImage}
-                         addProduct={addProduct}
-                    />
-                    <RelatedProducts relatedProducts={relatedProducts} />
-               </main>
-          </Wrapper>
-     );
+      useEffect(() => {
+            window.scrollTo(0, 0);
+      }, [product.id]);
+      return (
+            <Wrapper title="Menu Item">
+                  <MenuTitle title={title} />
+                  <main>
+                        <MainMenuItem
+                              product={product}
+                              prevImage={prevImage}
+                              setPrevImage={setPrevImage}
+                              addProduct={addProduct}
+                        />
+                        <RelatedProducts relatedProducts={relatedProducts} />
+                  </main>
+            </Wrapper>
+      );
 };
 
 export default MenuItem;

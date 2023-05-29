@@ -55,8 +55,8 @@
 }
 
 .prev__image {
-      width: 5rem;
-      height: 5rem;
+      width: 4rem;
+      height: 4rem;
       object-fit: contain;
       cursor: pointer;
       transition: 0.4s;
@@ -71,6 +71,7 @@
       flex-basis: 40%;
       width: 30rem;
       height: 30rem;
+      object-fit: contain;
       margin: 1rem;
       padding: 1rem;
 }

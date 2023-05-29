@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useState } from "react";
 import {
       BrowserRouter,
       Routes,
@@ -21,19 +21,12 @@ import Profile from "./pages/Profile";
 import Missing from "./pages/Missing";
 import SearchBar from "./components/header/SearchBar";
 
-const ScrollToTop = () => {
-      const { path } = useLocation();
-      useEffect(() => {
-            window.scrollTo(0, 0);
-      }, [path]);
-      return null;
-};
-
 const App = () => {
+      const [wordEntered, setWordEntered] = useState("");
+
       return (
             <>
                   <BrowserRouter>
-                        <ScrollToTop />
                         <Header />
                         <SearchBar />
                         <Routes>
@@ -41,7 +34,16 @@ const App = () => {
                                     path="/"
                                     element={<Navigate to="/home" />}
                               />
-                              <Route exact path="/home" element={<Home />} />
+                              <Route
+                                    exact
+                                    path="/home"
+                                    element={
+                                          <Home
+                                                wordEntered={wordEntered}
+                                                setWordEntered={setWordEntered}
+                                          />
+                                    }
+                              />
                               <Route path="/about" element={<About />} />
                               <Route path="/contact" element={<Contact />} />
                               <Route path="/register" element={<Register />} />

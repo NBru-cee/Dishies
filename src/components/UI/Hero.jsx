@@ -32,11 +32,6 @@ const Hero = () => {
                                                 sm: "column",
                                                 md: "row",
                                           },
-                                          height: {
-                                                xs: "160vh",
-                                                sm: "200vh",
-                                                md: "80vh",
-                                          },
                                           alignItems: "center",
                                           gap: "2rem",
                                           justifyContent: "center",

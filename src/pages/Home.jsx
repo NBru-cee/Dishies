@@ -7,7 +7,11 @@ import MenuPack from "../components/UI/MenuPack";
 import NewsLetter from "../components/UI/NewsLetter";
 import Download from "../components/UI/Download";
 
-const Home = () => {
+const Home = ({ wordEntered, setWordEntered }) => {
+      useEffect(() => {
+            window.scrollTo(0, 0);
+      }, []);
+      
       return (
             <Wrapper title="Home">
                   <Hero />
@@ -15,7 +19,10 @@ const Home = () => {
                         <PopularMenu />
                         <AboutUs />
                         <MenuPack />
-                        <NewsLetter />
+                        <NewsLetter
+                              wordEntered={wordEntered}
+                              setWordEntered={setWordEntered}
+                        />
                         <Download />
                   </main>
             </Wrapper>

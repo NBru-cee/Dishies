@@ -56,3 +56,18 @@
       display: inline-block;
       color: #13135d;
 }
+
+.signupButton {
+      background: #40c840;
+      color: whitesmoke;
+      padding: 1rem 2rem;
+      margin: 1rem;
+      border-radius: 5px;
+      text-decoration: none;
+      transition: all 0.4s ease;
+}
+
+.signupButton:hover {
+      transform: scale(1.1);
+      background: #1ea01e;
+}
