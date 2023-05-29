@@ -203,7 +203,7 @@ const UserLogin = () => {
                                                 }
                                           >
                                                 <FaInfoCircle />
-                                                {/* 8 to 24 characters. <br />
+                                                8 to 24 characters. <br />
                                                 Must include <br />
                                                 uppercase and <br />
                                                 lowercase letters,
@@ -211,7 +211,7 @@ const UserLogin = () => {
                                                 a number and a <br /> special
                                                 character. <br /> Allowed
                                                 special <br />
-                                                characters: */}
+                                                characters:
                                                 <span aria-label="exclamation mark">
                                                       !
                                                 </span>
