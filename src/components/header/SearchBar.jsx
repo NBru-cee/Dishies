@@ -51,7 +51,7 @@ const SearchBar = () => {
             setWordEntered("");
       };
       const isLoaded = useLoadScript({
-            googleMapsApiKey: "AIzaSyDtVUZlglD-lVUyt3JXUdX1TXSRneLF1LA",
+            googleMapsApiKey: "AIzaSyA9PL6Czx2yvrKjSiduvFP_VQ92r3LRN24",
       });
       if (!isLoaded) {
             return <CircularProgress />;
