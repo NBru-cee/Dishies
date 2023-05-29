@@ -14,8 +14,17 @@ import "../../styles/home.css";
 import { useDispatch } from "react-redux";
 import { cartActions } from "../../app/slices/cartSlice";
 
-const ProductCard = ({ item }) => {
-      const { image01, price, title, id, category } = item;
+const ProductCard = ({ product }) => {
+      const { image01, price, title, id, category } = product.attributes;
+      const {
+            data: {
+                  attributes: {
+                        formats: {
+                              medium: { url },
+                        },
+                  },
+            },
+      } = image01;
       const dispatch = useDispatch();
       const [ratingValue, setRatingValue] = useState(null);
       const handleRating = (newValue) => {
@@ -73,7 +82,7 @@ const ProductCard = ({ item }) => {
                         >
                               <Link to={`/foods/${id}`}>
                                     <img
-                                          src={image01}
+                                          src={`http://localhost:1337${url}`}
                                           alt="product image"
                                           style={{
                                                 overflow: "hidden",

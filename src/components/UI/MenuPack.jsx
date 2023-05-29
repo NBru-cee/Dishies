@@ -14,43 +14,43 @@ const MenuPack = () => {
 
             if (selectedCategory === "Burger") {
                   const filteredProducts = products.filter(
-                        (item) => item.category === "Burger"
+                        (product) => product.category === "Burger"
                   );
                   setAllProducts(filteredProducts);
             }
             if (selectedCategory === "Bread") {
                   const filteredProducts = products.filter(
-                        (item) => item.category === "Bread"
+                        (product) => product.category === "Bread"
                   );
                   setAllProducts(filteredProducts);
             }
             if (selectedCategory === "Cake") {
                   const filteredProducts = products.filter(
-                        (item) => item.category === "Cake"
+                        (product) => product.category === "Cake"
                   );
                   setAllProducts(filteredProducts);
             }
             if (selectedCategory === "Chicken") {
                   const filteredProducts = products.filter(
-                        (item) => item.category === "Chicken"
+                        (product) => product.category === "Chicken"
                   );
                   setAllProducts(filteredProducts);
             }
             if (selectedCategory === "Dish") {
                   const filteredProducts = products.filter(
-                        (item) => item.category === "Dish"
+                        (product) => product.category === "Dish"
                   );
                   setAllProducts(filteredProducts);
             }
             if (selectedCategory === "Fries") {
                   const filteredProducts = products.filter(
-                        (item) => item.category === "Fries"
+                        (product) => product.category === "Fries"
                   );
                   setAllProducts(filteredProducts);
             }
             if (selectedCategory === "Tacos") {
                   const filteredProducts = products.filter(
-                        (item) => item.category === "Tacos"
+                        (product) => product.category === "Tacos"
                   );
                   setAllProducts(filteredProducts);
             }
@@ -72,7 +72,7 @@ const MenuPack = () => {
                               sx={{
                                     display: "flex",
                                     flexWrap: "wrap",
-                                    alignItems: "center",
+                                    alignProdproducts: "center",
                                     justifyContent: "center",
                                     padding: "1rem",
                                     borderRadius: "0.5rem",
@@ -172,19 +172,19 @@ const MenuPack = () => {
                         sx={{
                               display: "flex",
                               flexWrap: "wrap",
-                              alignItems: "center",
+                              alignProdproducts: "center",
                               justifyContent: "center",
                         }}
                         className="menu__stack"
                   >
-                        {allProducts.slice(0, 12).map((item) => (
+                        {allProducts.slice(0, 12).map((product) => (
                               <Stack
-                                    key={item.id}
+                                    key={product.id}
                                     direction="row"
                                     spacing={2}
                                     m={2}
                               >
-                                    <ProductCard item={item} />
+                                    <ProductCard product={product} />
                               </Stack>
                         ))}
                   </Box>
