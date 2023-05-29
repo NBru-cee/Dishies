@@ -15,16 +15,7 @@ import { useDispatch } from "react-redux";
 import { cartActions } from "../../app/slices/cartSlice";
 
 const ProductCard = ({ product }) => {
-      const { image01, price, title, id, category } = product.attributes;
-      const {
-            data: {
-                  attributes: {
-                        formats: {
-                              medium: { url },
-                        },
-                  },
-            },
-      } = image01;
+      const { image01, price, title, id, category } = product;
       const dispatch = useDispatch();
       const [ratingValue, setRatingValue] = useState(null);
       const handleRating = (newValue) => {
@@ -82,7 +73,7 @@ const ProductCard = ({ product }) => {
                         >
                               <Link to={`/foods/${id}`}>
                                     <img
-                                          src={`http://localhost:1337${url}`}
+                                          src={image01}
                                           alt="product image"
                                           style={{
                                                 overflow: "hidden",

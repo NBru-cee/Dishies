@@ -2,8 +2,9 @@ import React from "react";
 import { Stack, Typography, Box } from "@mui/material";
 import ProductCard from "./ProductCard";
 import "../../styles/home.css";
+import { popularMenu } from "../../assets/data/data";
 
-const PopularMenu = ({ products }) => {
+const PopularMenu = () => {
       return (
             <section>
                   <Box>
@@ -25,7 +26,7 @@ const PopularMenu = ({ products }) => {
                               }}
                               className="popular__menu"
                         >
-                              {products.slice(0, 6).map((product) => (
+                              {popularMenu.map((product) => (
                                     <Stack
                                           key={product.id}
                                           direction="row"
