@@ -6,27 +6,12 @@ import {
       IconButton,
       Stack,
       Tooltip,
-      Dialog,
       CircularProgress,
 } from "@mui/material";
-import { Phone, PinDrop, Email, Search, Close } from "@mui/icons-material";
+import { Phone, Email, Search, Close } from "@mui/icons-material";
 import { products } from "../../assets/data/products";
 import { Link } from "react-router-dom";
 import "../../styles/header.css";
-import MapContainer from "../UI/MapContainer";
-import Draggable from "react-draggable";
-import { useLoadScript } from "@react-google-maps/api";
-
-function PaperComponent() {
-      return (
-            <Draggable
-                  handle="#draggable-dialog-title"
-                  cancel={'[class*="MuiDialogContent-root"]'}
-            >
-                  <Paper />
-            </Draggable>
-      );
-}
 
 const SearchBar = () => {
       const [filterData, setFilterData] = useState([]);
@@ -50,9 +35,7 @@ const SearchBar = () => {
             setFilterData([]);
             setWordEntered("");
       };
-      const isLoaded = useLoadScript({
-            googleMapsApiKey: "AIzaSyA9PL6Czx2yvrKjSiduvFP_VQ92r3LRN24",
-      });
+
       if (!isLoaded) {
             return <CircularProgress />;
       }
@@ -120,47 +103,6 @@ const SearchBar = () => {
                                     fontSize="0.6rem"
                                     textAlign="start"
                               >
-                                    Location
-                              </Typography>
-                              <Stack direction="row" textAlign="center">
-                                    <Tooltip
-                                          title=" Kigali, Rwanda"
-                                          placement="bottom"
-                                          arrow
-                                          enterDelay={1000}
-                                          leaveDelay={200}
-                                    >
-                                          <IconButton
-                                                sx={{
-                                                      width: "20px",
-                                                      height: "20px",
-                                                      padding: "1rem",
-                                                      boxSizing: "border-box",
-                                                      background: "whitesmoke",
-                                                      borderRadius: "50%",
-                                                      display: "flex",
-                                                      alignItems: "center",
-                                                      justifyContent: "center",
-                                                      marginRight: ".5rem",
-                                                      color: "red",
-                                                      "&:hover": {
-                                                            background: "#ccc",
-                                                      },
-                                                }}
-                                                onClick={() => setOpen(true)}
-                                          >
-                                                <PinDrop />
-                                          </IconButton>
-                                    </Tooltip>
-                              </Stack>
-                        </Box>
-
-                        <Box textAlign="center">
-                              <Typography
-                                    variant="body2"
-                                    fontSize="0.6rem"
-                                    textAlign="start"
-                              >
                                     Send Message
                               </Typography>
                               <Stack direction="row" textAlign="center">
@@ -194,15 +136,6 @@ const SearchBar = () => {
                                           </IconButton>
                                     </Tooltip>
                               </Stack>
-                        </Box>
-                        <Box>
-                              <Dialog
-                                    open={open}
-                                    onClose={() => setOpen(false)}
-                                    PaperComponent={PaperComponent}
-                              >
-                                    <MapContainer />
-                              </Dialog>
                         </Box>
                   </Stack>
                   <Stack direction="column" position="relative">
