@@ -16,7 +16,6 @@ import "../../styles/header.css";
 const SearchBar = () => {
       const [filterData, setFilterData] = useState([]);
       const [wordEntered, setWordEntered] = useState("");
-      const [open, setOpen] = useState(false);
       const handleFilter = (e) => {
             const searchWord = e.target.value;
             setWordEntered(searchWord);
@@ -35,10 +34,6 @@ const SearchBar = () => {
             setFilterData([]);
             setWordEntered("");
       };
-
-      if (!isLoaded) {
-            return <CircularProgress />;
-      }
       return (
             <Paper
                   sx={{
@@ -55,94 +50,77 @@ const SearchBar = () => {
                         gap: "1rem",
                   }}
             >
-                  <Stack direction="row" spacing={2} display="flex">
-                        <Box>
-                              <Typography
-                                    variant="body2"
-                                    fontSize="0.6rem"
-                                    textAlign="start"
+                  <Stack
+                        direction="row"
+                        spacing={2}
+                        display="flex"
+                        justifyContent="space-between"
+                  >
+                        <Tooltip
+                              title="If you need help contact: +250-791-888-141"
+                              placement="bottom"
+                              arrow
+                              enterDelay={1000}
+                              leaveDelay={200}
+                        >
+                              <IconButton
+                                    sx={{
+                                          width: "20px",
+                                          height: "20px",
+                                          padding: "1rem",
+                                          boxSizing: "border-box",
+                                          background: "whitesmoke",
+                                          borderRadius: "50%",
+                                          display: "flex",
+                                          alignItems: "center",
+                                          justifyContent: "center",
+                                          marginRight: ".5rem",
+                                          color: "red",
+                                          "&:hover": {
+                                                background: "#ccc",
+                                          },
+                                          fontSize: "12px",
+                                    }}
                               >
-                                    Need Help?
-                              </Typography>
-                              <Stack direction="row" textAlign="center">
-                                    <Tooltip
-                                          title="+250-791-888-141"
-                                          placement="bottom"
-                                          arrow
-                                          enterDelay={1000}
-                                          leaveDelay={200}
-                                    >
-                                          <IconButton
-                                                sx={{
-                                                      width: "20px",
-                                                      height: "20px",
-                                                      padding: "1rem",
-                                                      boxSizing: "border-box",
-                                                      background: "whitesmoke",
-                                                      borderRadius: "50%",
-                                                      display: "flex",
-                                                      alignItems: "center",
-                                                      justifyContent: "center",
-                                                      marginRight: ".5rem",
-                                                      color: "red",
-                                                      "&:hover": {
-                                                            background: "#ccc",
-                                                      },
-                                                      fontSize: "12px",
-                                                }}
-                                          >
-                                                <Phone />
-                                          </IconButton>
-                                    </Tooltip>
-                              </Stack>
-                        </Box>
+                                    <Phone />
+                              </IconButton>
+                        </Tooltip>
 
-                        <Box textAlign="center">
-                              <Typography
-                                    variant="body2"
-                                    fontSize="0.6rem"
-                                    textAlign="start"
+                        <Tooltip
+                              title="Get in touch with us: bruce@yahoo.com"
+                              placement="bottom"
+                              arrow
+                              enterDelay={1000}
+                              leaveDelay={200}
+                        >
+                              <IconButton
+                                    sx={{
+                                          width: "20px",
+                                          height: "20px",
+                                          padding: "1rem",
+                                          boxSizing: "border-box",
+                                          background: "whitesmoke",
+                                          borderRadius: "50%",
+                                          display: "flex",
+                                          alignItems: "center",
+                                          justifyContent: "center",
+                                          marginRight: ".5rem",
+                                          color: "red",
+                                          "&:hover": {
+                                                background: "#ccc",
+                                          },
+                                          fontSize: "12px",
+                                    }}
                               >
-                                    Send Message
-                              </Typography>
-                              <Stack direction="row" textAlign="center">
-                                    <Tooltip
-                                          title="bruce@yahoo.com"
-                                          placement="bottom"
-                                          arrow
-                                          enterDelay={1000}
-                                          leaveDelay={200}
-                                    >
-                                          <IconButton
-                                                sx={{
-                                                      width: "20px",
-                                                      height: "20px",
-                                                      padding: "1rem",
-                                                      boxSizing: "border-box",
-                                                      background: "whitesmoke",
-                                                      borderRadius: "50%",
-                                                      display: "flex",
-                                                      alignItems: "center",
-                                                      justifyContent: "center",
-                                                      marginRight: ".5rem",
-                                                      color: "red",
-                                                      "&:hover": {
-                                                            background: "#ccc",
-                                                      },
-                                                      fontSize: "12px",
-                                                }}
-                                          >
-                                                <Email />
-                                          </IconButton>
-                                    </Tooltip>
-                              </Stack>
-                        </Box>
+                                    <Email />
+                              </IconButton>
+                        </Tooltip>
                   </Stack>
                   <Stack direction="column" position="relative">
                         <Stack
                               direction="row"
                               sx={{
-                                    border: "1.5px solid white",
+                                    border: "1px solid #eee",
                                     borderRadius: "1rem",
                                     display: "flex",
                                     alignItems: "center",

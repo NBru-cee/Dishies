@@ -1,11 +1,5 @@
-import React, { useState } from "react";
-import {
-      BrowserRouter,
-      Routes,
-      Route,
-      useLocation,
-      Navigate,
-} from "react-router-dom";
+import React from "react";
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import Header from "./components/header/Header";
 import Footer from "./components/footer/Footer";
 import Home from "./pages/Home";
@@ -22,8 +16,6 @@ import Missing from "./pages/Missing";
 import SearchBar from "./components/header/SearchBar";
 
 const App = () => {
-      const [wordEntered, setWordEntered] = useState("");
-
       return (
             <>
                   <BrowserRouter>
@@ -34,16 +26,7 @@ const App = () => {
                                     path="/"
                                     element={<Navigate to="/home" />}
                               />
-                              <Route
-                                    exact
-                                    path="/home"
-                                    element={
-                                          <Home
-                                                wordEntered={wordEntered}
-                                                setWordEntered={setWordEntered}
-                                          />
-                                    }
-                              />
+                              <Route exact path="/home" element={<Home />} />
                               <Route path="/about" element={<About />} />
                               <Route path="/contact" element={<Contact />} />
                               <Route path="/register" element={<Register />} />

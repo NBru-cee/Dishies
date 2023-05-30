@@ -4,14 +4,13 @@ import Hero from "../components/UI/Hero";
 import PopularMenu from "../components/UI/PopularMenu";
 import AboutUs from "../components/UI/AboutUs";
 import MenuPack from "../components/UI/MenuPack";
-import NewsLetter from "../components/UI/NewsLetter";
 import Download from "../components/UI/Download";
 
-const Home = ({ wordEntered, setWordEntered }) => {
+const Home = () => {
       useEffect(() => {
             window.scrollTo(0, 0);
       }, []);
-      
+
       return (
             <Wrapper title="Home">
                   <Hero />
@@ -19,10 +18,6 @@ const Home = ({ wordEntered, setWordEntered }) => {
                         <PopularMenu />
                         <AboutUs />
                         <MenuPack />
-                        <NewsLetter
-                              wordEntered={wordEntered}
-                              setWordEntered={setWordEntered}
-                        />
                         <Download />
                   </main>
             </Wrapper>
