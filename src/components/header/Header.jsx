@@ -105,6 +105,24 @@ const Header = () => {
 
                               <Stack direction="row" spacing={2}>
                                     <Tooltip
+                                          title="Profile"
+                                          placement="bottom"
+                                          arrow
+                                          enterDelay={1000}
+                                          leaveDelay={200}
+                                    >
+                                          <IconButton
+                                                color="inherit"
+                                                onClick={(e) =>
+                                                      setProfileOpen(
+                                                            e.currentTarget
+                                                      )
+                                                }
+                                          >
+                                                <Person />
+                                          </IconButton>
+                                    </Tooltip>
+                                    <Tooltip
                                           title="Cart"
                                           placement="bottom"
                                           arrow
@@ -124,25 +142,6 @@ const Header = () => {
                                                 </span>
                                           </IconButton>
                                     </Tooltip>
-                                    <Tooltip
-                                          title="Profile"
-                                          placement="bottom"
-                                          arrow
-                                          enterDelay={1000}
-                                          leaveDelay={200}
-                                    >
-                                          <IconButton
-                                                color="inherit"
-                                                onClick={(e) =>
-                                                      setProfileOpen(
-                                                            e.currentTarget
-                                                      )
-                                                }
-                                          >
-                                                <Person />
-                                          </IconButton>
-                                    </Tooltip>
-
                                     <Tooltip
                                           title="Menu"
                                           placement="bottom"
@@ -175,7 +174,7 @@ const Header = () => {
                                     onClose={closeProfile}
                                     anchorOrigin={{
                                           vertical: "bottom",
-                                          horizontal: "right",
+                                          horizontal: "left",
                                     }}
                               >
                                     <Account />

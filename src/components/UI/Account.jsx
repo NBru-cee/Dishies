@@ -17,10 +17,6 @@ const Account = () => {
                                     sx={{
                                           background: "whitesmoke",
                                           transition: "0.4s",
-                                          "&:hover": {
-                                                background: "maroon",
-                                                color: "whitesmoke",
-                                          },
                                     }}
                               >
                                     {profile.icon}
