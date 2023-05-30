@@ -359,16 +359,12 @@ const userRegister = () => {
                                     </Box>
                               </form>
                               <Box mt="1rem">
-                                    <Typography variant="body2">
+                                    <Typography
+                                          variant="body2"
+                                          className="line"
+                                    >
                                           Already have an account?
-                                          <Link
-                                                to="/login"
-                                                style={{
-                                                      textDecoration: "none",
-                                                }}
-                                          >
-                                                Login here
-                                          </Link>
+                                          <Link to="/login">Login here</Link>
                                     </Typography>
                               </Box>
                         </Paper>

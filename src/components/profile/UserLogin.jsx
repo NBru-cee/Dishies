@@ -85,7 +85,9 @@ const UserLogin = () => {
                                     minHeight: "100vh",
                               }}
                         >
-                              <Typography variant="h1">Success</Typography>
+                              <Typography variant="h1" color="goldenrod">
+                                    Success
+                              </Typography>
                               <Typography variant="h4" color="green">
                                     Your have successfully logged in!
                               </Typography>
@@ -296,16 +298,14 @@ const UserLogin = () => {
                                     </Box>
                               </form>
                               <Box mt="1rem">
-                                    <Typography variant="body2">
-                                          Don't have an account
-                                          <Typography
-                                                variant="subtitle1"
-                                                className="line"
-                                          >
-                                                <Link to="/register">
-                                                      Create account
-                                                </Link>
-                                          </Typography>
+                                    <Typography
+                                          variant="body2"
+                                          className="line"
+                                    >
+                                          Don't have an account?
+                                          <Link to="/register">
+                                                Create account
+                                          </Link>
                                     </Typography>
                               </Box>
                         </Paper>

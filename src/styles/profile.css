@@ -52,9 +52,14 @@
       margin-bottom: 0.5rem;
 }
 
-.line {
-      display: inline-block;
-      color: #13135d;
+.line a {
+
+      color: #4141cf !important;
+      transition: all 0.4s ease;
+}
+
+.line a:hover {
+      color: #1d1da5 !important;
 }
 
 .signupButton {
