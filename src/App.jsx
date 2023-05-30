@@ -14,6 +14,7 @@ import MenuItem from "./pages/MenuItem";
 import Profile from "./pages/Profile";
 import Missing from "./pages/Missing";
 import SearchBar from "./components/header/SearchBar";
+import Help from "./pages/Help";
 
 const App = () => {
       return (
@@ -37,6 +38,7 @@ const App = () => {
                               <Route path="/cart" element={<Cart />} />
                               <Route path="*" element={<Missing />} />
                               <Route path="/login" element={<Login />} />
+                              <Route path="/help" element={<Help />} />
                         </Routes>
                         <Footer />
                   </BrowserRouter>
