@@ -44,7 +44,8 @@ const CartContainer = ({ setCartOpen }) => {
                          >
                               <Close />
                          </IconButton>
-                    </Box>
+                       </Box>
+                  <p></p>
                     <Box
                          sx={{
                               height: "80vh",
